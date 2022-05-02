@@ -8,8 +8,22 @@ html, body {
   margin: 0;
 }
 
+body {
+  margin-top: 30px;
+}
+
 input, textarea, keygen, select, button {
   font-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC";
+}
+
+ol {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 80%;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 a {
@@ -22,12 +36,38 @@ a {
   }
 }
 
-body {
-  margin-top: 30px;
+.hero {
+  width: 100%;
 }
 
-img {
-  width: 100%;
+.item-text {
+  margin-bottom: 70px;
+  line-height: 1.6rem;
+
+  .highlight {
+    color: $font-highlight-color;
+  }
+  .bigger {
+    font-size: 1.6rem;
+  }
+}
+
+.item-title {
+  img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    padding-right: 10px;
+  }
+  hr {
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {

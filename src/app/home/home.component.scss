@@ -6,10 +6,23 @@
   border-radius: 20px;
   border: 0px;
   font-size: 1.8rem;
+  cursor: pointer;
   color: $font-color;
   background: $button-color;
 
   &:hover {
     background: $button-hover-color;
   }
+
+  &.disable {
+    cursor: not-allowed;
+
+    &:hover {
+      background: $button-color;
+    }
+  }
+}
+
+hr {
+  color: $hr-color;
 }
