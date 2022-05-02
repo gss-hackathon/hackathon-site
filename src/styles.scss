@@ -16,12 +16,6 @@ input, textarea, keygen, select, button {
   font-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC";
 }
 
-ol {
-  padding-left: 10%;
-  padding-right: 10%;
-  width: 80%;
-}
-
 h2 {
   font-size: 2rem;
 }
@@ -66,6 +60,15 @@ a {
   }
 }
 
+.item-list {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 80%;
+  li + li {
+    margin-top: 0.8rem;
+  }
+}
+
 .text-left {
   text-align: left;
 }
@@ -78,6 +81,14 @@ a {
   text-align: right;
 }
 
-.container {
-  width: 1024px;
+.text-justify {
+  text-align: justify;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 96% !important;
+    padding-right: 2% !important;
+    padding-left: 2% !important;
+  }
 }
