@@ -23,10 +23,12 @@
 <h2 class="item-title"><img alt="項目圖案" src="/assets/images/miru.png" />競賽獎項</h2>
 <p>&nbsp;</p>
 <h2 class="item-title"><img alt="項目圖案" src="/assets/images/miru.png" />注意事項</h2>
-<ol class="item-text">
-  <li class="text-left">報名活動時請確實填寫聯絡資訊，若因資料不全導致參賽者未能收到主辦單位通知事項，主辦單位概不負責。</li>
-  <li class="text-left">活動辦法若有未盡事宜，主辦單位擁有保留、修改、刪除、解釋本辦法之權力。</li>
-</ol>
+<div class="item-text item-list">
+  <ol>
+    <li class="text-justify">報名活動時請確實填寫聯絡資訊，若因資料不全導致參賽者未能收到主辦單位通知事項，主辦單位概不負責。</li>
+    <li class="text-justify">活動辦法若有未盡事宜，主辦單位擁有保留、修改、刪除、解釋本辦法之權力。</li>
+  </ol>
+</div>
 <hr />
 <p>&nbsp;</p>
 <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}">{{ callToActionText }}</button>
