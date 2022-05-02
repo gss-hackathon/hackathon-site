@@ -8,8 +8,16 @@
   background-color: black;
   color: $font-color;
 
+  img {
+    margin-top: 1rem;
+  }
+
   p {
     line-height: 1.5;
+    text-align: right;
+    @media (max-width: 768px) {
+      text-align: left;
+    }
   }
 }
 
