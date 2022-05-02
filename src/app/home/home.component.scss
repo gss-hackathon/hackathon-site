@@ -21,6 +21,18 @@
       background: $button-color;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 576px) {
+    width: 70%;
+    height: 55px;
+    font-size: 1.4rem;
+  }
 }
 
 hr {
