@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+html, body {
+  font-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC";
+  background: $bg-color;
+  color: $font-color;
+  font-size: 20px;
+  margin: 0;
+}
+
+input, textarea, keygen, select, button {
+  font-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC";
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $link-color;
+  }
+}
+
+body {
+  margin-top: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.container {
+  width: 1024px;
+}

@@ -1,0 +1,15 @@
+@import '../../variables';
+
+.cta_button {
+  width: 512px;
+  height: 90px;
+  border-radius: 20px;
+  border: 0px;
+  font-size: 1.8rem;
+  color: $font-color;
+  background: $button-color;
+
+  &:hover {
+    background: $button-hover-color;
+  }
+}
