@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   callToActionText: String = "";
 
   ngOnInit() {
-    this.isOpenSignUp = true;
+    this.isOpenSignUp = false;
     this.callToActionText = this.isOpenSignUp ? "立即報名" : "即將開放報名";
   }
 }
