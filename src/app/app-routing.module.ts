@@ -7,7 +7,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/2022/home', pathMatch: 'full' },
   {
       path: '2022',
-      component: AppComponent,
       children: [
           { path: '', redirectTo: 'home', pathMatch: 'full' },
           { path: 'home', component: HomeComponent },
