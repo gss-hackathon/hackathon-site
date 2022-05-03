@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=/hackathon-site/ --name=\"unciax (publish)\" --email=\"unciaq@gmail.com\" --no-silent"
+    "deploy": "ng deploy --cname=hackathon.gss.com.tw --name=\"unciax (publish)\" --email=\"unciaq@gmail.com\" --no-silent"
   },
   "private": true,
   "dependencies": {
