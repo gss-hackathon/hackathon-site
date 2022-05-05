@@ -28,6 +28,16 @@ a {
     text-decoration: underline;
     text-decoration-color: $link-color;
   }
+
+  &.highlight-link {
+    color: $font-highlight-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: font-highlight-color;
+    }
+  }
 }
 
 .hero {
