@@ -1,0 +1,46 @@
+/* Color Pattern */
+$white: #FFF;
+$black: #000;
+$gray: #2D353F;
+$blue: #367DEF;
+$light-blue: #91B3EB;
+$dark-blue: #0B015A;
+$yellow: #FAFF0D;
+$orange: #F9A825;
+
+/* Body */
+$body-bg: $dark-blue !default;
+$body-color: $white !default;
+$body-heading-color: $blue !default;
+$body-color-highlight: $yellow !default;
+$font-base-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC";
+$font-base-size: 20px;
+$line-height: 1.6rem;
+
+/* cta button */
+$cta-default-bg: $blue !default;
+$cta-default-color: $white !default;
+$cta-default-border-color: $blue !default;
+$cta-default-bg-hover: $light-blue !default;
+$cta-default-color-hover: $white !default;
+$cta-primary-bg: $blue !default;
+$cta-primary-color: $white !default;
+$cta-primary-border-color: $blue !default;
+$cta-primary-bg-hover: $light-blue !default;
+$cta-primary-color-hover: $white !default;
+
+/* table */
+$table-bg: transparent !default;
+$table-color: $body-color !default;
+$table-bg-hover: $blue !default;
+$table-color-hover: $body-color !default;
+
+/* hr */
+$hr-color: $blue;
+
+/* Footer */
+$footer-bg: $black;
+$footer-color: $white;
+
+$footer-link-color: $white;
+$footer-link-color-hover: $white;
