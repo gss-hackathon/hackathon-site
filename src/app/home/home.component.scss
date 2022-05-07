@@ -8,9 +8,12 @@
   font-size: 1.8rem;
   cursor: pointer;
   color: $font-color;
-  background: $button-color;
+  background: transparent;
+  border: 1px solid $button-color;
+  box-shadow: 2px 2px 3px $button-color;
 
   &:hover {
+    color: white;
     background: $button-hover-color;
   }
 
@@ -18,7 +21,8 @@
     cursor: not-allowed;
 
     &:hover {
-      background: $button-color;
+      color: $font-color;
+      background: transparent;
     }
   }
 
@@ -44,10 +48,12 @@ table {
   width: 100%;
   max-width: 768px;
   border-spacing: 0;
+  color: #2D353F;
 
   tbody {
     tr {
       &:hover {
+        color: white;
         background-color: $hr-color;
       }
     }

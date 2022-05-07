@@ -1,7 +1,7 @@
-<img class="hero" alt="Hackathon 主視覺" src="assets/images/hero.png">
+<img class="hero" alt="Hackathon 主視覺" src="assets/images/hero_white.png">
 <p>&nbsp;</p>
 <h2>The only limitation is your imagination.</h2>
-<button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}">{{ callToActionText }}</button>
+<button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText }}</button>
 <p>&nbsp;</p>
 <hr />
 <h2 class="item-title"><img alt="項目圖案" src="assets/images/miru.png" />競賽內容</h2>
@@ -115,5 +115,5 @@
 </div>
 <hr />
 <p>&nbsp;</p>
-<button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}">{{ callToActionText }}</button>
+<button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText }}</button>
 <p>&nbsp;</p>
