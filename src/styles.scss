@@ -1,19 +1,14 @@
-@import 'variables';
+@import 'assets/scss/variables';
+@import 'assets/scss/utilities';
 
 html, body {
-  font-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC";
-  background: $bg-color;
-  color: $font-color;
-  font-size: 20px;
+  font-family: $font-base-family;
+  font-size: $font-base-size;
   margin: 0;
 }
 
-body {
-  margin-top: 30px;
-}
-
-input, textarea, keygen, select, button {
-  font-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC";
+button {
+  font-family: $font-base-family;
 }
 
 h2 {
@@ -21,83 +16,16 @@ h2 {
 }
 
 a {
-  color: $link-color;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
-
-  &.highlight-link {
-    color: $font-highlight-color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-.hero {
-  width: 100%;
-}
-
-.item-text {
-  margin-bottom: 70px;
-  line-height: 1.6rem;
-  color: #2D353F;
-
-  .highlight {
-    color: $font-highlight-color;
-  }
-  .bigger {
-    font-size: 1.6rem;
-  }
-}
-
-.item-title {
-  color: $font-color;
-  img {
-    vertical-align: middle;
-    display: inline-block;
-    width: 64px;
-    height: 64px;
-    padding-right: 10px;
-  }
-  hr {
-    vertical-align: middle;
-    display: inline-block;
-  }
-}
-
-.item-list {
-  padding-left: 10%;
-  padding-right: 10%;
-  width: 80%;
-  li + li {
-    margin-top: 0.8rem;
-  }
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-justify {
-  text-align: justify;
 }
 
 @media (max-width: 576px) {
-  .container {
-    width: 96% !important;
+  .container-fluid, .container {
+    width: 95% !important;
     padding-right: 2% !important;
     padding-left: 2% !important;
   }

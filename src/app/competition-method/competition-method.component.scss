@@ -1,0 +1,13 @@
+@import '../../assets/scss/variables';
+
+.item-title {
+  color: $body-heading-color;
+
+  img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    padding-right: 10px;
+  }
+}

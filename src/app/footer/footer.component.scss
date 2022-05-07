@@ -1,23 +1,34 @@
-@import '../../variables';
+@import '../../assets/scss/variables';
 
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.container-fluid {
+  background: $footer-bg;
+  color: $footer-color;
+}
+
+.container {
   padding: 40px 0;
-  background-color: black;
-  color: white;
+
+  a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: $footer-link-color-hover;
+    }
+  }
 
   img {
     margin-top: 1rem;
   }
 
   p {
-    line-height: 1.5;
+    line-height: $line-height;
     text-align: right;
+
     @media (max-width: 768px) {
       text-align: left;
     }
   }
 }
+
+
 

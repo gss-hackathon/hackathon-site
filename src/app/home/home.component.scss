@@ -1,4 +1,13 @@
-@import '../../variables';
+@import '../../assets/scss/school-variables';
+
+.container-fluid {
+  background: $body-bg;
+  color: $body-color;
+}
+
+.container {
+  margin-top: 10px;
+}
 
 .cta_button {
   width: 512px;
@@ -7,22 +16,22 @@
   border: 0px;
   font-size: 1.8rem;
   cursor: pointer;
-  color: $font-color;
+  color: $body-color;
   background: transparent;
-  border: 1px solid $button-color;
-  box-shadow: 2px 2px 3px $button-color;
+  border: 1px solid $cta-primary-border-color;
+  box-shadow: 2px 2px 3px $cta-primary-border-color;
 
   &:hover {
     color: white;
-    background: $button-hover-color;
+    background: $cta-primary-bg-hover;
   }
 
   &.disable {
     cursor: not-allowed;
 
     &:hover {
-      color: $font-color;
-      background: transparent;
+      color: currentColor;
+      background: currentColor;
     }
   }
 
@@ -73,6 +82,7 @@ table {
 
 .prize {
   margin-bottom: 70px;
+  color: $blue;
 
   img {
     width: 96px;
@@ -83,5 +93,32 @@ table {
     font-size: 1.6rem;
     line-height: 3rem;
     font-weight: bold;
+  }
+}
+
+
+.hero {
+  width: 100%;
+}
+
+.item-text {
+  margin-bottom: 70px;
+  line-height: 1.6rem;
+  color: #2D353F;
+
+  .highlight {
+    color: $body-color-highlight;
+  }
+  .bigger {
+    font-size: 1.6rem;
+  }
+}
+
+.item-list {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 80%;
+  li + li {
+    margin-top: 0.8rem;
   }
 }
