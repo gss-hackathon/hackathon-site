@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CompetitionMethodComponent } from './competition-method/competition-method.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import { GSSSignUpComponent } from './gss/signup/gss-signup.component';
+import { SchoolSignUpComponent } from './school/signup/school-signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    SchoolSignUpComponent,
+    GSSSignUpComponent,
     CompetitionMethodComponent,
     FooterComponent
   ],

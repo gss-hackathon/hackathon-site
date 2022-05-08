@@ -1,11 +1,11 @@
 import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'school-signup',
+  templateUrl: './school-signup.component.html',
+  styleUrls: ['./school-signup.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class SchoolSignUpComponent implements OnInit {
 
   isOpenSignUp: boolean = false;
 

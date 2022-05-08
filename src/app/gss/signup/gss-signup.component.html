@@ -1,0 +1,126 @@
+<div class="container-fluid">
+  <div class="container text-center">
+    <img class="hero" alt="Hackathon 主視覺" src="assets/images/hero.png">
+    <p>&nbsp;</p>
+    <h2>The only limitation is your imagination.</h2>
+    <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText }}</button>
+    <p>&nbsp;</p>
+    <hr />
+    <c-method [icon]="'miru'" [methodSubject]="'競賽內容'">
+      <p class="item-text">
+        運用公司開發的 <a class="highlight" href="https://www.gss.com.tw/conversational-ai" target="_blank">C.ai 對話服務平台</a> 及相關技術開發 Chatbot<br />題目不拘，惟發佈平台限制為 WebChat, iota, LINE 以及 Microsoft Teams
+      </p>
+    </c-method>
+    <c-method [icon]="'miru'" [methodSubject]="'參賽對象'">
+      <p class="item-text">
+        叡揚資訊的在職員工（包含兼職與實習生）
+      </p>
+    </c-method>
+    <c-method [icon]="'miru'" [methodSubject]="'報名方式'">
+      <p class="item-text">
+        於 <span class="highlight">本網站報名</span> ，每組需至少兩名成員（包含隊長）
+      </p>
+    </c-method>
+    <c-method [icon]="'miru'" [methodSubject]="'重要時程'">
+      <table>
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>時間</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>報名時間</td>
+            <td>2022/05/09 ~ 2022/05/31</td>
+          </tr>
+          <tr>
+            <td>報名結果公告</td>
+            <td>2022/06/02</td>
+          </tr>
+          <tr>
+            <td>競賽課程 (線上)</td>
+            <td>2022/06/27 ~ 2022/06/28</td>
+          </tr>
+          <tr>
+            <td>競賽期間</td>
+            <td>2022/06/27 ~ 2022/08/15</td>
+          </tr>
+          <tr>
+            <td>作品繳交截止</td>
+            <td>2022/08/15</td>
+          </tr>
+          <tr>
+            <td>評審評分期間</td>
+            <td>2022/08/22 ~ 2022/08/31</td>
+          </tr>
+          <tr>
+            <td>公開投票期間</td>
+            <td>2022/08/24 ~ 2022/08/31</td>
+          </tr>
+          <tr>
+            <td>評分結果公佈</td>
+            <td>2022/09/06</td>
+          </tr>
+          <tr>
+            <td>頒獎典禮</td>
+            <td>2022/09/13</td>
+          </tr>
+        </tbody>
+      </table>
+    </c-method>
+    <c-method [icon]="'miru'" [methodSubject]="'競賽獎項'">
+      <p class="item-text">
+        只要在競賽最後有繳交出作品 （且可正常運作），<br />
+        團隊每人可獲得 <span class="highlight">完賽證明</span> 、 <span class="highlight">活動紀念 T-shirt</span> 與 <span class="highlight">精美禮品</span><br />
+        另獲獎者可再獲得 以下對應的<span class="highlight">獎金</span>
+      </p>
+      <div class="row">
+        <div class="col-sm-4 prize">
+          <img alt="冠軍" src="assets/images/star.png"><br />
+          <span>冠軍</span><br />
+          獎金 20,000 元
+        </div>
+        <div class="col-sm-4 prize">
+          <img alt="亞軍" src="assets/images/star.png"><br />
+          <span>亞軍</span><br />
+          獎金 15,000 元
+        </div>
+        <div class="col-sm-4 prize">
+          <img alt="季軍" src="assets/images/star.png"><br />
+          <span>季軍</span><br />
+          獎金 10,000 元
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 prize">
+          <img alt="人氣獎" src="assets/images/people.png"><br />
+          <span>人氣獎</span><br />
+          獎金 3,000 元
+        </div>
+        <div class="col-sm-4 prize">
+          <img alt="趣味獎" src="assets/images/light.png"><br />
+          <span>趣味獎</span><br />
+          獎金 3,000 元
+        </div>
+        <div class="col-sm-4 prize">
+          <img alt="實用獎" src="assets/images/util.png"><br />
+          <span>實用獎</span><br />
+          獎金 3,000 元
+        </div>
+      </div>
+    </c-method>
+    <c-method [icon]="'miru'" [methodSubject]="'注意事項'">
+      <div class="item-text item-list">
+        <ol>
+          <li class="text-justify">報名活動時請確實填寫聯絡資訊，若因資料不全導致參賽者未能收到主辦單位通知事項，主辦單位概不負責。</li>
+          <li class="text-justify">活動辦法若有未盡事宜，主辦單位擁有保留、修改、刪除、解釋本辦法之權力。</li>
+        </ol>
+      </div>
+    </c-method>
+    <hr />
+    <p>&nbsp;</p>
+    <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText }}</button>
+  </div>
+</div>
+

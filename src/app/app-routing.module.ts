@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { GSSSignUpComponent } from './gss/signup/gss-signup.component';
+import { SchoolSignUpComponent } from './school/signup/school-signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/2022/school', pathMatch: 'full' },
@@ -8,7 +9,8 @@ const routes: Routes = [
       path: '2022',
       children: [
           { path: '', redirectTo: 'school', pathMatch: 'full' },
-          { path: 'school', component: HomeComponent },
+          { path: 'school', component: SchoolSignUpComponent },
+          { path: 'gss', component: GSSSignUpComponent },
           { path: '**', redirectTo: '/2022/school', pathMatch: 'full' },
       ]
   }
