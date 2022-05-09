@@ -22,7 +22,7 @@
   box-shadow: 2px 2px 3px $cta-primary-border-color;
 
   &:hover {
-    color: white;
+    color: $cta-primary-color-hover;
     background: $cta-primary-bg-hover;
   }
 
@@ -30,8 +30,8 @@
     cursor: not-allowed;
 
     &:hover {
-      color: currentColor;
-      background: currentColor;
+      color: $body-color;
+      background: transparent;
     }
   }
 
