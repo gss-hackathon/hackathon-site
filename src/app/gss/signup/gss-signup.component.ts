@@ -9,7 +9,7 @@ export class GSSSignUpComponent implements OnInit {
 
   isOpenSignUp: boolean = false;
 
-  startDate: Date = new Date('2022-05-13 15:00:00');
+  startDate: Date = new Date('2022-05-18 15:00:00');
 
   @Output()
   callToActionText: String = "";
@@ -21,7 +21,7 @@ export class GSSSignUpComponent implements OnInit {
 
   openForm() {
     if (this.isOpenSignUp) {
-      window.open('https://gsskm.gss.com.tw/survey/a/637775f0-b610-41ee-a810-db8fde2b4697', '_blank');
+      window.open('https://gsskm.gss.com.tw/survey/filloutsurvey/1cbc93e60f914189b02bfc8b203a2e12', '_blank');
     }
   }
 }
