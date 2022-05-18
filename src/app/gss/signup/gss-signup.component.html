@@ -3,7 +3,7 @@
     <img class="hero" alt="Hackathon 主視覺" src="assets/images/hero.png">
     <p>&nbsp;</p>
     <h2>The only limitation is your imagination.</h2>
-    <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText }}</button>
+    <button [ngClass]="{'cta_button': true}" (click)="openForm()">{{ callToActionText }}</button>
     <p>&nbsp;</p>
     <hr />
     <c-method [icon]="'miru'" [methodSubject]="'競賽內容'">
@@ -121,7 +121,7 @@
     </c-method>
     <hr />
     <p>&nbsp;</p>
-    <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText }}</button>
+    <button [ngClass]="{'cta_button': true}" (click)="openForm()">{{ callToActionText }}</button>
   </div>
 </div>
 
