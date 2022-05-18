@@ -9,7 +9,7 @@ export class GSSSignUpComponent implements OnInit {
 
   isOpenSignUp: boolean = false;
 
-  startDate: Date = new Date('2022-05-18 15:00:00');
+  startDate: Date = new Date('2022-05-18 17:00:00');
 
   @Output()
   callToActionText: String = "";
