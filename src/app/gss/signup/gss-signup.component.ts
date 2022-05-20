@@ -15,6 +15,6 @@ export class GSSSignUpComponent implements OnInit {
   }
 
   openForm() {
-    window.open('https://gsskm.gss.com.tw/survey/filloutsurvey/e0553a58d4e4417680b3b4566bb42131', '_blank');
+    window.open('https://gsskm.gss.com.tw/survey/a/b7f6eb11-bab3-44a6-af9c-b3af4d72037c', '_blank');
   }
 }
