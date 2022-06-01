@@ -11,10 +11,10 @@ export class SchoolSignUpComponent implements OnInit {
   callToActionText: String = "";
 
   ngOnInit() {
-    this.callToActionText = "立即報名";
+    this.callToActionText = "報名已截止";
   }
 
   openForm() {
-    window.open('https://gsskm.gss.com.tw/survey/a/637775f0-b610-41ee-a810-db8fde2b4697', '_blank');
+    return;
   }
 }
