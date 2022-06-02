@@ -1,0 +1,153 @@
+@import '../../../assets/scss/school-variables';
+
+.container-fluid {
+  background: $body-bg;
+  color: $body-color;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.cta_button {
+  width: 512px;
+  height: 90px;
+  border-radius: 20px;
+  border: 0px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: $body-color;
+  background: transparent;
+  border: 1px solid $cta-primary-border-color;
+  box-shadow: 2px 2px 3px $cta-primary-border-color;
+
+  &:hover {
+    color: $cta-primary-color-hover;
+    background: $cta-primary-bg-hover;
+  }
+
+  &.disable {
+    cursor: not-allowed;
+
+    &:hover {
+      color: $body-color;
+      background: transparent;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 576px) {
+    width: 70%;
+    height: 55px;
+    font-size: 1.4rem;
+  }
+}
+
+hr {
+  border-color: $hr-color;
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  border-spacing: 0;
+  color: #2D353F;
+
+  @media (max-width: 992px) {
+    max-width: 988px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 760px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 569px;
+    font-size: 0.8rem;
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        color: white;
+        background-color: $hr-color;
+      }
+    }
+  }
+
+  th {
+    font-weight: bold;
+    padding: 0.5rem 0.5rem;
+    border-bottom: 2px solid $hr-color;
+  }
+
+  td {
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid $hr-color;
+  }
+}
+
+.prize {
+  margin-bottom: 70px;
+  color: $blue;
+
+  img {
+    width: 96px;
+    height: 96px;
+  }
+
+  span {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: bold;
+  }
+}
+
+
+.hero {
+  width: 100%;
+}
+
+.item-text {
+  line-height: 1.6rem;
+  color: #2D353F;
+
+  .highlight {
+    color: $body-color-highlight;
+  }
+  .bigger {
+    font-size: 1.6rem;
+  }
+}
+
+.item-list {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 80%;
+  li + li {
+    margin-top: 0.8rem;
+  }
+}
+
+.btn-close {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  margin: 5px;
+  font-size: 3rem;
+
+  a {
+    color: $gray;
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}
+
