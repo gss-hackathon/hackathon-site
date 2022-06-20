@@ -1,0 +1,189 @@
+@import '../../../assets/scss/variables';
+
+.container-fluid {
+  background: $body-bg;
+  color: $body-color;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+.cta_button {
+  width: 512px;
+  height: 90px;
+  border-radius: 20px;
+  border: 0px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: $cta-primary-color;
+  background: $cta-primary-bg;
+  border: 1px solid $cta-primary-border-color;
+  box-shadow: 2px 2px 3px $cta-primary-border-color;
+
+  &:hover {
+    color: $cta-primary-color-hover;
+    background: $cta-primary-bg-hover;
+  }
+
+  &.disable {
+    cursor: not-allowed;
+
+    &:hover {
+      color: $cta-primary-color;
+      background: $cta-primary-bg;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 576px) {
+    width: 70%;
+    height: 55px;
+    font-size: 1.4rem;
+  }
+}
+
+hr {
+  border-color: $hr-color;
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 768px;
+  border-spacing: 0;
+
+  tbody {
+    tr {
+      &:hover {
+        background-color: $hr-color;
+      }
+    }
+  }
+
+  th {
+    font-weight: bold;
+    padding: 0.5rem 0.5rem;
+    border-bottom: 2px solid $hr-color;
+  }
+
+  td {
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid $hr-color;
+  }
+}
+
+.prize {
+  margin-bottom: 70px;
+  color: $white;
+
+  img {
+    width: 96px;
+    height: 96px;
+  }
+
+  span {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: bold;
+  }
+}
+
+
+.hero {
+  width: 100%;
+}
+
+.item-text {
+  margin-bottom: 70px;
+  line-height: 1.6rem;
+
+  .highlight {
+    color: $body-color-highlight;
+  }
+  .bigger {
+    font-size: 1.6rem;
+  }
+}
+
+.item-list {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 80%;
+  li + li {
+    margin-top: 0.8rem;
+  }
+}
+
+.tooltip {
+
+  position: relative;
+  display: inline-block;
+  color: $body-color-highlight;
+
+  @media (max-width: 576px) {
+    margin-top: 40px;
+  }
+
+
+  .tooltip-text {
+    width: 120px;
+    background-color: $hr-color;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    top: -5px;
+    left: 105%;
+
+    @media (max-width: 576px) {
+      width: 120px;
+      bottom: 150%;
+      top: inherit;
+      left: 50%;
+      margin-left: -60px;
+    }
+  }
+
+  .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent $hr-color transparent transparent;
+
+    @media (max-width: 576px) {
+      top: 100%; /* At the bottom of the tooltip */
+      left: 50%;
+      margin-left: -5px;
+    }
+  }
+}
+
+.btn-close {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  margin: 5px;
+  font-size: 3rem;
+
+  a {
+    color: $white;
+    &:hover {
+      color: $light-blue;
+      text-decoration: none;
+    }
+  }
+}
