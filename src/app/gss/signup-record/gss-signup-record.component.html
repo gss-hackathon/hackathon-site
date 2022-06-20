@@ -1,0 +1,33 @@
+<div class="btn-close"><a [routerLink]="['/2022/gss']">&times;</a></div>
+<div class="container-fluid">
+  <div class="container text-center">
+    <img class="hero" alt="Hackathon banner" [src]="heroImagePath">
+    <h2>2022 GSS AI Chatbot Hackathon 報名結果公佈</h2>
+    <hr />
+    <p class="text-left item-text">
+      感謝各位同仁熱情的支持，本次活動的報名已於 6/15 截止，<br/>
+      以下為本次報名的隊伍，若相關資料有問題再請來信 <a class="highlight" href="mailto:hackathon@gss.com.tw">hackathon@gss.com.tw</a> 修改，謝謝。
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>報名序號</th>
+          <th>隊伍名稱</th>
+          <th>隊伍人數</th>
+          <th>隊長姓名</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let team of teams; let i=index">
+            <td style="width: 10%">{{i+1}}</td>
+            <td style="width: 55%">{{team.teamName}}</td>
+            <td style="width: 10%">{{team.teamMemberCount}}</td>
+            <td style="width: 25%">{{team.leaderName}}</td>
+          </tr>
+      </tbody>
+    </table>
+    <hr />
+    <p>&nbsp;</p>
+  </div>
+</div>
+
