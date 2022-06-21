@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'gss-signup',
@@ -10,11 +11,13 @@ export class GSSSignUpComponent implements OnInit {
   @Output()
   callToActionText: String = "";
 
+  constructor(private router: Router) { }
+
   ngOnInit() {
     this.callToActionText = "查看隊伍列表";
   }
 
   openForm() {
-    window.open('/2022/gss/record');
+    this.router.navigateByUrl('/2022/gss/record');
   }
 }
