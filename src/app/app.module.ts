@@ -9,6 +9,8 @@ import { GSSSignUpComponent } from './gss/signup/gss-signup.component';
 import { SchoolSignUpComponent } from './school/signup/school-signup.component';
 import { SchoolSignupRecordComponent } from './school/signup-record/school-signup-record.component';
 import { GssSignupRecordComponent } from './gss/signup-record/gss-signup-record.component';
+import { SchoolAwardComponent } from './school/award/school-award.component';
+import { GssAwardComponent } from './gss/award/gss-award.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { GssSignupRecordComponent } from './gss/signup-record/gss-signup-record.
     CompetitionMethodComponent,
     FooterComponent,
     SchoolSignupRecordComponent,
-    GssSignupRecordComponent
+    GssSignupRecordComponent,
+    SchoolAwardComponent,
+    GssAwardComponent
   ],
   imports: [
     BrowserModule,

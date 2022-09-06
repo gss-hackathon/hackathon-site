@@ -14,10 +14,10 @@ export class SchoolSignUpComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.callToActionText = "人氣投票開跑啦~";
+    this.callToActionText = "入圍名單公布";
   }
 
   openForm() {
-    window.open('https://contest.plus1today.tw/hackathon2022/', '_blank');
+    this.router.navigateByUrl('/2022/school/award');
   }
 }

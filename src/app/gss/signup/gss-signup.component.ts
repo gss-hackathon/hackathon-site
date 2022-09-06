@@ -14,10 +14,10 @@ export class GSSSignUpComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.callToActionText = "查看隊伍列表";
+    this.callToActionText = "入圍名單公布";
   }
 
   openForm() {
-    this.router.navigateByUrl('/2022/gss/record');
+    this.router.navigateByUrl('/2022/gss/award');
   }
 }
