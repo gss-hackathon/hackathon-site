@@ -1,44 +1,50 @@
 [
   {
-    "prizeId": 0,
-    "prizeName": "",
-    "teamName": "GSS_POST_OPEN",
-    "botName": "郵小鴿"
-  },
-  {
-    "prizeId": 0,
-    "prizeName": "",
-    "teamName": "655 Siri",
-    "botName": "655 Siri"
-  },
-  {
-    "prizeId": 0,
-    "prizeName": "",
-    "teamName": "ねこ",
-    "botName": "貓秘書"
-  },
-  {
-    "prizeId": 0,
-    "prizeName": "",
-    "teamName": "大神降肉",
-    "botName": "大神降肉"
-  },
-  {
-    "prizeId": 0,
-    "prizeName": "",
+    "prizeId": 1,
+    "prizeName": "冠軍",
     "teamName": "零食組隊",
     "botName": "AVC服務小幫手"
   },
   {
-    "prizeId": 0,
-    "prizeName": "",
+    "prizeId": 2,
+    "prizeName": "亞軍",
+    "teamName": "HRS明日之星",
+    "botName": "我想來點....."
+  },
+  {
+    "prizeId": 3,
+    "prizeName": "季軍",
+    "teamName": "ねこ",
+    "botName": "貓秘書"
+  },
+  {
+    "prizeId": 4,
+    "prizeName": "遺珠獎",
+    "teamName": "655 Siri",
+    "botName": "655 Siri"
+  },
+  {
+    "prizeId": 5,
+    "prizeName": "趣味獎",
+    "teamName": "大神降肉",
+    "botName": "大神降肉"
+  },
+  {
+    "prizeId": 6,
+    "prizeName": "實用獎",
+    "teamName": "GSS_POST_OPEN",
+    "botName": "郵小鴿"
+  },
+  {
+    "prizeId": 7,
+    "prizeName": "評審青睞獎",
     "teamName": "SAME!",
     "botName": "GSS-FAD服務小幫手"
   },
   {
-    "prizeId": 0,
-    "prizeName": "",
-    "teamName": "HRS明日之星",
-    "botName": "我想來點....."
+    "prizeId": 8,
+    "prizeName": "人氣獎",
+    "teamName": "零食組隊",
+    "botName": "AVC服務小幫手"
   }
 ]
