@@ -4,23 +4,22 @@
     <img class="hero" alt="Hackathon banner" [src]="heroImagePath">
     <h2>2022 GSS AI Chatbot Hackathon 入圍隊伍公佈</h2>
     <hr />
-    <p class="text-left item-text">
-      感謝各位同仁熱情的支持，本次的競賽計分已經完成，以下為本次競賽入圍的隊伍，近日將會寄送頒獎典禮相關資訊給各個入圍隊伍。<br/>
-      <b>排序與得獎名次無關，名次將於 9/13 頒獎典禮上公佈，敬請期待。</b>
+    <p class="item-text">
+      恭喜以下得獎的隊伍 ✧*｡ ٩(ˊᗜˋ*)و✧*｡
     </p>
     <table>
       <thead>
         <tr>
-          <!--<th>報名序號</th>-->
+          <th>獎項</th>
           <th>隊伍名稱</th>
           <th>機器人名稱</th>
         </tr>
       </thead>
       <tbody>
           <tr *ngFor="let award of awards; let i=index">
-            <!--<td style="width: 10%">{{award.prizeName}}</td>-->
-            <td style="width: 45%">{{award.teamName}}</td>
-            <td style="width: 45%">{{award.botName}}</td>
+            <td style="width: 20%">{{award.prizeName}}</td>
+            <td style="width: 40%">{{award.teamName}}</td>
+            <td style="width: 40%">{{award.botName}}</td>
           </tr>
       </tbody>
     </table>

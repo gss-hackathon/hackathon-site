@@ -35,7 +35,6 @@ export class SchoolAwardComponent implements OnInit {
       award.botName = data[index]['botName'];
       this.awards.push(award);
     }
-
   }
 
   @HostListener('window:resize', ['$event'])

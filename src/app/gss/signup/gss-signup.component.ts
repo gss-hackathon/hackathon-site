@@ -14,7 +14,7 @@ export class GSSSignUpComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.callToActionText = "入圍名單公布";
+    this.callToActionText = "得獎名單公布";
   }
 
   openForm() {
