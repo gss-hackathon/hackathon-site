@@ -1,12 +1,9 @@
 @import '../../../assets/scss/school-variables';
 
-.container-fluid {
-  background: $body-bg;
-  color: $body-color;
-}
-
 .container {
   margin-top: 10px;
+  background: $body-bg;
+  color: $body-color;
 }
 
 .cta_button {
