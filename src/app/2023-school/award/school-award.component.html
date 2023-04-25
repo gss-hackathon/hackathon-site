@@ -1,0 +1,30 @@
+<div class="btn-close"><a [routerLink]="['/2022/school']">&times;</a></div>
+<div class="container-fluid">
+  <div class="container text-center">
+    <img class="hero" alt="Hackathon banner" [src]="heroImagePath">
+    <h2>2022 GSS AI Chatbot Hackathon 獲獎隊伍</h2>
+    <hr />
+    <p class="item-text">
+      恭喜以下得獎的隊伍 ✧*｡ ٩(ˊᗜˋ*)و✧*｡
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>獎項</th>
+          <th>隊伍名稱</th>
+          <th>機器人名稱</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let award of awards; let i=index">
+            <td style="width: 20%">{{award.prizeName}}</td>
+            <td style="width: 40%">{{award.teamName}}</td>
+            <td style="width: 40%">{{award.botName}}</td>
+          </tr>
+      </tbody>
+    </table>
+    <hr />
+    <p>&nbsp;</p>
+  </div>
+</div>
+
