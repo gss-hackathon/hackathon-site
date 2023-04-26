@@ -10,7 +10,7 @@ export class School2023SignUpComponent implements OnInit {
 
   isOpenSignUp: boolean = false;
 
-  startDate: Date = new Date('2023-05-03 17:00:00');
+  startDate: Date = new Date('2023-05-02 00:00:00');
 
   @Output()
   callToActionText: String = "";
