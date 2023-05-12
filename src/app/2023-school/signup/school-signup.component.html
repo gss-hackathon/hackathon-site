@@ -1,13 +1,38 @@
 <div class="container text-center">
   <img class="hero" alt="Hackathon 主視覺" src="assets/images/2023_hero_light.jpg">
   <h2>The only limitation is your imagination.</h2>
-  <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText }}</button>
+  <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText
+    }}</button>
   <p>&nbsp;</p>
   <hr />
   <c-method [icon]="'miru'" [methodSubject]="'競賽內容'">
     <p class="item-text">
-      運用叡揚資訊開發的 <a class="highlight" href="https://www.gss.com.tw/iota" target="_blank">C.ai 對話服務平台</a> 及相關技術開發 Chatbot<br />題目以智慧校園為主，發佈平台限制為 WebChat 與 LINE
+      本次活動是一個面向全國大專院校學生的競賽，<br/>主題為<span class="highlight">智慧校園</span>，發佈平台限制為 WebChat 與 LINE，<br />
+      通過利用叡揚資訊所開發的對話機器人平台 <a class="highlight" href="https://www.gss.com.tw/iota" target="_blank">C.ai 對話服務平台</a>，<br />
+      參賽學生可以輕鬆地建立自己的對話機器人，並實現各種智慧校園服務，<br />例如學生查詢、課程查詢、圖書館預約等等。<br /><br/>
+      參賽學生可以組成團隊參加，只要 2 人以上皆可報名參賽，<br />
+      活動採用線上比賽的形式進行，參賽者可以在活動期間自由選擇時間進行開發和提交作品。<br />
+      活動將由專業評審團進行評選，優秀作品將有機會獲得豐厚的獎勵。
     </p>
+    <img src="assets/images/messageImage_1683878044185.jpg" style="width: 90%;">
+  </c-method>
+  <c-method [icon]="'miru'" [methodSubject]="'競賽主題'">
+    <p class="item-text" style="margin-bottom: 30px;">
+      <span class="bigger highlight">智慧校園</span>
+    </p>
+    <div class="item-text item-list">
+      <div class="text-justify" style="width: 100%;">至少包含但不限於以下：</div>
+      <ul>
+        <li class="text-justify">圖書館資源查詢：透過對話機器人查詢圖書館的開放時間、借書規則、圖書館資源、館藏書籍和期刊等。</li>
+        <li class="text-justify">學生證辦理：透過對話機器人申請、更新或補發生證，並查詢學生證相關問題。</li>
+        <li class="text-justify">宿舍申請：透過對話機器人申請宿舍、查詢住宿規定和退宿流程等。</li>
+        <li class="text-justify">課程選擇：透過對話機器人查詢課程信息、選課流程、課程時間表和學分計算等。</li>
+        <li class="text-justify">校園活動資訊：透過對話機人了解校園文化和娛樂活動，例如文化節、動會、表演等。</li>
+        <li class="text-justify">成績查詢：透過對話機器人查詢成績單，了解評分標準和課程評價等。</li>
+        <li class="text-justify">就業資訊：透過對話機器人了解就業市場和職業發展，包括實習機會、招聘信息和職業指導等。</li>
+        <li class="text-justify">學習輔助：透過對話機器人查詢習資源，例如數公式、英文單詞、文獻引用。</li>
+      </ul>
+    </div>
   </c-method>
   <c-method [icon]="'miru'" [methodSubject]="'參賽對象'">
     <p class="item-text">
@@ -115,12 +140,36 @@
       <ol>
         <li class="text-justify">報名活動時請確實填寫聯絡資訊，若因資料不全導致參賽者未能收到主辦單位通知事項，主辦單位概不負責。</li>
         <li class="text-justify">活動辦法若有未盡事宜，主辦單位擁有保留、修改、刪除、解釋本辦法之權力。</li>
-        <li class="text-justify">若對活動有任何疑問或建議，歡迎聯繫 <a class="highlight" href="mailto:hackathon@gss.com.tw">hackathon@gss.com.tw</a>。</li>
+        <li class="text-justify">若對活動有任何疑問或建議，歡迎聯繫 <a class="highlight"
+            href="mailto:hackathon@gss.com.tw">hackathon@gss.com.tw</a>。</li>
       </ol>
     </div>
   </c-method>
+  <c-method [icon]="'miru'" [methodSubject]="'去年得獎名單'">
+    <table>
+      <thead>
+        <tr>
+          <th>獎項</th>
+          <th>隊伍名稱</th>
+          <th>機器人名稱</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let award of awards; let i=index">
+          <td style="width: 20%">{{award.prizeName}}</td>
+          <td style="width: 40%">{{award.teamName}}</td>
+          <td style="width: 40%"><img [src]="'assets/images/2022_school_award/' + award.botName + '.jpg'"
+              style="width: 50px; border-radius: 50px;"><br />{{award.botName}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </c-method>
+  <c-method [icon]="'miru'" [methodSubject]="'去年報名分佈'">
+    <img src="assets/images/messageImage_1683877226742.jpg" style="width: 90%;">
+  </c-method>
   <hr />
   <p>&nbsp;</p>
-  <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText }}</button>
+  <button [ngClass]="{'cta_button': true, 'disable': !isOpenSignUp}" (click)="openForm()">{{ callToActionText
+    }}</button>
   <p>&nbsp;</p>
 </div>
