@@ -3,90 +3,105 @@
     "prizeId": 1,
     "prizeName": "冠軍",
     "teamName": "來電資詢",
-    "botName": "藏書閣"
+    "botName": "藏書閣",
+    "url": "https://www.youtube.com/watch?v=2cjVQll3Ips"
   },
   {
     "prizeId": 2,
     "prizeName": "亞軍",
     "teamName": "BUILD出你的BOT",
-    "botName": "醫賴我BOT"
+    "botName": "醫賴我BOT",
+    "url": "https://www.youtube.com/watch?v=eVxeqv0ytdc"
   },
   {
     "prizeId": 3,
     "prizeName": "季軍",
     "teamName": "你要不要回我訊息",
-    "botName": "Workout Adviser"
+    "botName": "Workout Adviser",
+    "url": "https://www.youtube.com/watch?v=tNcZj5gePt8"
   },
   {
     "prizeId": 4,
     "prizeName": "遺珠獎",
     "teamName": "東方貨格華茲雷文克勞高張蔡",
-    "botName": "占卜午子"
+    "botName": "占卜午子",
+    "url": "https://www.youtube.com/watch?v=lheSsK8Chwg"
   },
   {
     "prizeId": 5,
     "prizeName": "趣味獎",
     "teamName": "社交牛逼症",
-    "botName": "ChildABot"
+    "botName": "ChildABot",
+    "url": "https://www.youtube.com/watch?v=_ilNzr_S_l8"
   },
   {
     "prizeId": 6,
     "prizeName": "實用獎",
     "teamName": "ChatChat私語",
-    "botName": "居家小助手"
+    "botName": "居家小助手",
+    "url": "https://www.youtube.com/watch?v=tsuTniAuaYE"
   },
   {
     "prizeId": 7,
     "prizeName": "評審青睞獎",
     "teamName": "崖上的波奇",
-    "botName": "小白菜英文"
+    "botName": "小白菜英文",
+    "url": "https://www.youtube.com/watch?v=QgLGfczpp6c"
   },
   {
     "prizeId": 8,
     "prizeName": "精打細算獎",
     "teamName": "尼莫汪汪隊",
-    "botName": "挖ㄟ哇咧-記帳小秘書"
+    "botName": "挖ㄟ哇咧-記帳小秘書",
+    "url": "https://www.youtube.com/watch?v=YdgglrHsII8"
   },
   {
     "prizeId": 9,
     "prizeName": "燒腦獎",
     "teamName": "STYLeleven",
-    "botName": "Sherlock"
+    "botName": "Sherlock",
+    "url": "https://www.youtube.com/watch?v=nSPaIU51vkQ"
   },
   {
     "prizeId": 10,
     "prizeName": "小組人氣獎",
     "teamName": "AICT Team",
-    "botName": "AICT小旅伴"
+    "botName": "AICT小旅伴",
+    "url": "https://www.youtube.com/watch?v=kWkHz91uv5w"
   },
   {
     "prizeId": 11,
     "prizeName": "人氣獎-第一名",
     "teamName": "國北資訊三人組",
-    "botName": "天氣預言家"
+    "botName": "天氣預言家",
+    "url": "https://www.youtube.com/watch?v=P0nGewzhvOk"
   },
   {
     "prizeId": 12,
     "prizeName": "人氣獎-第二名",
     "teamName": "小熊維尼",
-    "botName": "高鐵小幫手_出發GOGO肉"
+    "botName": "高鐵小幫手_出發GOGO肉",
+    "url": "https://www.youtube.com/watch?v=08Mz2652Ivs"
   },
   {
     "prizeId": 13,
     "prizeName": "人氣獎-第三名",
     "teamName": "午餐要吃什麼",
-    "botName": "像素世界與重生時空"
+    "botName": "像素世界與重生時空",
+    "url": "https://www.youtube.com/watch?v=b8Gc6gNsZmQ"
   },
   {
     "prizeId": 14,
     "prizeName": "人氣獎-第四名",
     "teamName": "你問我答",
-    "botName": "Sugoi蔬果耶"
+    "botName": "Sugoi蔬果耶",
+    "url": "https://www.youtube.com/watch?v=UPEuf_Wdkr4"
   },
   {
     "prizeId": 15,
     "prizeName": "人氣獎-第五名",
     "teamName": "來電資詢",
-    "botName": "藏書閣"
+    "botName": "藏書閣",
+    "url": "https://www.youtube.com/watch?v=2cjVQll3Ips"
   }
 ]

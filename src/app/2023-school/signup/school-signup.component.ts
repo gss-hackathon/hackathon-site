@@ -44,6 +44,7 @@ export class School2023SignUpComponent implements OnInit {
       award.prizeName = data[index]['prizeName'];
       award.teamName = data[index]['teamName'];
       award.botName = data[index]['botName'];
+      award.url = data[index]['url'];
       this.awards.push(award);
     }
     console.log(this.awards);
@@ -52,6 +53,7 @@ export class School2023SignUpComponent implements OnInit {
   openForm() {
     if (this.isOpenSignUp) {
       // this.router.navigateByUrl('/2022/school/award');
+      document.getElementById('dcard')?.click();
       window.open('https://forms.gle/zBahCFvdDP9Yoa1N8', '_blank');
     }
   }

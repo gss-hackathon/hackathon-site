@@ -3,4 +3,5 @@ export class AwardModel {
   prizeName: string = '';
   teamName: string = '';
   botName: string = '';
+  url: string = '';
 }

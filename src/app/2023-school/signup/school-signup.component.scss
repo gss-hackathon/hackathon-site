@@ -52,7 +52,7 @@ hr {
 table {
   margin: 0 auto;
   width: 100%;
-  max-width: 768px;
+  max-width: 850px;
   border-spacing: 0;
   color: #2D353F;
 
@@ -61,6 +61,10 @@ table {
       &:hover {
         color: white;
         background-color: $hr-color;
+      }
+      &:hover a {
+        color: white;
+        text-decoration: underline;
       }
     }
   }
