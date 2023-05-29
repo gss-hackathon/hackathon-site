@@ -95,6 +95,9 @@ table {
     line-height: 3rem;
     font-weight: bold;
   }
+  .highlight {
+    color: $body-color-highlight;
+  }
 }
 
 
@@ -122,4 +125,57 @@ table {
   li + li {
     margin-top: 0.8rem;
   }
+}
+
+.tooltip {
+
+  position: relative;
+  display: inline-block;
+  color: $body-color-highlight;
+
+  @media (max-width: 576px) {
+    margin-top: 40px;
+  }
+
+
+  .tooltip-text {
+    width: 120px;
+    background-color: $hr-color;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    top: -5px;
+    left: 105%;
+
+    @media (max-width: 576px) {
+      width: 120px;
+      bottom: 150%;
+      top: inherit;
+      left: 50%;
+      margin-left: -60px;
+    }
+  }
+
+  .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent $hr-color transparent transparent;
+
+    @media (max-width: 576px) {
+      top: 100%; /* At the bottom of the tooltip */
+      left: 50%;
+      margin-left: -5px;
+    }
+  }
+
 }
