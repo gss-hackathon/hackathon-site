@@ -29,8 +29,9 @@ export class School2023SignUpComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isOpenSignUp = (new Date() > this.startDate) ? true : false;
-    this.callToActionText = this.isOpenSignUp ? "立即報名" : "即將開放報名";
+    // this.isOpenSignUp = (new Date() > this.startDate) ? true : false;
+    // this.callToActionText = this.isOpenSignUp ? "立即報名" : "即將開放報名";
+    this.callToActionText = '報名已截止';
   }
 
   getJSON(): Observable<any> {
@@ -51,10 +52,10 @@ export class School2023SignUpComponent implements OnInit {
   }
 
   openForm() {
-    if (this.isOpenSignUp) {
+    // if (this.isOpenSignUp) {
       // this.router.navigateByUrl('/2022/school/award');
-      document.getElementById('dcard')?.click();
-      window.open('https://forms.gle/zBahCFvdDP9Yoa1N8', '_blank');
-    }
+      // document.getElementById('dcard')?.click();
+      // window.open('https://forms.gle/zBahCFvdDP9Yoa1N8', '_blank');
+    // }
   }
 }
