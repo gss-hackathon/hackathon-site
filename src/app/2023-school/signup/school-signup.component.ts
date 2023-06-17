@@ -13,9 +13,9 @@ export class School2023SignUpComponent implements OnInit {
 
   awards: AwardModel[] = [];
 
-  isOpenSignUp: boolean = false;
+  isOpenRecord: boolean = false;
 
-  startDate: Date = new Date('2023-05-02 00:00:00');
+  startDate: Date = new Date('2023-06-19 00:00:00');
 
   private _jsonURL = 'assets/data/awards.json';
 
@@ -29,9 +29,8 @@ export class School2023SignUpComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.isOpenSignUp = (new Date() > this.startDate) ? true : false;
-    // this.callToActionText = this.isOpenSignUp ? "立即報名" : "即將開放報名";
-    this.callToActionText = '報名已截止';
+    this.isOpenRecord = (new Date() > this.startDate) ? true : false;
+    this.callToActionText = this.isOpenRecord ? "查看隊伍列表" : "報名已截止";
   }
 
   getJSON(): Observable<any> {
@@ -48,14 +47,11 @@ export class School2023SignUpComponent implements OnInit {
       award.url = data[index]['url'];
       this.awards.push(award);
     }
-    console.log(this.awards);
   }
 
   openForm() {
-    // if (this.isOpenSignUp) {
-      // this.router.navigateByUrl('/2022/school/award');
-      // document.getElementById('dcard')?.click();
-      // window.open('https://forms.gle/zBahCFvdDP9Yoa1N8', '_blank');
-    // }
+    if (this.isOpenRecord){
+      this.router.navigateByUrl('/2023/school/record');
+    }
   }
 }

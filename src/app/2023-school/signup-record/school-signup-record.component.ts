@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
   templateUrl: './school-signup-record.component.html',
   styleUrls: ['./school-signup-record.component.scss']
 })
-export class SchoolSignupRecordComponent implements OnInit {
+export class School2023SignupRecordComponent implements OnInit {
 
   teams: TeamModel[] = [];
 
-  heroImagePath: string = 'assets/images/school_banner.jpg';
+  heroImagePath: string = 'assets/images/2023_hackathon_survey-03.jpg';
 
-  private _jsonURL = 'assets/data/teams.json';
+  private _jsonURL = 'assets/data/teams_2023.json';
 
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
@@ -27,7 +27,6 @@ export class SchoolSignupRecordComponent implements OnInit {
   }
 
   convertToModels(data: any) {
-    console.log(data);
     for (let index in data) {
       let team = new TeamModel();
       team.teamName = data[index]['teamName'];
@@ -42,9 +41,9 @@ export class SchoolSignupRecordComponent implements OnInit {
     protected onResize() {
       let width = window.innerWidth;
       if (width <= 576) {
-        this.heroImagePath = 'assets/images/school_banner_min.jpg';
+        this.heroImagePath = 'assets/images/2023_hackathon_survey-03_min.jpg';
       } else {
-        this.heroImagePath = 'assets/images/school_banner.jpg';
+        this.heroImagePath = 'assets/images/2023_hackathon_survey-03.jpg';
       }
     }
 

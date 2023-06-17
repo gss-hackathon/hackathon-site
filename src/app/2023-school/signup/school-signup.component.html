@@ -1,7 +1,7 @@
 <div class="container text-center">
   <img class="hero" alt="Hackathon 主視覺" src="assets/images/2023_hero_light.jpg">
   <h2>The only limitation is your imagination.</h2>
-  <button [ngClass]="{'cta_button': true, 'disable': true}" (click)="openForm()">{{ callToActionText
+  <button [ngClass]="{'cta_button': true, 'disable': !isOpenRecord}" (click)="openForm()">{{ callToActionText
     }}</button>
   <p>&nbsp;</p>
   <hr />
@@ -180,7 +180,7 @@
   </c-method>
   <hr />
   <p>&nbsp;</p>
-  <button [ngClass]="{'cta_button': true, 'disable': true}" (click)="openForm()">{{ callToActionText
+  <button [ngClass]="{'cta_button': true, 'disable': !isOpenRecord}" (click)="openForm()">{{ callToActionText
     }}</button>
   <p>&nbsp;</p>
 </div>

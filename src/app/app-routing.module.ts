@@ -7,6 +7,7 @@ import { GssSignupRecordComponent } from './gss/signup-record/gss-signup-record.
 import { SchoolAwardComponent } from './school/award/school-award.component';
 import { GssAwardComponent } from './gss/award/gss-award.component';
 import { School2023SignUpComponent } from './2023-school/signup/school-signup.component';
+import { School2023SignupRecordComponent } from './2023-school/signup-record/school-signup-record.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/2023/school', pathMatch: 'full' },
@@ -28,7 +29,7 @@ const routes: Routes = [
       children: [
           { path: '', redirectTo: 'school', pathMatch: 'full' },
           { path: 'school', component: School2023SignUpComponent },
-          // { path: 'school/record', component: SchoolSignupRecordComponent },
+          { path: 'school/record', component: School2023SignupRecordComponent },
           // { path: 'school/award', component: SchoolAwardComponent },
           { path: '**', redirectTo: '/2023/school', pathMatch: 'full' },
       ]

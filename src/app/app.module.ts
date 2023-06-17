@@ -12,6 +12,7 @@ import { GssSignupRecordComponent } from './gss/signup-record/gss-signup-record.
 import { SchoolAwardComponent } from './school/award/school-award.component';
 import { GssAwardComponent } from './gss/award/gss-award.component';
 import { School2023SignUpComponent } from './2023-school/signup/school-signup.component';
+import { School2023SignupRecordComponent } from './2023-school/signup-record/school-signup-record.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { School2023SignUpComponent } from './2023-school/signup/school-signup.co
     GssSignupRecordComponent,
     SchoolAwardComponent,
     GssAwardComponent,
-    School2023SignUpComponent
+    School2023SignUpComponent,
+    School2023SignupRecordComponent
   ],
   imports: [
     BrowserModule,
