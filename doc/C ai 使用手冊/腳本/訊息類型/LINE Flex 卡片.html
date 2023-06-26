@@ -1,0 +1,226 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>LINE Flex 卡片</title>
+	<link href="../../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="274fdf00-bc9d-4a91-9b9f-e79d80558a26" class="page sans">
+		<figure  class="link-to-page back">
+			<a href="../../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../訊息類型.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title">LINE Flex 卡片</h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<p id="cecf9be9-b3a9-4946-9b67-729401211b69" class="">Flex Messages是一種可由您自定義卡片版型的訊息格式(JSON格式)，設計時必須符合CSS
+				Flexible Box (CSS Flexbox) 的規範。</p>
+			<p id="47869072-1bd0-4671-9108-fad6b991a971" class="">相關參考網址:</p>
+			<ul id="0a5db439-06e8-42e4-889b-b06f8f2feaf6" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/">Flex Message
+						elements</a></li>
+			</ul>
+			<ul id="6e66c1e9-8863-44dc-a861-90934bc88512" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-layout/">Flex Message
+						layout</a></li>
+			</ul>
+			<ul id="55ff6fd0-0f76-440d-bf4b-3440b9fa4ea6" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://developers.line.biz/flex-simulator/">Flex Message
+						Simulator</a>：Flex Message線上模擬器。</li>
+			</ul>
+			<p id="86dc6a29-3422-45dd-a2f5-582270dec373" class="">我們將使用LINE 所提供的Flex Message
+				Simulator線上模擬器快速並有效率進行卡片的設計。</p>
+			<p id="1feffc2a-9527-4a4d-88d8-6619189bbd00" class="">網址：<a
+					href="https://developers.line.biz/flex-simulator/">https://developers.line.biz/flex-simulator/</a>
+			</p>
+			<figure id="ad61e02d-0354-46ee-a2c0-272b48fa92e0" class="image"><a
+					href="./assest/FlexMessageSimulator.png"><img
+						style="width:75%"
+						src="./assest/FlexMessageSimulator.png" /></a>
+			</figure>
+			<p id="00e9c6ca-46b5-45bf-b21f-ba16d8e67b55" class="">
+			</p>
+			<p id="4a73e5f3-b9d9-4d8d-b622-79d190167f46" class=""><strong>1.Flex Message Simulator線上模擬器介紹</strong></p>
+			<ul id="164ea8eb-ce9d-4dcc-83f5-846370147cc7" class="bulleted-list">
+				<li style="list-style-type:disc">上方功能列：提供NEW、Showcase、Send Message、View as JSON等按鈕功能。</li>
+			</ul>
+			<p id="85eda3ae-6445-4756-9132-175ad15f8f34" class="">(1)New：可以建立一個新的bubble或是carousel類型的卡片。</p>
+			<p id="4aa16200-0c5c-49a8-85be-94769f741807" class="">(2)Showcase：找不到靈感的話，可以按這個按鈕從中挑選LINE提供的範本，就不用重頭開始設計。
+			</p>
+			<p id="ed0ebffe-aa40-46d9-9a82-3e0a2206c46a" class="">(3)Send
+				Message：將設計好的卡片傳送至您的LINE，可以檢視您所設計的卡片在LINE中實際顯示的效果。</p>
+			<blockquote id="c5ea9336-5d5b-4df2-837b-e43753240e81" class=""><strong>如果您想要接收測試訊息，您必須要在您的LINE加入Flex Message
+					Simulator LINE Official Account</strong></blockquote>
+			<figure id="fe5aeb6d-38f0-43d5-a614-36d8c673290b" class="image"><a
+					href="./assest/FlexMessageSimulatorLINEOfficialAccount.png"><img
+						style="width:45%"
+						src="./assest/FlexMessageSimulatorLINEOfficialAccount.png" /></a>
+			</figure>
+			<p id="621f5e4f-07a5-4922-b0cb-a3d364f3d885" class="">(4)View as JSON：查看卡片的JSON。</p>
+			<figure id="1701a1aa-b3de-40ce-92ec-49b3cd094e55">
+				<video width="100%" controls>
+					<source src="./assest/01.上方功能列.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<ul id="a4d2fd22-3415-4d4e-b48d-e762fc7d1db6" class="bulleted-list">
+				<li style="list-style-type:disc">左側：卡片預覽。</li>
+			</ul>
+			<ul id="484b0866-e514-40df-8903-e7c7dc9d9d73" class="bulleted-list">
+				<li style="list-style-type:disc">中間：呈現卡片元件結構，您可以由此點選元件開始操作元件，例：上移、下移、刪除、複製、貼上、重做、復原。</li>
+			</ul>
+			<figure id="9f248ac6-e7eb-47c3-bd9d-0e1b33cf1d31">
+				<video width="100%" controls>
+					<source src="./assest/02.元件操作.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<ul id="5e2e2c6e-9493-4e88-ba93-18c08a201181" class="bulleted-list">
+				<li style="list-style-type:disc">右側：點選中間的元件後，您可以在右側設定元件的屬性。</li>
+			</ul>
+			<figure id="34dda3b7-fe74-474c-a1b5-87ad0be94db4">
+				<video width="100%" controls>
+					<source src="./assest/03.元件屬性設定.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="8c46fd53-576b-4bc9-b10a-d7e935fb5253" class="">
+			</p>
+			<p id="31c63584-b35b-4c92-9559-ad0d43475bf6" class=""><strong>2.Flex Message elements</strong></p>
+			<p id="f860c439-b385-4b6a-954b-9c61e427c87c" class="">Flex Message 是由三種結構所組成的，分別是：container、 blocks (header,
+				hero, body, footer), and components。</p>
+			<figure id="63f5f2c7-c50a-4102-a3b7-936e49e63127" class="image"><a
+					href="./assest/FlexMessageStructures.png"><img
+						style="width:60%"
+						src="./assest/FlexMessageStructures.png" /></a>
+			</figure>
+			<p id="49e3b311-d26e-4e2a-bb56-fb5ab12d4609" class=""><strong>(1)Container</strong></p>
+			<p id="497d8862-1cf2-46da-be02-c076f46440d1" class=""><a
+					href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#container">Container</a>是Flex
+				Message最上層的結構。包含以下兩種container類型：</p>
+			<p id="045c0175-c9d4-4a50-b683-958393817c3c" class=""><strong>(Container的詳細說明，請點選連結參閱LINE官方文件。)</strong></p>
+			<ul id="07b8609f-985d-421a-a06d-0679c2f6cf9b" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#bubble">Bubble</a>：顯示單張的卡片。
+				</li>
+			</ul>
+			<ul id="54f78d6c-d13e-4868-bc34-7bf9ad369d73" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#carousel">Carousel</a>：水平並排顯示多張卡片，使用者可以水平滾動方式瀏覽卡片。
+				</li>
+			</ul>
+			<figure id="19283137-3538-4b79-99fa-2cf0c5157dd6" class="image"><a
+					href="./assest/FlexMessageContainer.png"><img
+						style="width: 100%"
+						src="./assest/FlexMessageContainer.png" /></a>
+			</figure>
+			<p id="40e68ecb-b426-4124-89ba-0c9dd8d321d8" class=""><strong>(2)Block</strong></p>
+			<p id="f7c4a44d-2db0-42d7-88c1-9b92b580a0cd" class=""><a
+					href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#block">Block</a>是構成Bubble的要素。有以下幾種類型可以使用：
+			</p>
+			<p id="ccbaf32e-89da-45df-97bf-01b2a598b8a1" class=""><strong>(Block的詳細說明，請點選連結參閱LINE官方文件。)</strong></p>
+			<p id="b911ddc6-08c0-42b3-a7bd-c3ccf3d57f1d" class="">
+				從上到下顯示的順序是：Header、Hero、Body、Footer。每種類型只能在一個Bubble中使用一次（或也可不使用）。</p>
+			<ul id="c27cca15-d009-4b5a-8df0-4bc8df8eef0b" class="bulleted-list">
+				<li style="list-style-type:disc">Header：用來顯示卡片的標題或主題。</li>
+			</ul>
+			<ul id="9a283ba7-8f6a-4618-aaf8-362a7132b191" class="bulleted-list">
+				<li style="list-style-type:disc">Hero：只能用來顯示圖片。</li>
+			</ul>
+			<ul id="27a2ff40-0fdb-433f-9c88-e13b1e96df16" class="bulleted-list">
+				<li style="list-style-type:disc">Body：卡片內容區塊。</li>
+			</ul>
+			<ul id="a8a74787-ad53-4791-b845-cd50ca2d0aaf" class="bulleted-list">
+				<li style="list-style-type:disc">Footer：顯示按鈕或其他補充資訊的區塊。</li>
+			</ul>
+			<figure id="bd2da241-3050-448a-bbc7-4bacb95e746e" class="image"><a
+					href="./assest/FlexMessageBlock.png"><img
+						style="width:60%"
+						src="./assest/FlexMessageBlock.png" /></a>
+			</figure>
+			<p id="31ea11f3-c188-4185-b960-6caed87dd4e0" class=""><strong>(3)Component</strong></p>
+			<p id="7bb4f5e6-335d-48dc-8aa8-336927795c25" class="">Component是構成Blocks的元素。以下是可用的Component類型：</p>
+			<p id="f7aa4d17-2b89-4231-a8cd-60e4115338a8" class=""><strong>(每一種組件的詳細使用方式及限制，請點選連結參閱LINE官方文件。)</strong>
+			</p>
+			<ul id="cfb50cd2-c846-4387-8a1f-dc7790ddf3c4" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#box">Box</a>：可以想像是一個容器，Box裡面可以再放入其他的Component。
+				</li>
+			</ul>
+			<ul id="a8aeb3ce-0602-4782-bbde-99fa738a81e1" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#button">Button</a>：按鈕，當使用者點擊按鈕時，可指定按鈕的執行動作。例如：開啟連結，顯示文字訊息等。
+				</li>
+			</ul>
+			<ul id="bac7e559-d18c-4c54-8cb5-29e009ff8df2" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#image">Image</a>：圖片組件。
+				</li>
+			</ul>
+			<ul id="d9815e91-a6d2-4065-9330-44203791cfd4" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#video">Video</a>：影片組件。
+				</li>
+			</ul>
+			<ul id="58198064-1160-4641-8c85-a94435a0e011" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#icon">Icon</a>：圖標組件。（只能使用在baseline
+					box）</li>
+			</ul>
+			<ul id="e3e5e162-873a-4b85-92e1-267fd931bb12" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#text">Text</a>：文字組件。可以指定字體顏色、大小和粗細。
+				</li>
+			</ul>
+			<ul id="ed9c9748-d405-42aa-9db1-76859bc6d931" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#span">Span</a>：可將文字組件細拆成Span，因此可以讓一行文字出現不同的效果。也能分別設定字體顏色、大小、粗細。
+				</li>
+			</ul>
+			<ul id="de4fb328-100b-4725-959c-384c8b5e6de3" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#separator">Separator</a>：分隔線組件。
+				</li>
+			</ul>
+			<ul id="14f5f5bd-9ac8-4c87-88ce-6c7fc90acb65" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://developers.line.biz/en/docs/messaging-api/flex-message-elements/#filler">Filler</a>：添加空白空間的組件。
+				</li>
+			</ul>
+			<p id="72afc1a6-718a-4192-8cba-ebeacc35756a" class="">
+			</p>
+			<p id="ac561354-7dc6-4d57-9aaa-5fdbba3b7fa8" class=""><strong>3.如何使用Flex Message</strong></p>
+			<p id="4e32df1f-ac19-48ce-8478-7a9939624797" class="">我們使用<a
+					href="https://developers.line.biz/flex-simulator/">Flex Message
+					Simulator線上模擬器</a>完成卡片的設計後，只要點選右上的View as JSON按鈕，將整個JSON內容拷貝，回到 <a
+					href="http://c.ai/">C.ai</a> BotBuilder的腳本中，使用「發送訊息」或「文字輸入」節點，文字類型請挑選：LINE
+				Flex卡片，並將拷貝的JSON內容貼進&quot;卡片內容&quot;輸入框中即可。</p>
+			<figure id="561d48ec-659b-41f8-81f9-538b3ba8f76b">
+				<video width="100%" controls>
+					<source src="./assest/04.如何使用FlexMessage.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="893f5bfa-3359-4e7c-896b-2967fae6d570" class="">
+			</p>
+			<p id="100815c1-f785-4568-86d1-f67d1a9b46bc" class=""><strong>4.模擬測試</strong></p>
+			<p id="697c3716-16a8-4691-9b4d-00100fd149f4" class="">使用模擬測試執行到節點時，可以讓您即時觀看所設計的卡片顯示是否正確。</p>
+			<p id="bec4fb9a-1544-42e7-8b54-6ad53c4e68fe" class=""><strong>卡片上的按鈕執行效果，請至LINE實際進行測試。</strong></p>
+			<figure id="4a515e9f-9c8d-4ca1-a34f-e34c4cf8a03e">
+				<video width="100%" controls>
+					<source src="./assest/05.模擬測試FlexMessage.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="fd5e2d38-3d0c-4044-9b6a-cb29f0bc80c7" class="">
+			</p>
+			<p id="63c8c1c5-31d8-42db-a46c-a3a13954ac4d" class="">
+			</p>
+		</div>
+	</article>
+</body>
+
+</html>

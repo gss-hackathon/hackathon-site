@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Line 明細卡片</title>
+	<link href="../../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="2f3f945f-d9a4-4c89-a905-2e87cb56a40e" class="page sans">
+		<figure  class="link-to-page back">
+			<a href="../../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../訊息類型.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title">Line 明細卡片</h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<p id="84d733b4-8951-4c32-8abe-91f8da9dd972" class="">設計一個支援 LINE 的詳細資料卡片，常用於顯示某筆資料的詳細內容，內容為欄位與相對應的值。</p>
+			<ul id="e2134225-c998-4544-af24-8198b70ddef7" class="bulleted-list">
+				<li style="list-style-type:disc">選擇「文字輸入」或「發送訊息」節點 -&gt; 點擊「訊息」 -&gt; 調整文字訊息為「LINE 明細卡片」節點</li>
+			</ul>
+			<p id="90b724da-6406-4a9d-b449-85a2edfa60c7" class=""><strong>1.設定基本內容</strong></p>
+			<p id="920f9267-023f-4b63-ab75-a19a43c90060" class="">製作「LINE 清單卡片」需要先準備一份 JSON 資料</p>
+			<p id="cf6bc754-dbe9-4b8c-ba25-134e932ddb83" class="">JSON 範例：</p>
+			<pre id="89296120-a41a-473f-ab54-4860a39a4b8a" class="code"><code>{
+    &quot;Id&quot;: &quot;1001&quot;,
+    &quot;Name&quot;: &quot;王小明&quot;,
+    &quot;Sex&quot;:&quot;男&quot;,
+    &quot;StartDate&quot;: &quot;2003/03/01&quot;,
+    &quot;Birthday&quot;: &quot;1985/09/02&quot;,
+    &quot;DeptName&quot;: &quot;未來平台服務事業處&quot;,
+    &quot;Tel&quot;: &quot;(07)123-4567#11300&quot;
+}</code></pre>
+			<p id="ce0f1e7c-38f0-477a-96ba-ffad05eb7f1f" class="">
+			</p>
+			<p id="51c13ca3-a055-48d3-91ef-7b7bc7e32878" class=""><strong>2.範例展示</strong></p>
+			<p id="6f35bcf8-6261-4e3d-823d-933498779f81" class="">此範例希望展示使用者詳細個人資訊</p>
+			<p id="220046e8-35a3-453d-aa35-50d8d694be70" class=""><strong>(1)基本設定</strong></p>
+			<figure id="1fd4036d-e507-45fb-a2a1-0af192b81363">
+				<video width="100%" controls>
+					<source src="./assest/01.明細_基本設定.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<ul id="d6649dc7-a69c-47c1-b130-bc24cb9f5664" class="bulleted-list">
+				<li style="list-style-type:disc">資料需設定標題、內容、資料形態、內容格式</li>
+			</ul>
+			<ul id="f67282cc-ac9a-4eea-8c6b-49fb0949c0cd" class="bulleted-list">
+				<li style="list-style-type:disc">要將資料來源設定到「內容」欄位需要使用 <strong>{{$.欄位名稱}}</strong></li>
+			</ul>
+			<ul id="b9c5a48a-e370-452d-a30c-7938fdcf8fde" class="bulleted-list">
+				<li style="list-style-type:disc">如使用日期形態則需要額外設定「內容格式」例如 yyyy-MM-dd</li>
+			</ul>
+			<p id="eda4fb6f-48a1-46a3-890a-13961700cd0f" class="">
+			</p>
+			<p id="6d8c14c9-1dd7-424c-9dd1-70afbf1f3e10" class=""><strong>(2)調整樣式</strong></p>
+			<figure id="63256a44-54e0-4577-985f-abd5b8806d19">
+				<video width="100%" controls>
+					<source src="./assest/02.明細_調整樣式.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="c5b521eb-40cf-4a2f-9c83-2e9334295537" class="">根據需求調整樣式，卡片節點雖然可以立即預覽，實際卡片樣式要到 LINE 查看比較準確。</p>
+			<p id="64143ec4-e040-481e-9b46-fa71dce9a714" class="">
+			</p>
+			<p id="5c5dbfd2-f4d5-4680-8382-cb0d01cb1563" class=""><strong>(3)結果展示</strong></p>
+			<figure id="7b7b1a4b-8a96-4b02-9f8f-bab0de6ac88a" class="image"><a
+					href="./assest/03.明細_結果展示.png"><img
+						style="width:1920px"
+						src="./assest/03.結果展示.png" /></a>
+			</figure>
+			<p id="148c639a-2e24-463a-9d26-85e93875a20f" class="">
+			</p>
+		</div>
+	</article>
+</body>
+
+</html>

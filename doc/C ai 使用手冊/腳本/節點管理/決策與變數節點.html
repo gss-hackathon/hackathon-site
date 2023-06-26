@@ -1,0 +1,95 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>決策與變數節點</title>
+	<link href="../../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="68868e41-a7fe-4446-9b69-061527a0dcc2" class="page sans">
+		<figure class="link-to-page back">
+			<a href="../../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../節點管理.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title"><strong><strong>決策與變數節點</strong></strong></h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<p id="fbdb97cd-4473-4f76-bcd5-5d6b38b64dbc" class="">
+				「決策與變數節點」主要用於「設定變數」和「判斷某一變數的狀態」決定後續腳本的執行方向，由於大部分的節點都有支援設定變數，所以這個節點比較常使用在判斷腳本後續執行方向。</p>
+			<p id="9ce83d67-7252-4ef5-ac0a-7a4604ab27ac" class="">判斷的類型:</p>
+			<ol type="1" id="c2d8a796-5145-4387-97a3-8f90a39f0e58" class="numbered-list" start="1">
+				<li>無需符合任何條件</li>
+			</ol>
+			<ol type="1" id="a338f7bd-8c3f-4c67-82d8-8fd569617552" class="numbered-list" start="2">
+				<li>所有規則都需符合 (And)</li>
+			</ol>
+			<ol type="1" id="bb5a3230-0640-4f85-93ae-d5e47eba829a" class="numbered-list" start="3">
+				<li>只要有一個規則符合 (Or)</li>
+			</ol>
+			<ol type="1" id="8e137634-d9d0-4e7b-8e14-6ce255bae7cf" class="numbered-list" start="4">
+				<li>所有規則都不符合</li>
+			</ol>
+			<p id="76f9b2cf-64c6-4dd4-b68f-41d59c0813bf" class="">
+			</p>
+			<h3 id="86d67775-9e2e-4d73-a797-6fd62bde57ab" class=""><strong>1.比對的規則:</strong></h3>
+			<p id="76d3c171-df08-453f-a042-e37bd35e88ce" class="">
+				比對規則由上到下進行比對，上面的規則符合後不會判斷之後的規則，例如第一條路線的規則如果是「無需符合任何條件」，那麼這個節點只會執行第一條路線。</p>
+			<p id="cd4fb22d-3f31-4260-b415-0b3824057975" class="">(1)表達式可用表達式的方式判斷條件</p>
+			<p id="b730ecae-c30d-4b61-a2d0-52e8786cfa50" class="">(2)變數選取需要判斷的變數
+			<div class="indented">
+				<ul id="79b2799e-6280-4083-83f6-120800927f66" class="bulleted-list">
+					<li style="list-style-type:disc">比對規則方法<ul id="298f25d5-f0cf-407d-9ec5-7036b2598235"
+							class="bulleted-list">
+							<li style="list-style-type:circle">文字：字串比較</li>
+						</ul>
+						<ul id="7f2bb900-4069-4338-b830-35fdb26d1ee9" class="bulleted-list">
+							<li style="list-style-type:circle">布林值：布林值比較方式，這裡有提供可以被當作 True、False 的設定，這裡建議設定
+								0、1，因為資料庫讀取出來布林值為 0、1</li>
+						</ul>
+						<ul id="61467688-b9b4-4579-93cc-6d57a40a4c6d" class="bulleted-list">
+							<li style="list-style-type:circle">正規表示法：可參考一些網路文件撰寫，如 <a
+									href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">Regular
+									Expressions - MDN Web 文檔</a></li>
+						</ul>
+						<ul id="88f741a6-af14-4c53-b05b-52b15984e35f" class="bulleted-list">
+							<li style="list-style-type:circle">日期時間：這裡可以設定多個需要判斷的日期格式</li>
+						</ul>
+						<ul id="afad5853-2a03-4ff4-b01d-45c21fea3aef" class="bulleted-list">
+							<li style="list-style-type:circle">表達式：使用表達式的方式判斷條件</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			</p>
+			<p id="e709b561-008a-4169-8ff8-dad3aa7cae41" class="">
+			</p>
+			<h3 id="70ff2bcc-8ccd-4a49-8715-24ea4c7c9af0" class=""><strong>2.範例</strong></h3>
+			<figure id="93ce1321-7cca-4d1e-a913-1600986b4391">
+				<video width="100%" controls>
+					<source src="./assest/01.決策範例.mp4" type="video/mp4">
+				</video>
+
+			</figure>
+			<p id="730522ca-fb41-4807-ba2e-e719b12ab4b3" class="">(1)此範例判斷遊樂園門票是否有優惠</p>
+			<p id="8cdf90b5-58ab-4a50-addc-c43a9ef89359" class="">(2)條件有兩項
+			<div class="indented">
+				<ul id="ee2b0f62-b593-4098-9b49-aa9e279a8b5b" class="bulleted-list">
+					<li style="list-style-type:disc">符合年齡小於 18</li>
+				</ul>
+				<ul id="f7410d5e-568b-44bf-9fc8-dc953e7ccc5c" class="bulleted-list">
+					<li style="list-style-type:disc">擁有優惠券</li>
+				</ul>
+			</div>
+			</p>
+			<p id="4371880b-9b74-4c49-ba47-77e2b9811687" class="">(3)都符合打 7 折、任一符合打 85 折、都不符合則沒有優惠</p>
+			<p id="4fbf94da-d6e9-405c-82c0-076ade9a31ab" class="">(4)在設定任一符合的時候使用複製貼上的方式簡化設定</p>
+		</div>
+	</article>
+</body>
+
+</html>

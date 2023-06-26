@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>訓練問句及設計心法</title>
+	<link href="../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="ec74cfb0-d589-449d-abd6-5bb62fbd13d8" class="page sans">
+		<figure class="link-to-page back">
+			<a href="../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../問答集.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title"><strong>訓練問句及設計心法</strong></h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<h3 id="3115772c-52b5-436c-a646-62d3a51e6f36" class=""><strong>1.何謂「訓練問句」</strong></h3>
+			<p id="c5044e8d-9d17-45f6-b2c7-c09df33b4ef0" class="">用於<mark
+					class="highlight-blue_background">訓練AI模型</mark>(自然語意理解模型)<mark
+					class="highlight-blue_background">的文本</mark>，使模型其具備識別相關領域題目的能力。</p>
+			<p id="c3a1ab62-4627-48aa-b6b9-b58f1cdcf3e2" class="">AI模型可分析所有題目的關鍵詞彙及語意特性，建立「相似度預測」的語言模型，當機器人被提問時，據以<mark
+					class="highlight-blue_background">推測相似度最接近的題目</mark>，而提供對應答案。</p>
+			<h3 id="5534a00b-f0d6-4c22-8662-d6f841cc08eb" class="">
+				<strong>2.問句設計心法</strong>
+			</h3>
+			<p id="4facf8f2-aa9a-4b51-9754-31e81d85d829" class="">(1)每個訓練句都<mark
+					class="highlight-blue_background">必需擁有專屬的詞彙</mark>，以彰顯題目存在意義</p>
+			<p id="bb3b86ac-600d-47e6-8f34-3e24d2a55787" class="">例：申請DN ,申請IP ,出現錯誤訊息 ,查詢申辦進度</p>
+			<p id="1a21fc5e-cc00-41d9-b8fb-db574541e2c0" class="">若未出現專屬詞彙，容易理解錯誤</p>
+			<p id="d7797554-b07e-4979-8ec5-be5343738aa9" class="">如:查詢申辦進度，只詢問申辦進度或查詢進度無法完整理解題意，可能導致回答錯誤。
+			</p>
+			<p id="05b3b179-5547-4795-9052-9aa2c66f3c6a" class="">
+			</p>
+			<p id="dccd06aa-7d04-4ccd-9a04-b4dd13c333d2" class="">(2)句子<mark class="highlight-blue_background">字數應在 4 ~15 字之間</mark>，訓練效率最佳
+			<p id="9d6602e5-a6cc-407b-a7f6-c055787cf21b" class="">AI在做自然語意理解時需要判斷關鍵詞，過短可能會表達不清，過長要找出關鍵詞找不到重點訓練句也要跟著增加效率會變差，過長過短都會影響判斷的結果，因此建議在4~15字之間。</p>
+			</p>
+			<p id="acc88be6-83da-49ed-a73b-cb6ea84a636e" class="">
+			</p>
+			<p id="23b1c33e-c5fa-412c-af46-4fc588396fdb" class="">(3)減少贅詞 (stop-words)</p>
+			<p id="ced92ab0-e5a8-40a3-a137-d65e65d0b701" class="">(請/告訴/我/應該/怎麼/不知道…)查申辦進度(如何/嗎/呢/哩/咧/可以嗎?…)</p>
+			<p id="aa85908e-26eb-4442-a719-645c0839f97b" class="">在新增訓練句時<mark
+					class="highlight-blue_background">無須特地增加</mark>不必要的字詞，對於AI判斷自然語意無影響。
+			</p>
+			<p id="afb0686b-fb0c-45ce-b1b8-7603b6ac5655" class="">
+			</p>
+			<p id="7f8e1672-10a8-47fa-ac52-716e47969545" class="">(4)若單題有多種易理解的口語表示可能，可<mark
+					class="highlight-blue_background">建多個補充訓練句</mark>，以強化命中率，例：</p>
+			<p id="9d6602e5-a6cc-407b-a7f6-c055787cf21b" class="">例：主問句：查詢申辦進度、補充句(口語問法)：何時完成申辦案件</p>
+			<p id="95b92bbe-d6f3-425b-82d4-138e7f996fba" class="">
+			</p>
+		</div>
+	</article>
+</body>
+
+</html>

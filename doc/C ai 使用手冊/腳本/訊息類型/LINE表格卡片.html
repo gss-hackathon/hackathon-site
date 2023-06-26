@@ -1,0 +1,86 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>LINE表格卡片</title>
+	<link href="../../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="2ac7fea0-41b5-49ea-b15b-24782bc1d305" class="page sans">
+		<figure  class="link-to-page back">
+			<a href="../../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../訊息類型.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title">LINE表格卡片</h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<p id="eded3da4-27ef-4770-97ad-bb756f517300" class="">設計一個支援 LINE 的表格卡片，常用於需要將資料使用表格的方式呈現，表格內容可以顯示圖片及文字。</p>
+			<ul id="1f78e45a-85be-420c-980d-9f19524931e1" class="bulleted-list">
+				<li style="list-style-type:disc">選擇「文字輸入」或「發送訊息」節點 -&gt; 點擊「訊息」 -&gt; 調整文字訊息為「LINE 表格卡片」節點</li>
+			</ul>
+			<p id="f790992c-9d6f-491b-a08d-c3d550ac052c" class=""><strong>1.設定基本內容</strong></p>
+			<p id="c6f1f086-c550-40e5-8ca1-bfa9bd2079c5" class="">製作「LINE 清單卡片」需要先準備一份 JSON 資料</p>
+			<p id="c9ed6205-734c-4f08-9feb-5c4f852f9e39" class="">JSON 範例：</p>
+			<pre id="516237f2-c907-4202-893e-552f399f7051" class="code"><code>[
+    {
+        &quot;Id&quot;: &quot;1001&quot;,
+        &quot;Name&quot;: &quot;王小明&quot;,
+        &quot;Avatar&quot;: &quot;https://cai.gss.com.tw/fileserver/api/file/blob/7a62baea-08d9-4236-bc19-bb9d2d9d759f.png&quot;,
+        &quot;StartDate&quot;: &quot;2003-03-01&quot;
+    },
+    {
+        &quot;Id&quot;: &quot;1002&quot;,
+        &quot;Name&quot;: &quot;李大華&quot;,
+        &quot;Avatar&quot;: &quot;https://cai.gss.com.tw/fileserver/api/file/blob/1f62f00b-f6c0-4d06-85f9-3423310c7f9f.png&quot;,
+        &quot;StartDate&quot;: &quot;2012-04-19&quot;
+    },
+    {
+        &quot;Id&quot;: &quot;1003&quot;,
+        &quot;Name&quot;: &quot;張小為&quot;,
+        &quot;Avatar&quot;: &quot;https://cai.gss.com.tw/fileserver/api/file/blob/99230448-6e2a-4ec6-83e0-70d16dd42248.png&quot;,
+        &quot;StartDate&quot;: &quot;2019-05-20&quot;
+    }
+]</code></pre>
+			<p id="25201c84-d87a-4964-9e95-bd5122193a53" class=""><strong>2.範例展示</strong></p>
+			<p id="2d247ccc-7144-45a5-a889-0bd99e7e27c7" class="">此範例希望展示一份公司員工資料，並且在使用者點擊資料時展示資料內容。</p>
+			<p id="d989a66d-f39a-4037-8ab2-2e92a9783acb" class=""><strong>(1)基本設定</strong></p>
+			<figure id="6517286f-f578-4060-b6d8-caeaf2f03586">
+				<video width="100%" controls>
+					<source src="./assest/01.基本設定.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<ul id="b8e80985-6c66-4322-aa48-c855a3d2dd9f" class="bulleted-list">
+				<li style="list-style-type:disc">資料欄需設定標題、類型、ID、資料來源的值</li>
+			</ul>
+			<ul id="ade568b9-318b-416e-87f1-db59cf630ca5" class="bulleted-list">
+				<li style="list-style-type:disc">要將資料來源設定到「值」欄位需要使用 <strong>{{$.欄位名稱}}</strong></li>
+			</ul>
+			<ul id="28233634-7a53-4c6b-b711-53d1238d5627" class="bulleted-list">
+				<li style="list-style-type:disc">每一欄的樣式可以設定欄寬、對齊方式</li>
+			</ul>
+			<ul id="314c0dbc-972a-4cef-b6ee-4bf7cbdcf5d1" class="bulleted-list">
+				<li style="list-style-type:disc">資料列點擊動作一樣可以使用 <strong>{{$.欄位名稱}}</strong> 讀取當前列的資料</li>
+			</ul>
+			<p id="0c9fcc24-d60a-40b7-af89-d17a7aa4b79f" class=""><strong>(2)調整樣式</strong></p>
+			<figure id="40033704-8271-453e-98e3-e435ad0e879d">
+				<video width="100%" controls>
+					<source src="./assest/02.調整樣式.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="d10aaf38-6e60-457f-abc3-963ea8a833de" class="">根據需求調整樣式，卡片節點雖然可以立即預覽，實際卡片樣式要到 LINE 查看比較準確。</p>
+			<p id="0bac1ac5-ce23-4689-87e4-127514fa1d56" class=""><strong>(3)結果展示</strong></p>
+			<figure id="0b7e8644-3b81-4fe3-8c0c-bd3e43fabab3">
+				<video width="100%" controls>
+					<source src="./assest/03.模擬測試.mp4" type="video/mp4">
+				  </video>
+			</figure>
+		</div>
+	</article>
+</body>
+
+</html>

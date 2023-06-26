@@ -1,0 +1,462 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Cai_ETA 訊息推播_API_v2</title>
+	<link href="../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="348c0a04-018c-4cbd-8d19-c96a9bd7e454" class="page sans">
+		<figure  class="link-to-page back">
+			<a href="../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../腳本.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title">Cai_ETA 訊息推播_API_v2</h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<h3 id="c66f6f40-0b4d-4a29-8895-060ea1694921" class=""><strong>1.ETA 訊息發送 API</strong></h3>
+			<h3 id="553a94a9-d265-44ce-be35-496df0b76fcb" class="">(1)<strong>發送文字訊息</strong></h3>
+			<p id="fad616ee-768b-4c1c-b1d8-e2ff64a88267" class="">適用於單純發送⽂字訊息</p>
+			<ul id="d11f651b-1fa8-44bb-864c-ef6c29fb3991" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>URL</strong></li>
+			</ul>
+			<pre id="3b5769a7-70f2-45d0-9661-2d67b23ae3b1"
+				class="code"><code>POST https://{hostUrl}/eta/api/subscription/{botId}/message/multicast</code></pre>
+			<p id="84e62e9b-8a2d-4725-80f9-bd7e606f7aac" class="">
+			<div class="indented">
+				<ul id="508959a4-8b62-4456-9cae-a9ba314cb21f" class="bulleted-list">
+					<li style="list-style-type:circle">hostUrl – 請填入 ETA server (通常為 bot server) 的網址</li>
+				</ul>
+				<ul id="b734e8a8-7eb9-41cf-8905-24b9dfef17a5" class="bulleted-list">
+					<li style="list-style-type:circle">BotId – 請填入 Bot Id (Bot 會有一組固定的識別碼)</li>
+				</ul>
+			</div>
+			</p>
+			<p id="10d5fff1-4c50-484f-806f-6d17cc33d9d3" class="">
+			</p>
+			<ul id="4cfef096-5e0c-4f49-a8f6-cee3cfe543cd" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>Header</strong></li>
+			</ul>
+			<pre id="55bec067-01fe-4c65-b4c9-ee20567e5378" class="code"><code>x-gss-event-subscription-key: {subscription key}
+x-gss-event-from: {botId}
+content-type: application/json</code></pre>
+			<table id="8db36779-58bd-4bdd-afe7-9c3c5a3296de" class="simple-table">
+				<tbody>
+					<tr id="f00733b5-276d-48f9-a73f-d267b943e8e8">
+						<td id="oMeu" class="" style="width:174.5px"><strong>參數名稱</strong></td>
+						<td id="yv?a" class="" style="width:174.5px"><strong>說明</strong></td>
+						<td id="yryJ" class="" style="width:174.5px"><strong>格式</strong></td>
+						<td id="RJKO" class="" style="width:174.5px"><strong>必填</strong></td>
+					</tr>
+					<tr id="7ccb881c-ac2e-4e7e-bbaf-ef95e46277b3">
+						<td id="oMeu" class="" style="width:174.5px">x-gss-event-subscription-key</td>
+						<td id="yv?a" class="" style="width:174.5px">Bot 訂閱 Key，Bot 安裝後的首次發佈時會產生一組 subscription key。
+						</td>
+						<td id="yryJ" class="" style="width:174.5px">string</td>
+						<td id="RJKO" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="c05ec75f-4513-46c0-a4fc-a9684e782127">
+						<td id="oMeu" class="" style="width:174.5px">x-gss-event-from</td>
+						<td id="yv?a" class="" style="width:174.5px">發送來源，填寫系統名稱或是 botId；可留空白</td>
+						<td id="yryJ" class="" style="width:174.5px">string</td>
+						<td id="RJKO" class="" style="width:174.5px"></td>
+					</tr>
+					<tr id="6c55150d-7e2f-43b3-b744-906a82dff996">
+						<td id="oMeu" class="" style="width:174.5px">content-type</td>
+						<td id="yv?a" class="" style="width:174.5px">內容資料型態，固定值 : application/json</td>
+						<td id="yryJ" class="" style="width:174.5px">string</td>
+						<td id="RJKO" class="" style="width:174.5px">V</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul id="829801ef-e500-440b-8c33-84bc9feecd29" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>Body</strong></li>
+			</ul>
+			<table id="f7419b5d-9e72-4c39-ba23-9ee3c3382885" class="simple-table">
+				<tbody>
+					<tr id="1e99965d-bdbb-43bb-8490-b8d78310a7f3">
+						<td id="=qOA" class="" style="width:174.5px"><strong>參數名稱</strong></td>
+						<td id="SLGF" class="" style="width:174.5px"><strong>說明</strong></td>
+						<td id="Wz@C" class="" style="width:174.5px"><strong>格式</strong></td>
+						<td id="[HqM" class="" style="width:174.5px"><strong>必填</strong></td>
+					</tr>
+					<tr id="dd05d922-06ac-4484-90be-04d427fd8f9f">
+						<td id="=qOA" class="" style="width:174.5px">TriggerId</td>
+						<td id="SLGF" class="" style="width:174.5px">預設填入 botId，若有設定其他 TriggerId 會另行提供</td>
+						<td id="Wz@C" class="" style="width:174.5px">string</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="dfbbea23-8ccd-494f-980a-1e6b8abd3992">
+						<td id="=qOA" class="" style="width:174.5px">Conversations</td>
+						<td id="SLGF" class="" style="width:174.5px">訊息接收者</td>
+						<td id="Wz@C" class="" style="width:174.5px">array</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="2ec3063f-f8ca-47b3-9dd4-9070b5d5254d">
+						<td id="=qOA" class="" style="width:174.5px">Id</td>
+						<td id="SLGF" class="" style="width:174.5px">頻道為 Iota/ Teams/ Line : 留空白
+
+							其他頻道如 Webchat : 使用者的聊天室 Id
+							若 Webchat 有介接登入認證：可留空白</td>
+						<td id="Wz@C" class="" style="width:174.5px">string</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="cd16101d-b6b3-49bf-bf60-3ad3bd43a1c9">
+						<td id="=qOA" class="" style="width:174.5px">RecipientId</td>
+						<td id="SLGF" class="" style="width:174.5px">訊息接收者的識別碼，如：
+							• iota: 使用者帳號, 如: 員工編號或 AD 帳號
+							• Teams: UserId，為亂數字串
+							• Line: 使用者綁定的 line Id，為亂數字串
+							• Webchat 若有介接登入認證，則傳使用者帳號</td>
+						<td id="Wz@C" class="" style="width:174.5px">string</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="f0effaf0-6711-4d6f-bad1-bef80ab5f9da">
+						<td id="=qOA" class="" style="width:174.5px">ChannelList</td>
+						<td id="SLGF" class="" style="width:174.5px">只推播到特定 Channel；若未限定則會發送到所有在發佈設定所勾選的頻道。</td>
+						<td id="Wz@C" class="" style="width:174.5px">string</td>
+						<td id="[HqM" class="" style="width:174.5px"></td>
+					</tr>
+					<tr id="9a16e934-1d9b-4040-9203-2b123ac56eb0">
+						<td id="=qOA" class="" style="width:174.5px">Subject</td>
+						<td id="SLGF" class="" style="width:174.5px">標題，僅作為內部紀錄查詢⽤</td>
+						<td id="Wz@C" class="" style="width:174.5px">string</td>
+						<td id="[HqM" class="" style="width:174.5px"></td>
+					</tr>
+					<tr id="141a566e-60d0-433d-aee9-72d31f39e8db">
+						<td id="=qOA" class="" style="width:174.5px">IsGroup</td>
+						<td id="SLGF" class="" style="width:174.5px">是否為群組
+
+							個人聊天室 : false 群組聊天室 : true</td>
+						<td id="Wz@C" class="" style="width:174.5px">boolean</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="ed1c88ca-311f-4b72-82c5-2b58473a2f57">
+						<td id="=qOA" class="" style="width:174.5px">Message</td>
+						<td id="SLGF" class="" style="width:174.5px">文字訊息</td>
+						<td id="Wz@C" class="" style="width:174.5px">json</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="0ad26483-badb-4678-80e7-19859c6c1bf1">
+						<td id="=qOA" class="" style="width:174.5px">ItemType</td>
+						<td id="SLGF" class="" style="width:174.5px">訊息內容類型 ，請填 text</td>
+						<td id="Wz@C" class="" style="width:174.5px">string</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="b843fb79-e85c-4622-adbe-b1d1cdedfffd">
+						<td id="=qOA" class="" style="width:174.5px">Item</td>
+						<td id="SLGF" class="" style="width:174.5px">訊息內容</td>
+						<td id="Wz@C" class="" style="width:174.5px">string</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="1cce1bbc-b467-4f35-8af1-77a9d35578ad">
+						<td id="=qOA" class="" style="width:174.5px">TemplateId</td>
+						<td id="SLGF" class="" style="width:174.5px">預留欄位，請留空白</td>
+						<td id="Wz@C" class="" style="width:174.5px">string</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="7830e665-525d-4d04-a38f-4472227fe517">
+						<td id="=qOA" class="" style="width:174.5px">Data</td>
+						<td id="SLGF" class="" style="width:174.5px">訊息內容所需的資料，⽤於動態綁入訊息內容</td>
+						<td id="Wz@C" class="" style="width:174.5px">json</td>
+						<td id="[HqM" class="" style="width:174.5px"></td>
+					</tr>
+					<tr id="2239f838-e169-4f77-9597-5074efa0eae8">
+						<td id="=qOA" class="" style="width:174.5px">Event</td>
+						<td id="SLGF" class="" style="width:174.5px">事件訊息，請填 null</td>
+						<td id="Wz@C" class="" style="width:174.5px">object</td>
+						<td id="[HqM" class="" style="width:174.5px">V</td>
+					</tr>
+				</tbody>
+			</table>
+			<pre id="c9df48e7-2079-409b-aecf-0c1aadf8fcb3" class="code"><code>{
+    &quot;TriggerId&quot;: &quot;gssbot&quot;,
+    &quot;Conversations&quot;: [
+        {
+            &quot;Id&quot;: &quot;&quot;, //請依據發佈頻道填寫
+            &quot;RecipientId&quot;: &quot;user1&quot;,
+            &quot;ChannelList&quot;: {
+                &quot;InclusionChannels&quot;: &quot;iota&quot;
+            }
+    &quot;Subject&quot;: &quot;&quot;,
+            &quot;IsGroup&quot;: false
+        },
+        {
+            &quot;Id&quot;: &quot;&quot;, //請依據發佈頻道填寫
+            &quot;RecipientId&quot;: &quot;user2&quot;,
+            &quot;Subject&quot;: &quot;&quot;,
+            &quot;IsGroup&quot;: false
+        }
+    ],
+    &quot;Event&quot;: null,
+    &quot;Message&quot;: {
+        &quot;TemplateId&quot;: &quot;&quot;,
+        &quot;ItemType&quot;: &quot;text&quot;,
+        &quot;Item&quot;: {
+            &quot;Text&quot;: &quot;Hello {{$.User}}. Today is {{=&gt; DateTime.Today.ToString(DateFormat);}}&quot;
+        },
+        &quot;Data&quot;: {
+            &quot;User&quot;: &quot;Marty&quot;,
+            &quot;DateFormat&quot;: &quot;yyyy-MM-dd&quot;
+        }
+    }
+}</code></pre>
+			<ul id="d92b4d8e-2397-4386-acdd-2236679fbb74" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>Response</strong></li>
+			</ul>
+			<table id="3217614d-d5db-48a6-a4b5-1f89e42df0a6" class="simple-table">
+				<tbody>
+					<tr id="c4c3f2ef-ac00-49c2-9e90-5cdb27b0381c">
+						<td id="W^R\" class="" style="width:139.6px"><strong>參數名稱</strong></td>
+						<td id="K[y~" class="" style="width:139.6px"><strong>說明</strong></td>
+						<td id="[Irv" class="" style="width:139.6px"><strong>格式</strong></td>
+						<td id="\pk}" class="" style="width:139.6px"><strong>必填</strong></td>
+						<td id="Qdn_" class="" style="width:139.6px"><strong>參數名稱</strong></td>
+					</tr>
+					<tr id="1f0c1c2a-1d08-4e63-81ba-bec289c93734">
+						<td id="W^R\" class="" style="width:139.6px">status</td>
+						<td id="K[y~" class="" style="width:139.6px">訊息回應碼</td>
+						<td id="[Irv" class="" style="width:139.6px">string</td>
+						<td id="\pk}" class="" style="width:139.6px">V</td>
+						<td id="Qdn_" class="" style="width:139.6px">200 表⽰成功
+							401 表⽰認證失敗
+							500 表⽰其他錯誤</td>
+					</tr>
+					<tr id="6b418807-07a7-4349-aa21-b8f1df140c03">
+						<td id="W^R\" class="" style="width:139.6px">message</td>
+						<td id="K[y~" class="" style="width:139.6px">處理結果</td>
+						<td id="[Irv" class="" style="width:139.6px">string</td>
+						<td id="\pk}" class="" style="width:139.6px">V</td>
+						<td id="Qdn_" class="" style="width:139.6px">非 200 會告知錯誤原因</td>
+					</tr>
+				</tbody>
+			</table>
+			<pre id="f2bef6dd-7933-4efa-b16f-f1bfd0158391" class="code"><code>{
+    &quot;status&quot;: 200,
+    &quot;message&quot;: &quot;OK&quot;,
+    &quot;data&quot;: null
+}</code></pre>
+			<h3 id="829d692f-66ae-42bd-a8ca-363f8eff64a2" class="">(2)<strong>發送事件訊息</strong></h3>
+			<p id="079b1d0c-bcb8-442b-8247-297e988c4f0a" class="">適⽤於觸發流程或複雜內容</p>
+			<ul id="45c38e91-c525-402f-a3d6-5a8890ba8298" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>URL</strong></li>
+			</ul>
+			<pre id="71b0260b-ee2a-40ca-9e49-20bd344c4ce1"
+				class="code"><code>POST https://{hostUrl}/eta/api/subscription/{botId}/event/multicast</code></pre>
+			<p id="39f7e815-519b-400b-b2ab-77142b15904a" class="">
+			<div class="indented">
+				<ul id="43c458e0-6c05-4ae6-a27e-315662470173" class="bulleted-list">
+					<li style="list-style-type:circle">hostUrl – 請填入 ETA server (通常為 bot server) 的網址</li>
+				</ul>
+				<ul id="d1795054-686b-432b-bdf7-fcd6b5cd127d" class="bulleted-list">
+					<li style="list-style-type:circle">BotId – 請填入 Bot Id (Bot 會有一組固定的識別碼)</li>
+				</ul>
+			</div>
+			</p>
+			<p id="5d3001e9-e8e4-49e4-ad51-940144a61d64" class="">
+			</p>
+			<ul id="35356633-68a6-46ab-a002-0ed857c0948a" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>Header</strong></li>
+			</ul>
+			<pre id="d77859a0-6ee3-49c3-bf9a-eabdf55d3481" class="code"><code>x-gss-event-subscription-key: {subscription key} 
+x-gss-event-from: {botId}
+content-type: application/json</code></pre>
+			<table id="b66de56a-08de-4e4d-aac3-8c5891366d37" class="simple-table">
+				<tbody>
+					<tr id="e0120dba-66b0-4284-a9c6-268f39b433b8">
+						<td id="=CbK" class="" style="width:174.5px"><strong>參數名稱</strong></td>
+						<td id="[YP&lt;" class="" style="width:174.5px"><strong>說明</strong></td>
+						<td id="RkA}" class="" style="width:174.5px"><strong>格式</strong></td>
+						<td id="VAG?" class="" style="width:174.5px"><strong>必填</strong></td>
+					</tr>
+					<tr id="ccfb4ca5-5316-453f-9b44-45cea09f0fd4">
+						<td id="=CbK" class="" style="width:174.5px">x-gss-event- subscription-key</td>
+						<td id="[YP&lt;" class="" style="width:174.5px">Bot 訂閱 Key，Bot 安裝後的首次發佈時會產生一組 subscription key
+						</td>
+						<td id="RkA}" class="" style="width:174.5px">string</td>
+						<td id="VAG?" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="c8b0e2ab-60ff-41b2-a51c-32812f3cbb32">
+						<td id="=CbK" class="" style="width:174.5px">x-gss-event-from</td>
+						<td id="[YP&lt;" class="" style="width:174.5px">發送來源(填寫系統名稱或是 botId)，可留空白</td>
+						<td id="RkA}" class="" style="width:174.5px">string</td>
+						<td id="VAG?" class="" style="width:174.5px"></td>
+					</tr>
+					<tr id="f78c4b68-aa4a-486f-b6bd-721d90a1d853">
+						<td id="=CbK" class="" style="width:174.5px">content-type</td>
+						<td id="[YP&lt;" class="" style="width:174.5px">內容資料型態，固定值 : application/json</td>
+						<td id="RkA}" class="" style="width:174.5px">string</td>
+						<td id="VAG?" class="" style="width:174.5px">V</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul id="892ef87b-96be-427a-9d49-b30506f4a118" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>Body</strong></li>
+			</ul>
+			<table id="9a0c8953-50b6-4761-b75d-aaa031ebb988" class="simple-table">
+				<tbody>
+					<tr id="19efa995-e179-43bb-9aff-ffccf899ebbb">
+						<td id="L^wC" class="" style="width:174.5px"><strong>參數名稱</strong></td>
+						<td id="DxB@" class="" style="width:174.5px"><strong>說明</strong></td>
+						<td id="Ka\b" class="" style="width:174.5px"><strong>格式</strong></td>
+						<td id="wari" class="" style="width:174.5px"><strong>必填</strong></td>
+					</tr>
+					<tr id="80ef76b2-62e4-4626-be5d-1a7e7b232847">
+						<td id="L^wC" class="" style="width:174.5px">TriggerId</td>
+						<td id="DxB@" class="" style="width:174.5px">預設填入 botId，若有設定其他 TriggerId 會另行提供</td>
+						<td id="Ka\b" class="" style="width:174.5px">string</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="d48d740d-a3b3-452b-8b33-3b26f6fb8bb5">
+						<td id="L^wC" class="" style="width:174.5px">Conversations</td>
+						<td id="DxB@" class="" style="width:174.5px">訊息接收者</td>
+						<td id="Ka\b" class="" style="width:174.5px">array</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="538d4697-530d-4c54-847d-7bdbabd220c6">
+						<td id="L^wC" class="" style="width:174.5px">Id</td>
+						<td id="DxB@" class="" style="width:174.5px">頻道為 Iota/ Teams/ Line : 可留空白
+
+							其他頻道如 Webchat : 使用者的聊天室 Id
+							若 Webchat 有介接登入認證，則可留空白</td>
+						<td id="Ka\b" class="" style="width:174.5px">string</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="1ea4a511-e969-4b8a-8be0-84e04d919739">
+						<td id="L^wC" class="" style="width:174.5px">RecipientId</td>
+						<td id="DxB@" class="" style="width:174.5px">訊息接收者的識別碼，如：
+							• iota: 使用者帳號, 如: 員工編號或 AD 帳號
+							• Teams: UserId，為亂數字串
+							• Line: 使用者綁定的 line ID，為亂數字串
+							• Webchat 若有介接登入認證，則傳使用者帳號</td>
+						<td id="Ka\b" class="" style="width:174.5px">string</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="41e6e2a6-139c-4f3c-8193-57ff74a7c4f3">
+						<td id="L^wC" class="" style="width:174.5px">ChannelList</td>
+						<td id="DxB@" class="" style="width:174.5px">只推播到特定 Channel；若未限定則會發送到所有在發佈設定所勾選的頻道。</td>
+						<td id="Ka\b" class="" style="width:174.5px">string</td>
+						<td id="wari" class="" style="width:174.5px"></td>
+					</tr>
+					<tr id="0df8d365-e32f-4dce-a3b0-627bb011f14f">
+						<td id="L^wC" class="" style="width:174.5px">Subject</td>
+						<td id="DxB@" class="" style="width:174.5px">標題，僅作為內部紀錄查詢⽤</td>
+						<td id="Ka\b" class="" style="width:174.5px">string</td>
+						<td id="wari" class="" style="width:174.5px"></td>
+					</tr>
+					<tr id="70713a66-f26a-4cdd-8cfb-9f13e86f2364">
+						<td id="L^wC" class="" style="width:174.5px">IsGroup</td>
+						<td id="DxB@" class="" style="width:174.5px">是否為群組
+
+							個人聊天室 : false 群組聊天室 : true</td>
+						<td id="Ka\b" class="" style="width:174.5px">boolean</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="c00b0fab-5f8a-4348-aa12-2c284731e32c">
+						<td id="L^wC" class="" style="width:174.5px">Event</td>
+						<td id="DxB@" class="" style="width:174.5px">事件訊息</td>
+						<td id="Ka\b" class="" style="width:174.5px">json</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="f74bd188-313e-4212-bfc2-5a0ccb105ae1">
+						<td id="L^wC" class="" style="width:174.5px">Name</td>
+						<td id="DxB@" class="" style="width:174.5px">事件名稱，設定欲觸發的事件名稱。
+
+							值需配合 bot 設定 (由 bot 提供參數值)</td>
+						<td id="Ka\b" class="" style="width:174.5px">string</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="1de1e1d2-1d6f-425d-b065-46acc88c35ab">
+						<td id="L^wC" class="" style="width:174.5px">Value</td>
+						<td id="DxB@" class="" style="width:174.5px">流程需帶的變數資料</td>
+						<td id="Ka\b" class="" style="width:174.5px">json</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+					<tr id="2f9dd2cc-87ea-4360-911b-e523a29fd4e0">
+						<td id="L^wC" class="" style="width:174.5px">Message</td>
+						<td id="DxB@" class="" style="width:174.5px">文字訊息，請填 null</td>
+						<td id="Ka\b" class="" style="width:174.5px">json</td>
+						<td id="wari" class="" style="width:174.5px">V</td>
+					</tr>
+				</tbody>
+			</table>
+			<pre id="a34237bd-6db0-4abb-b592-dd8a2c7bf789" class="code"><code>{
+    &quot;TriggerId&quot;: &quot;gssbot&quot;,
+    &quot;Conversations&quot;: [
+        {
+            &quot;Id&quot;: &quot;&quot;, //請依據發佈頻道填寫
+            &quot;RecipientId&quot;: &quot;User1&quot;,
+            &quot;ChannelList&quot;: {
+                &quot;InclusionChannels&quot;: &quot;iota&quot;
+            }
+    &quot;Subject&quot;: &quot;&quot;,
+            &quot;IsGroup&quot;: false
+        },
+        {
+            &quot;Id&quot;: &quot;&quot;, //請依據發佈頻道填寫
+            &quot;RecipientId&quot;: &quot;User2&quot;,
+            &quot;Subject&quot;: &quot;&quot;,
+            &quot;IsGroup&quot;: false
+        }
+    ],
+    &quot;Event&quot;: {
+        &quot;Name&quot;: &quot;approval&quot;,
+        &quot;Value&quot;: {
+            &quot;FormID&quot;: &quot;0001&quot;
+        }
+    },
+    &quot;Message&quot;: null
+}</code></pre>
+			<ul id="dcda2c6f-ad35-4d41-a378-d1743bdcb929" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>Response</strong></li>
+			</ul>
+			<table id="5ba7135c-4efa-4c38-bdfb-5acc3a3fa441" class="simple-table">
+				<tbody>
+					<tr id="1c13d2e4-003a-450d-87a7-facf5e291dd3">
+						<td id="I}e}" class="" style="width:139.6px"><strong>參數名稱</strong></td>
+						<td id="C{uh" class="" style="width:139.6px"><strong>說明</strong></td>
+						<td id="oKzZ" class="" style="width:139.6px"><strong>格式</strong></td>
+						<td id="Q_Oa" class="" style="width:139.59375px"><strong>必填</strong></td>
+						<td id="Fcsu" class="" style="width:139.6px"><strong>其他說明</strong></td>
+					</tr>
+					<tr id="ae787da3-6928-4604-acda-0a02e800e525">
+						<td id="I}e}" class="" style="width:139.6px">status</td>
+						<td id="C{uh" class="" style="width:139.6px">訊息回應碼</td>
+						<td id="oKzZ" class="" style="width:139.6px">string</td>
+						<td id="Q_Oa" class="" style="width:139.59375px">V</td>
+						<td id="Fcsu" class="" style="width:139.6px">200 表⽰成功
+							401 表⽰認證失敗
+							500 表⽰其他錯誤</td>
+					</tr>
+					<tr id="fc2f9cc4-b9bc-43b2-ac71-01b4ef487d5d">
+						<td id="I}e}" class="" style="width:139.6px">message</td>
+						<td id="C{uh" class="" style="width:139.6px">處理結果</td>
+						<td id="oKzZ" class="" style="width:139.6px">string</td>
+						<td id="Q_Oa" class="" style="width:139.59375px">V</td>
+						<td id="Fcsu" class="" style="width:139.6px">非 200 會告知錯誤原因</td>
+					</tr>
+				</tbody>
+			</table>
+			<pre id="fedccaeb-4454-4b42-a8a2-30809f15f6d9" class="code"><code>{
+    &quot;status&quot;: 200,
+    &quot;message&quot;: &quot;OK&quot;,
+    &quot;data&quot;: null
+}</code></pre>
+			<h3 id="fdc1e6e7-0d29-4365-aac3-a3a3425a605e" class=""><strong>2.補充說明</strong></h3>
+			<p id="5fd09802-89b3-451b-8a9b-d2b9830abdb7" class="">(1) botId、subscription key：可登入管理平台，由 機器人基本資訊取得識別碼
+				(botId) 及通知金鑰 (subscription key)</p>
+			<figure id="2d8b7b0c-d03d-4ed3-adb6-4dd9ee3c9783" class="image"><a
+					href="./assest/補充說明.png"><img
+						style="width:700px"
+						src="./assest/補充說明.png" /></a>
+			</figure>
+		</div>
+	</article>
+</body>
+
+</html>
