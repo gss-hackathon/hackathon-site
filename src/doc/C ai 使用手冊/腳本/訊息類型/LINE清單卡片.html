@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>LINE清單卡片</title>
+	<link href="../../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="5bd8901e-75a3-494d-8c21-14ce32867195" class="page sans">
+		<figure  class="link-to-page back">
+			<a href="../../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../訊息類型.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title">LINE清單卡片</h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<p id="ee4f4c64-703c-40ef-8209-aa688d1ef6f2" class="">設計一個支援 LINE 的列表卡片，常用於需要將資料逐列顯示，清單內容可顯示標題、副標題、描述文字、圖片。
+			</p>
+			<p id="cf7f55fd-bf74-4265-878a-a0d1cb5f68ba" class=""><strong>1.設定步驟</strong></p>
+			<p id="ffe367a2-4b6b-4374-8eae-cadadf330704" class="">(1)加入「LINE 清單卡片」節點</p>
+			<p id="a8a589f6-0205-45fc-ad76-82246276f9cc" class="">(2)設定標題、文字訊息、資料來源</p>
+			<p id="da964dec-3174-4ebd-a88e-205a46b7c2e0" class="">(3)根據資料內容設定標題、副標題、文字、圖片連結</p>
+			<p id="661cceb6-cdf1-415f-9957-64fc162d4a30" class="">(4)調整卡片樣式</p>
+			<p id="9aa3ffff-579d-40f0-ac4a-f1821b9a902b" class=""><strong>2.建立 LINE 清單卡片</strong></p>
+			<p id="ee3c0176-c980-48c9-9d9c-89bd1e44efc9" class="">• 選擇「文字輸入」或「發送訊息」節點 -&gt; 點擊「訊息」 -&gt; 調整文字訊息為「LINE
+				清單卡片」節點</p>
+			<p id="06626b14-d682-4106-952b-7987ea94daba" class=""><strong>3.設定基本內容</strong></p>
+			<p id="dad56481-f00e-4738-9094-8fec5d518887" class="">製作「LINE 清單卡片」需要先準備一份 JSON 資料</p>
+			<p id="2258465d-c5f1-4e45-80d6-828c6884167e" class="">JSON 範例：</p>
+			<pre id="e57266c3-c555-4ecc-a254-aec6f55e0b88" class="code"><code>[
+    {
+        &quot;Name&quot;: &quot;Facebook&quot;,
+        &quot;Description&quot;: &quot;Facebook是源於美國的社群網路服務及社會化媒體網站...&quot;,
+        &quot;HomeUrl&quot;: &quot;https://www.facebook.com/&quot;,
+        &quot;ImageUrl&quot;: &quot;https://imgur.com/qNRwmyV.png&quot;
+    },
+    {
+        &quot;Name&quot;: &quot;Google&quot;,
+        &quot;Description&quot;: &quot;Google是源自美國的跨國科技公司...&quot;,
+        &quot;HomeUrl&quot;: &quot;https://www.google.com.tw&quot;,
+        &quot;ImageUrl&quot;: &quot;https://imgur.com/WUySGns.png&quot;
+    },
+    {
+        &quot;Name&quot;: &quot;Microsoft&quot;,
+        &quot;Description&quot;: &quot;Microsoft是美國一家跨國電腦科技公司...&quot;,
+        &quot;HomeUrl&quot;: &quot;https://www.microsoft.com/&quot;,
+        &quot;ImageUrl&quot;: &quot;https://imgur.com/hvnJ8To.png&quot;
+    }
+]</code></pre>
+			<p id="00aab44a-b39c-41c6-b794-4998c0fde4bd" class=""><strong>4.範例展示</strong></p>
+			<p id="9073970b-2f51-4ba3-821a-e403f436ad8f" class="">此範例希望展示 Name、Description、ImageUrl
+				在每一列，並且使用者點擊資料時連結到　HomeUrl 網址</p>
+			<p id="0fd0af2b-361b-47d3-9387-defc71b0a872" class=""><strong>(1)基本設定</strong></p>
+			<figure id="e4b8a644-c796-4e59-9ca6-e16c7e727348">
+				<video width="100%" controls>
+					<source src="./assest/01.清單_基本設定.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<ul id="416f31f6-ff7a-452e-8d62-af58b1c28096" class="bulleted-list">
+				<li style="list-style-type:disc">資料需設定標題，副標題、文字、圖片連結為可選</li>
+			</ul>
+			<ul id="70046dcc-ece5-4f74-835c-5a6b7de9d3e2" class="bulleted-list">
+				<li style="list-style-type:disc">要將資料來源設定到各欄位需要使用 <strong>{{$.欄位名稱}}</strong></li>
+			</ul>
+			<ul id="97a59cb7-3348-4528-9460-45ee28efb805" class="bulleted-list">
+				<li style="list-style-type:disc">清單項目點擊動作可以使用 <strong>{{$.欄位名稱}}</strong> 帶入對應資料</li>
+			</ul>
+			<p id="a702b11f-4c5f-4825-ade2-b42823493675" class=""><strong>(2)調整樣式</strong></p>
+			<figure id="e1277b15-c219-4b43-ae5a-ae6245a0bbc3">
+				<video width="100%" controls>
+					<source src="./assest/02.清單_調整樣式.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="a16b41fd-1132-4b50-810c-ce84c0d2ab70" class="">根據需求調整樣式，卡片節點雖然可以立即預覽，實際卡片樣式要到 LINE 查看比較準確。</p>
+			<p id="6a7d3f85-d6b4-4516-897c-a16640314de1" class=""><strong>(3)結果展示</strong></p>
+			<figure id="1563d550-94d6-402e-914c-37f886878f46">
+				<video width="100%" controls>
+					<source src="./assest/03.清單_模擬測試.mp4" type="video/mp4">
+				  </video>
+			</figure>
+		</div>
+	</article>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>問答機器人架構概述</title>
+	<link href="../../style.css" rel="stylesheet">
+</head>
+
+<body>
+	<article id="75b4417a-5b12-4bc7-9398-6be6dd5e56c0" class="page sans">
+		<figure class="link-to-page back">
+			<a href="../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../問答集.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title"><strong>問答機器人架構概述</strong></h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<ul id="6047b4de-100a-4e97-b309-ec157df49759" class="bulleted-list">
+				<li style="list-style-type:disc">首先必須由<mark class="highlight-blue_background">領域專家蒐集</mark>該領域的常見<mark
+						class="highlight-blue_background">問題</mark>，例如:資安專家就會蒐集一般資安使用者會問的問題，若是人力資源專家就需要蒐集人事規章或差勤辦法。</li>
+			</ul>
+			<ul id="aa8f9b32-4769-4ef1-97e3-3d14d900799f" class="bulleted-list">
+				<li style="list-style-type:disc">蒐集完一般使用者的常見問題後需要<mark
+						class="highlight-blue_background">整理成問答集</mark>，而問答集必須符合機器人的固定匯入格式。接著把問答集<mark
+						class="highlight-blue_background">匯到AI模型</mark>進行<mark
+						class="highlight-blue_background">訓練</mark>，訓練的方式可以由一個或多個問答集在AI模型裡進行訓練，差異在於這個AI模型可以回覆的範圍到哪裡，訓練完AI模型後下一階段會有<mark
+						class="highlight-blue_background">機器人</mark>來<mark
+						class="highlight-blue_background">引用</mark>，使用引用的理由是因為不同的機器人可能會需要不同回覆的效果，所以不同的機器人因應它的需求，需要匯入不同的知識腦袋。
+				</li>
+			</ul>
+			<ul id="cda52500-5afb-484e-a368-86132476c7ab" class="bulleted-list">
+				<li style="list-style-type:disc">機器人作為AI模型的代理人，可以<mark
+						class="highlight-blue_background">發佈到不同的Channel</mark>(例如:Line或Teams)，而一般使用者透過這些Channel就可以跟機器人進行互動，最終機器人會把AI模型帶出的結果回覆給使用者。
+				</li>
+			</ul>
+			<figure id="b0bd5b3b-146f-469e-bc03-6a9a888dd703" class="image"><a href="./assest/問答機器人架構概述.png"><img
+						style="width:1920px" src="./assest/問答機器人架構概述.png" /></a></figure>
+		</div>
+	</article>
+</body>
+
+</html>

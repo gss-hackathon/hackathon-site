@@ -1,0 +1,237 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>調適型卡片</title>
+	<link href="../../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="e32752c1-58e2-404b-b3fa-8a3df7970b6f" class="page sans">
+		<figure class="link-to-page back">
+			<a href="../../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../訊息類型.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+		<header>
+			<h1 class="page-title"><strong>調適型卡片</strong></h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<p id="7ed80dc1-a161-4dc1-a917-f991994bb67a" class=""><strong>1.Microsoft Adaptive Cards</strong></p>
+			<p id="cb83b5ff-6cfe-4a61-b4dd-203ba4fef209" class="">Adaptive
+				Cards是一種開放式卡片交換格式(JSON格式)，主要分成卡片主體及卡片資料兩個部份。可以自動適應不同應用程式之間的卡片風格轉換。例： Microsoft Teams、 Bot
+				Framework…等。因此開發人員只需設計一套卡片即可在不同的應用程式之間通用。</p>
+			<p id="057d9e5c-1b6a-4141-954b-b97e3e7258b8" class="">相關參考網址:</p>
+			<ul id="20872ecb-a69d-46b1-83fe-e94bbbc11c83" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://learn.microsoft.com/en-us/adaptive-cards/">Document</a>：Adaptive Cards官方說明文件。</li>
+			</ul>
+			<ul id="5a61f1b3-8bff-483e-8a93-733e1e763e7c" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://adaptivecards.io/explorer/">Schema
+						Explorer</a>：Adaptive Cards元件說明、適用版本及使用方式說明。</li>
+			</ul>
+			<ul id="b46a5cf8-05c9-466c-85b5-16a66a034848" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://adaptivecards.io/samples/">Samples and
+						Templates</a>：Adaptive Cards設計範本。</li>
+			</ul>
+			<ul id="b50f7d6b-6fac-4e17-be0e-cd4acf2db9d7" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://adaptivecards.io/designer/">Designer</a>：Adaptive
+					Cards線上編輯器。</li>
+			</ul>
+			<p id="ac567983-9d23-4038-aad1-5a0e5099f1e0" class="">我們將使用Adaptive Cards線上編輯器(Designer)快速並有效率進行卡片的設計。</p>
+			<p id="ff583fdc-8ebc-4fec-911e-49b2f4f2f887" class="">網址：<a
+					href="https://adaptivecards.io/designer/">https://adaptivecards.io/designer/</a></p>
+			<figure id="95607097-e576-4fcd-8edf-01abe980131a" class="image"><a
+					href="./assest/01.AdaptiveCardDesigner.png"><img
+						style="width:85%"
+						src="./assest/01.AdaptiveCardDesigner.png" /></a>
+			</figure>
+			<p id="2b4700ca-8d5b-44df-b944-f1c0d0efe965" class="">
+			</p>
+			<p id="0d84101c-6f47-4e53-b71b-f12291062591" class=""><strong>2.Adaptive Cards Designer 線上編輯器介紹</strong></p>
+			<ul id="ba83333b-0a78-4d8b-8499-c0af74da0493" class="bulleted-list">
+				<li style="list-style-type:disc">上方功能列：可以挑選host app、Undo、Redo、Copy card payload、Preview
+					mode（預覽卡片)、Target version（版本挑選)等。</li>
+			</ul>
+			<figure id="23229f70-48d2-408b-8c97-06939c524d51">
+				<video width="100%" controls>
+					<source src="./assest/02.Designer上方功能列.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="a016233f-aeac-4465-b213-fdf2f9b47888" class="">• 左側Card
+				Elements：您可以用拖拉方式將元件放置於中間的卡片編輯區（相關的元件介紹請參閱下方)。</p>
+			<figure id="ef9c65c3-27df-4dfc-926d-9f9f7ab7dba6">
+				<video width="100%" controls>
+					<source src="./assest/03.Designer左側CardElements.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="dd927497-6b48-4d97-821d-07ddbad09ac9" class="">• 中間卡片編輯區及Card Structure，點選卡片上的元件，Card
+				Structure會自動選取該元件並在右側顯示該元件的相關屬性。</p>
+			<p id="b71bbd86-ed3e-4ff6-898a-07d4fef78dcd" class="">• 右側Element Properties：可以設定元件的屬性。</p>
+			<figure id="3fcc972e-b47e-41b3-a4ae-8422b73288f8">
+				<video width="100%" controls>
+					<source src="./assest/04.Designer中間卡片編輯區.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="cecd2cbd-226e-4c9c-a57f-daadff0e13ce" class="">• 下方Card Payload Editor以及Sample Data Editor：</p>
+			<blockquote id="efdfcadd-12aa-4e50-99d1-065f1615e4ba" class="">Card Payload
+				Editor：顯示此張卡片的JSON，若您已相關熟悉Adaptive Cards，也可以直接編修JSON內容。</blockquote>
+			<blockquote id="efe4939e-a84e-45bb-973f-75f6de8830e2" class="">Sample Data
+				Editor：此張卡片的資料來源，卡片欲使用資料來源的資料，語法請參照<a
+					href="https://learn.microsoft.com/en-us/adaptive-cards/templating/language">Binding to data</a>說明文件。
+			</blockquote>
+			<p id="d85360a5-8d6c-4084-ade9-5145efdefe93" class="">
+			</p>
+			<p id="a8b6f932-835b-4cd9-8ceb-3e6390eba65a" class=""><strong>3.基本元件介紹</strong></p>
+			<p id="bf89f4c1-a3bf-43ce-a6c5-b39b01d41fdb" class="">Adaptive
+				Cards提供相當豐富的元件，可根據您的需求選用不同的元件來設計您的卡片，每一種元件均有各自的屬性可以設定。
+				在使用元件時，請務必參考各元件的屬性說明及注意使用版本。</p>
+			<blockquote id="8f1b151a-4423-4210-b708-173b24120c72" class=""><a href="http://c.ai/">C.ai</a> BotBuilder
+				目前僅可支援1.4以下版本</blockquote>
+			<p id="8a627e81-323e-4a59-b991-dd586899ce6d" class="">
+			</p>
+			<p id="c9c3d82e-cd8d-4cf1-a562-bb353e84e3e8" class="">(1)<strong>基本類型元件</strong></p>
+			<p id="f3455168-97b3-4c63-9e12-9c0dfc4ec6fc" class="">如果您想要單純顯示文字以及圖片或多媒體可以使用以下的元件。</p>
+			<ul id="a1136755-5f02-4e51-867e-7333bf50cae7" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/TextBlock.html">TextBlock</a>：顯示文字，並可設定文字的Size、Color、Weight等屬性。
+				</li>
+			</ul>
+			<ul id="15f6cc03-7da9-43f4-85ed-038cc67de8ec" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/RichTextBlock.html">RichTextBlock</a>：可以將文字內容拆成不同的文字區段，各自設定顯示的格式。
+				</li>
+			</ul>
+			<ul id="ea8c0df0-3c4d-4a1a-aa62-22c5057deba0" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://adaptivecards.io/explorer/Image.html">Image</a>：顯示圖片。
+				</li>
+			</ul>
+			<ul id="9f04adc7-c9a4-48b5-9518-daaba3b4f5e7" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://adaptivecards.io/explorer/Media.html">Media</a>：顯示多媒體。
+				</li>
+			</ul>
+			<p id="a47e22d2-1a8e-4b26-84b0-f11ba8dc5a23" class="">
+			</p>
+			<p id="ff0a100e-246f-4f02-9207-00044f0f0df7" class="">(2)<strong>容器類型元件</strong></p>
+			<p id="23199f66-eed1-4294-9885-711218e492f1" class="">容器類型的元件可以使您更方便的編排元件的顯示位置，以及群組化的控制顯示或隱藏等設定。</p>
+			<ul id="dfbcce2e-130b-43c7-aec0-c50d43d70dd8" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Container.html">Containers</a>：元件容器，可以在此容器內再嵌入其他的元件，例如Containers、TextBlock、ColumnSet…等。
+				</li>
+			</ul>
+			<ul id="1e895427-7209-4d2b-89ef-80be3a9236c6" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/ImageSet.html">ImageSet</a>：圖片元件容器，此容器內允許您加入多張的圖片，並依序顥示這些圖片。
+				</li>
+			</ul>
+			<ul id="b64a3952-c65a-4e1f-8147-146dc27f3c12" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/FactSet.html">FactSet</a>：資料顯示容器，需要提供資料來源，並設定資料的標題及內容值，條列式顥示資料。
+				</li>
+			</ul>
+			<ul id="902913ce-e769-4f38-879b-5aeb0adb1564" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/ColumnSet.html">ColumnSet</a>：ColumnSet 將區域劃分為
+					Columns，允許元件並排放置。</li>
+			</ul>
+			<ul id="65a16733-928f-4b2d-919a-399c63860e5b" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Table.html">Table</a>：提供一種以表格形式顯示資料的方法。(<strong>須支援1.5版才能使用</strong>)
+				</li>
+			</ul>
+			<ul id="cf5fd5e9-2beb-497d-ada6-da9c66c5a560" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/ActionSet.html">ActionSet</a>：按鈕的集合。</li>
+			</ul>
+			<p id="1932cd1b-c949-4ae5-af3e-a8acde1b2f5c" class="">
+			</p>
+			<p id="5f6ee04b-d3b7-4b6c-9159-54110c3615df" class="">(3)<strong>輸入類型元件</strong></p>
+			<p id="cce60b27-d2ab-44a2-97e3-fec0503beed6" class="">
+				輸入類型的元件，可以讓使用者輸入資料，像是輸入文字、數字、日期與時間。或是使用下拉式選單讓使用者挑選所需項目。</p>
+			<p id="865d1e87-1230-453c-8254-274d5e705298" class="">
+				* <strong>注意:輸入類型的元件，務必設定元件的Id屬性。如果該元件設定為必填(Required)，也須一併設定錯誤訊息(Error
+					message)。當使用者未輸入必填欄位時，才能提示使用者錯誤訊息。</strong></p>
+			<ul id="50a5f8e2-34d8-4504-961f-713fe9fc4bf4" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Input.Text.html">Input.Text</a>：文字輸入元件。</li>
+			</ul>
+			<ul id="73f63253-da7b-4c86-94c7-e2c1db220fc1" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Input.Date.html">Input.Date</a>：日期輸入選擇元件。</li>
+			</ul>
+			<ul id="f73b76e1-9070-40ad-bf3f-41f9e401b36f" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Input.Time.html">Input.Time</a>：時間輸入選擇元件。</li>
+			</ul>
+			<ul id="54e4b655-48f3-4ef9-ae50-f1a8721d4a9a" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Input.Number.html">Input.Number</a>：數字輸入元件。</li>
+			</ul>
+			<ul id="f88aaa7b-3314-431a-a76b-1adda1ae168e" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Input.ChoiceSet.html">Input.ChoiceSet</a>：下拉式選擇元件，可以設定Style屬性展開或是下拉方式讓使用者選擇項目。
+				</li>
+			</ul>
+			<ul id="93616357-9ed3-4690-8833-8eb115eca493" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Input.Toggle.html">Input.Toggle</a>：讓使用者在兩個項目之間單一選擇。例如勾選或不勾選。
+				</li>
+			</ul>
+			<p id="db530705-4bb9-4281-890c-9ef0560e4de0" class="">
+			</p>
+			<p id="3d6fb176-c477-4d35-9494-b1af23777605" class="">(4)<strong>按鈕類型元件</strong></p>
+			<p id="941f7739-19f7-462b-a4f0-07ded75ed869" class="">可依照您所想要的按鈕動作挑選以下幾種的按鈕類型。</p>
+			<ul id="aec24c1b-33e2-40bc-980f-1bddce4994ec" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Action.OpenUrl.html">Action.OpenUrl</a>：點選按鈕後開啟連結。</li>
+			</ul>
+			<ul id="9d0201ea-208f-4303-ba50-d20d51050a75" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Action.Submit.html">Action.Submit</a>：點選按鈕後送出資料。</li>
+			</ul>
+			<ul id="e19508d4-e667-4d2a-bb26-22f3e9bd1e55" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Action.ShowCard.html">Action.ShowCard</a>：點選按鈕後顯示內嵌的卡片。
+				</li>
+			</ul>
+			<ul id="9141c1bb-9c56-42be-90b5-7bde4c70c6f2" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Action.ToggleVisibility.html">Action.ToggleVisibility</a>：點選按鈕後控制其他元件顯示或隱藏。
+				</li>
+			</ul>
+			<ul id="33605fb7-5441-44e4-be89-3ae8d911c057" class="bulleted-list">
+				<li style="list-style-type:disc"><a
+						href="https://adaptivecards.io/explorer/Action.Execute.html">Action.Execute</a>：收集表單上的輸入元件資料，並可與您所設定的資料合併後再向Client發送事件。
+				</li>
+			</ul>
+			<p id="c73e50d9-2cda-48ff-a7a7-43a006cb7c21" class="">
+			</p>
+			<p id="a705f548-bbb4-4558-83cc-70f414d7d445" class=""><strong>4.如何使用Adaptive Cards</strong></p>
+			<p id="0aef3c79-7072-4bac-b035-a3354c2c7ff2" class="">我們使用<a
+					href="https://adaptivecards.io/designer/">Adaptive Cards線上編輯器(Designer)</a>完成卡片的設計後，只要將Card Payload
+				Editor的JSON內容先整個拷貝，回到 <a
+					href="http://c.ai/">C.ai</a> BotBuilder的腳本中，使用「發送訊息」或「文字輸入」節點，文字類型請挑選：調勢型卡片，並將拷貝的JSON內容貼進&quot;調適型卡片
+				Json&quot;輸入框中即可。</p>
+			<p id="a725f01e-2473-4690-a275-7c4ddb60e526" class="">如若在設計時有搭配資料來源（Sample Data
+				Editor中的資料），必須要在進入節點前完成資料來源的變數設定，並指定使用該變數，才能正確的顯示卡片。</p>
+			<figure id="84ccb72c-5eaa-48d5-be62-36e3e4b386e8">
+				<video width="100%" controls>
+					<source src="./assest/05.如何使用AdaptiveCards.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="22d6bbac-4e30-47c4-8d27-90280e61d817" class="">
+			</p>
+			<p id="d4fa799f-0993-4673-a8bf-ea973cec4729" class=""><strong>5.模擬測試</strong></p>
+			<p id="6a822a13-590e-4700-8014-6b9f4bae46b0" class="">使用模擬測試執行到節點時，可以讓您即時觀看所設計的卡片顯示是否正確。</p>
+			<figure id="ec9c85d2-3e56-46d4-ac7e-dffc4a6742e6">
+				<video width="100%" controls>
+					<source src="./assest/06.模擬測試AdaptiveCards.mp4" type="video/mp4">
+				  </video>
+			</figure>
+		</div>
+	</article>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>DBGateway</title>
+	<link href="../../style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="af3b5eeb-5f79-49f5-89cf-b3f9af5f384e" class="page sans">
+		<figure class="link-to-page back">
+			<a href="../../C ai 使用手冊.html" class="highlight-blue"><button>🔝回主頁</button></a>&emsp;
+			<br><br>
+			<a href="../腳本.html" class="highlight-blue"><button>🔙回上一頁</button></a>
+		</figure>
+
+		<header>
+			<h1 class="page-title"><strong><strong>DBGateway</strong></strong></h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<p id="5e68298a-6850-4c91-88e7-33cc4eda5ddd" class="">可讓機器人直接存取資料庫，需要有目標的連線相關資訊</p>
+			<p id="23f8eb18-218f-43ff-9d7c-f7a78b64c09f" class="">參考文件：<a
+					href="https://cai.gss.com.tw/CaiDocs/others/dbGatewayQueryApi/#%E8%B3%87%E6%96%99%E5%BA%AB%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2%E6%89%80%E6%94%AF%E6%8F%B4%E7%9A%84%E5%8F%83%E6%95%B8">C.ai
+					DBGateway 說明手冊</a></p>
+			<p id="957aa356-adf6-4d95-b6b8-58870d213107" class="">
+			</p>
+			<h3 id="3d7b106f-547f-45c1-8f66-c587462f7235" class=""><strong>操作步驟：</strong></h3>
+			<p id="05ab92f6-0666-4e36-b015-72778998a3a5" class="indented">(1)設定資料庫連線</p>
+			<p id="01300585-c513-410f-a217-1915ee04017d" class="indented">(2)使用資料庫存取模組</p>
+			<p id="fda1ac87-6e18-468b-a8e6-c12f13a548f0" class="">
+			</p>
+			<h3 id="4a1e57e9-db7a-436a-b2ea-c4e8612a178a" class=""><strong><strong>教學：</strong></strong></h3>
+			<h3 id="8fd764d1-9785-4308-864c-b75ddac4b9c1" class=""><strong>1. 設定資料庫連線</strong></h3>
+			<p id="9c47c462-9548-451b-b3db-50a19d3ed652" class=""><strong>(1)開啟「資料庫存取服務」：</strong></p>
+			<figure id="8035defb-73ca-4ae7-947f-c249ff646b5d">
+				<video width="100%" controls>
+					<source src="./assest/01.啟用資料庫服務.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="8e8a4ce2-31a0-4566-83cf-7117f3fcf72c" class="">選擇「進階」 -&gt; 點擊「資料庫存取服務設定」 -&gt; 點擊「啟用」</p>
+			<p id="fe253167-1204-4fe1-aab5-d42b1c25806a" class="">
+			</p>
+			<p id="5961b313-8333-41f3-9ec8-ff92f5831178" class=""><strong>(2)資料庫存取服務設定</strong></p>
+			<figure id="284904d6-9241-424b-aebc-b7f8396474ef">
+				<video width="100%" controls>
+					<source src="./assest/02.設定資料庫連線.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="56d1d416-c338-4229-aa22-44e0ce1195bd" class="">設定完畢點選測試連線，回傳綠色訊息代表設定無誤，點選新增儲存設定
+			<div class="indented">
+				<ul id="c29586f1-a62c-403f-bd1a-99b64ab691ae" class="bulleted-list">
+					<li style="list-style-type:disc">資料庫ID：自行定義不可重複</li>
+				</ul>
+				<ul id="dcb39007-0c7a-40ea-bca9-9da08ace7728" class="bulleted-list">
+					<li style="list-style-type:disc">名稱：自行定義不可重複</li>
+				</ul>
+				<ul id="1aca9998-c230-43eb-968d-09d6c9eae348" class="bulleted-list">
+					<li style="list-style-type:disc">資料庫類型：根據需求設定</li>
+				</ul>
+				<ul id="0f6c9225-3d23-49f5-8e1d-2bb878b00060" class="bulleted-list">
+					<li style="list-style-type:disc">連線字串：依照各個資料庫支援的連線字串設定</li>
+				</ul>
+			</div>
+			</p>
+			<p id="e84c91fe-ce39-4dfc-a9a7-3cf35497bdb5" class="">
+			</p>
+			<p id="b61cbb3b-f256-4456-b140-8ed2bf3615ba" class=""><strong>(3)設定資料庫客戶端</strong></p>
+			<figure id="3f2f0d5e-ffee-42c0-a4e1-a496de887364">
+				<video width="100%" controls>
+					<source src="./assest/03.設定Clinet端.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="08c8e50e-84bb-4560-9b17-3ff38f0d2ff0" class="">客戶端設定主要是要建立一組 API，之後會透過這組 API 存取資料庫</p>
+			<p id="570db376-dbae-4c43-9c8d-915137bee5f1" class="">
+			</p>
+			<h3 id="3466751d-428e-4f77-8aa7-d57132a98d34" class=""><strong><strong>2. 使用資料庫存取模組</strong></strong></h3>
+			<p id="da69d393-fcfb-4e93-b2ca-dfe2dd759763" class="">選取資料庫模組</p>
+			<p id="5e698ada-2486-4f16-97fe-78d2d219aa2d" class=""><strong>(1)方法一</strong></p>
+			<figure id="629962e8-55dd-4915-8bb9-62f92e5dc09f">
+				<video width="100%" controls>
+					<source src="./assest/04.選擇資料庫模組.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="110d2f07-5995-46af-b1ef-28f8278f4bc7" class="">
+			</p>
+			<p id="52bb8751-b6c9-45c7-bda7-2faf506b09a5" class=""><strong>(2)方法二</strong></p>
+			<figure id="ddb5c11f-72eb-4e98-990c-39eae19f95a0">
+				<video width="100%" controls>
+					<source src="./assest/05.選擇資料庫模組.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="b0c122da-ed56-4c72-94ed-0a22880ff482" class="">
+			</p>
+			<h3 id="b665ac47-ed48-40b5-b91b-ff324eb22e97" class="">3.<strong><strong>設定資料庫模組節點</strong></strong></h3>
+			<p id="474cdb20-516e-4af8-9bbe-c9c480b7496f" class="">客戶端 ID 和客戶端 API 建議新增到全域變數，方便後續設定模組</p>
+			<figure id="1eb66af1-8b1d-40b5-84d8-32dee5718e2c">
+				<video width="100%" controls>
+					<source src="./assest/06.資料庫模組基本設定.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<p id="c6a5fbd8-17ec-4208-9bbd-b0361554e44d" class=""><strong>(1)查詢類型說明</strong></p>
+			<p id="faf0b6fd-49b2-4987-b484-6dc69e85e199" class="">查詢類型會影響回傳的資料類型：</p>
+			<ul id="11a9f53c-69d0-4471-b955-523ebf875d4e" class="bulleted-list">
+				<li style="list-style-type:disc">QueryAll：回傳所有結果 (Table)。</li>
+			</ul>
+			<ul id="2c19da55-9fe8-4898-be76-39f48ae2d93d" class="bulleted-list">
+				<li style="list-style-type:disc">QueryFirst：回傳第一筆結果 (Row)。</li>
+			</ul>
+			<ul id="fef8d768-3dbf-4cbb-94e7-8c21c21b3d08" class="bulleted-list">
+				<li style="list-style-type:disc">QueryMultiple：回傳結果為多個結果的陣列 (多個 Table)。</li>
+			</ul>
+			<ul id="cad53902-747e-41ea-81a4-f910fe96164f" class="bulleted-list">
+				<li style="list-style-type:disc">Execute：回傳受影響的行數。</li>
+			</ul>
+			<ul id="2f1a5705-1fa3-43da-adbd-081ccd785080" class="bulleted-list">
+				<li style="list-style-type:disc">ExecuteScalar：回傳第一列第一欄的值。</li>
+			</ul>
+			<p id="0dd1dc83-8bca-460e-8817-9070c360102c" class="">
+			</p>
+			<p id="7a0ff38c-ad62-4379-9a4a-dcc698441bbd" class=""><strong>(2)SQL 語法區塊</strong></p>
+			<p id="62ebbfaf-e95f-47fd-95c5-6e57cf61ccd4" class="">使用一般 SQL 語法查詢，模組有提供參數化查詢，避免 SQL Injection 問題，使用 @Name
+				取得「參數」區塊對應 Value 值。</p>
+			<p id="49c84a2c-0e39-4365-8b21-cc26af948385" class="">
+			</p>
+			<h3 id="e554f415-8303-46f9-a12a-ae88a22c9e96" class="">4.<strong>模擬測試</strong></h3>
+			<p id="345ee4d6-ed97-45d2-9f06-56ad912613b0" class="">設定完畢可先執行模擬測試驗證設定是否如預期</p>
+			<figure id="bf69a55d-3e31-4dc7-a2f6-1f4dba1f6a5d">
+				<video width="100%" controls>
+					<source src="./assest/07.資料庫模擬測試.mp4" type="video/mp4">
+				  </video>
+			</figure>
+			<ul id="ebbfddc2-0600-4cc6-98ed-8d3b55c8a396" class="bulleted-list">
+				<li style="list-style-type:disc">參數化的方式模擬測試要先替換變數
+					<p id="02e81fc8-d39b-4149-992c-1141e49094b8" class="">(1)選擇「變數替換」</p>
+					<p id="ad7be2f1-eda2-4e9e-88a7-a7cdcd12aa56" class="">(2)點擊「自動新增變數」</p>
+					<p id="c8607b6d-660b-474c-be6e-2d41a95ffce3" class="">(3)在新增的變數填入要模擬的值</p>
+					<p id="8b22dac1-e123-44d7-a583-5325a47ba4b2" class="">(4)點選播放圖示查看結果</p>
+					<p id="0e2ab87b-f5b5-4ec2-838d-89905ef08eb0" class="">
+					</p>
+					<p id="3874cdff-fa56-4983-9f8f-6c67b675314b" class="">
+					</p>
+				</li>
+			</ul>
+		</div>
+	</article>
+</body>
+
+</html>
