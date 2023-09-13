@@ -15,8 +15,6 @@ export class School2023SignUpComponent implements OnInit {
 
   isOpenRecord: boolean = false;
 
-  startDate: Date = new Date('2023-06-19 00:00:00');
-
   private _jsonURL = 'assets/data/awards.json';
 
   @Output()
@@ -29,8 +27,7 @@ export class School2023SignUpComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isOpenRecord = (new Date() > this.startDate) ? true : false;
-    this.callToActionText = this.isOpenRecord ? "查看隊伍列表" : "報名已截止";
+    this.callToActionText = this.isOpenRecord ? "查看隊伍列表" : "得獎名單公布";
   }
 
   getJSON(): Observable<any> {
@@ -50,8 +47,6 @@ export class School2023SignUpComponent implements OnInit {
   }
 
   openForm() {
-    if (this.isOpenRecord){
-      this.router.navigateByUrl('/2023/school/record');
-    }
+    this.router.navigateByUrl('/2023/school/award');
   }
 }

@@ -1,0 +1,135 @@
+[
+  {
+    "prizeId": 1,
+    "prizeName": "冠軍",
+    "teamName": "不知道要叫怎麼哈哈哈",
+    "botName": "智能學霸",
+    "url": "https://www.youtube.com/watch?v=i8kA5AoflFk"
+  },
+  {
+    "prizeId": 2,
+    "prizeName": "亞軍",
+    "teamName": "1234",
+    "botName": "醫賴我BOT",
+    "url": "https://www.youtube.com/watch?v=MeMtXf6m2OI"
+  },
+  {
+    "prizeId": 3,
+    "prizeName": "季軍",
+    "teamName": "NO PROGRAM NO BUG",
+    "botName": "未來我來罩",
+    "url": "https://www.youtube.com/watch?v=0cOQwl2pYpU"
+  },
+  {
+    "prizeId": 4,
+    "prizeName": "遺珠獎",
+    "teamName": "創意科技研究社",
+    "botName": "科技雲",
+    "url": "https://www.youtube.com/watch?v=ljIl2qmw_4k"
+  },
+  {
+    "prizeId": 5,
+    "prizeName": "療癒夥伴獎",
+    "teamName": "智能聊天巧巧🐶",
+    "botName": "巧巧偷走你的心",
+    "url": "https://www.youtube.com/watch?v=zS72OD5m_dk"
+  },
+  {
+    "prizeId": 6,
+    "prizeName": "最國際化獎",
+    "teamName": "MisSeekers",
+    "botName": "GlobeScholar",
+    "url": "https://www.youtube.com/watch?v=t7Q0aF-KLfk"
+  },
+  {
+    "prizeId": 7,
+    "prizeName": "美食饕客獎",
+    "teamName": "愛鱔魚🫶",
+    "botName": "E熊在手",
+    "url": "https://www.youtube.com/watch?v=kPInfglA0Cg"
+  },
+  {
+    "prizeId": 8,
+    "prizeName": "人際關係獎",
+    "teamName": "哼哼哈兮",
+    "botName": "打羽球小幫手",
+    "url": "https://www.youtube.com/watch?v=qShgJQ36v0I"
+  },
+  {
+    "prizeId": 9,
+    "prizeName": "趣味獎",
+    "teamName": "機油好好喝",
+    "botName": "校戀嘉年華",
+    "url": "https://www.youtube.com/watch?v=SEb7ASPh7p0"
+  },
+  {
+    "prizeId": 10,
+    "prizeName": "情有獨鍾獎",
+    "teamName": "你是我的J妹",
+    "botName": "就是這麼簡單，YA",
+    "url": "https://www.youtube.com/watch?v=gSa-uQ5qnyQ"
+  },
+  {
+    "prizeId": 11,
+    "prizeName": "情有獨鍾獎",
+    "teamName": "斂財集團",
+    "botName": "校咖波比",
+    "url": "https://www.youtube.com/watch?v=7Jl2ulaPNiQ"
+  },
+  {
+    "prizeId": 12,
+    "prizeName": "實用獎",
+    "teamName": "欸今晚吃甚麼",
+    "botName": "守護你的血汗錢",
+    "url": "https://www.youtube.com/watch?v=f_U4TCJh2XY"
+  },
+  {
+    "prizeId": 13,
+    "prizeName": "最佳勇氣獎",
+    "teamName": "黑客之夢",
+    "botName": "校園事務系統",
+    "url": "https://www.youtube.com/watch?v=Uv4mS_MEOhM"
+  },
+  {
+    "prizeId": 14,
+    "prizeName": "AI 運用獎",
+    "teamName": "乙醯柳酸",
+    "botName": "乙醯柳酸",
+    "url": "https://www.youtube.com/watch?v=Vb3L4DUn86o"
+  },
+  {
+    "prizeId": 15,
+    "prizeName": "人氣獎-第一名",
+    "teamName": "什麼都好",
+    "botName": "i校園",
+    "url": "https://www.youtube.com/watch?v=w1jajp09QXs"
+  },
+  {
+    "prizeId": 16,
+    "prizeName": "人氣獎-第二名",
+    "teamName": "鴨香寶",
+    "botName": "歐趴指南",
+    "url": "https://www.youtube.com/watch?v=SaV0kX7451Y"
+  },
+  {
+    "prizeId": 17,
+    "prizeName": "人氣獎-第三名",
+    "teamName": "羔羊的小羔羊",
+    "botName": "羊助理",
+    "url": "https://www.youtube.com/watch?v=bw4tkhagXWY"
+  },
+  {
+    "prizeId": 18,
+    "prizeName": "人氣獎-第四名",
+    "teamName": "我的貓叫哺啾他吃素",
+    "botName": "貓咪蒲啾",
+    "url": "https://www.youtube.com/watch?v=-nF_w_V9G_8"
+  },
+  {
+    "prizeId": 19,
+    "prizeName": "人氣獎-第五名",
+    "teamName": "嫩魯宅",
+    "botName": "校園終結者",
+    "url": "https://www.youtube.com/watch?v=-SBZtyQqtXcs"
+  }
+]

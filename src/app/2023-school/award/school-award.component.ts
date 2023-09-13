@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
   templateUrl: './school-award.component.html',
   styleUrls: ['./school-award.component.scss']
 })
-export class SchoolAwardComponent implements OnInit {
+export class School2023AwardComponent implements OnInit {
 
   awards: AwardModel[] = [];
 
   heroImagePath: string = 'assets/images/school_banner.jpg';
 
-  private _jsonURL = 'assets/data/awards.json';
+  private _jsonURL = 'assets/data/awards_2023.json';
 
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
