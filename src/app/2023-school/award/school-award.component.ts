@@ -12,7 +12,7 @@ export class School2023AwardComponent implements OnInit {
 
   awards: AwardModel[] = [];
 
-  heroImagePath: string = 'assets/images/2023_hackathon_survey-03.jpg';
+  heroImagePath: string = '';
 
   private _jsonURL = 'assets/data/awards_2023.json';
 
@@ -42,9 +42,9 @@ export class School2023AwardComponent implements OnInit {
     protected onResize() {
       let width = window.innerWidth;
       if (width <= 576) {
-        this.heroImagePath = 'assets/images/school_banner_min.jpg';
+        this.heroImagePath = 'assets/images/2023_hackathon_survey-03_min.jpg';
       } else {
-        this.heroImagePath = 'assets/images/school_banner.jpg';
+        this.heroImagePath = 'assets/images/2023_hackathon_survey-03.jpg';
       }
     }
 
