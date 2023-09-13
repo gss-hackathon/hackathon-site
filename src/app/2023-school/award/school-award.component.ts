@@ -12,7 +12,7 @@ export class School2023AwardComponent implements OnInit {
 
   awards: AwardModel[] = [];
 
-  heroImagePath: string = 'assets/images/school_banner.jpg';
+  heroImagePath: string = 'assets/images/2023_hackathon_survey-03.jpg';
 
   private _jsonURL = 'assets/data/awards_2023.json';
 
@@ -33,6 +33,7 @@ export class School2023AwardComponent implements OnInit {
       award.prizeName = data[index]['prizeName'];
       award.teamName = data[index]['teamName'];
       award.botName = data[index]['botName'];
+      award.url = data[index]['url'];
       this.awards.push(award);
     }
   }
@@ -49,6 +50,10 @@ export class School2023AwardComponent implements OnInit {
 
   ngOnInit(): void {
     this.onResize();
+  }
+
+  gotoYT(url: string): void {
+    window.open(url);
   }
 
 }

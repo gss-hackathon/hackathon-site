@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let award of awards; let i=index">
+          <tr *ngFor="let award of awards; let i=index" (click)="gotoYT(award.url)" style="cursor: pointer;">
             <td style="width: 20%">{{award.prizeName}}</td>
             <td style="width: 40%">{{award.teamName}}</td>
             <td style="width: 40%">{{award.botName}}</td>
