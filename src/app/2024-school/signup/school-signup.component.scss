@@ -1,0 +1,90 @@
+@import '../../../assets/scss/school-variables';
+
+.container {
+    margin-top: 10px;
+    background: $body-bg;
+    color: $body-color;
+}
+
+.hero {
+    width: 100%;
+}
+
+.item-text {
+    margin-bottom: 70px;
+    line-height: 1.6rem;
+    color: #2D353F;
+  
+    .highlight {
+      color: $body-color-highlight;
+    }
+    .bigger {
+      font-size: 1.6rem;
+    }
+  }
+  
+  .item-list {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+    li + li {
+      margin-top: 0.8rem;
+    }
+  }
+
+table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 850px;
+    border-spacing: 0;
+    color: #2D353F;
+
+    tbody {
+        tr {
+            &:hover {
+                color: white;
+                background-color: $hr-color;
+            }
+
+            &:hover a {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    th {
+        font-weight: bold;
+        padding: 0.5rem 0.5rem;
+        border-bottom: 2px solid $hr-color;
+    }
+
+    td {
+        padding: 0.5rem 0.5rem;
+        border-bottom: 1px solid $hr-color;
+    }
+
+    .highlight {
+        color: $body-color-highlight;
+        font-weight: bold;
+    }
+}
+
+h3 {
+    color: #2D353F;
+    font-weight: bold;
+}
+
+.item-list-icon {
+    width: 20px; 
+    vertical-align: middle; 
+    margin-right: 5px;
+}
+
+.item-list-icon.two {
+    width: 15px; 
+}
+
+.item-list-icon.second {
+    width: 10px; 
+}
