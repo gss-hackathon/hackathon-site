@@ -6,8 +6,12 @@
     color: $body-color;
 }
 
-.hero {
+.logo {
     width: 100%;
+}
+
+hr {
+    border-color: $hr-color;
 }
 
 .item-text {
@@ -33,7 +37,7 @@
     }
   }
 
-table {
+.default-table {
     margin: 0 auto;
     width: 100%;
     max-width: 850px;
@@ -88,4 +92,34 @@ h3 {
 
 .item-list-icon.second {
     width: 10px; 
+}
+
+.iota-table {
+    margin-top: 20px; 
+    margin-left: 40px; 
+    width: 100%;
+    max-width: 850px;
+    border-spacing: 0;
+
+    th {
+        text-align: center;
+        font-weight: bold;
+        padding: 0.5rem 0.5rem;
+        border-bottom: 2px solid $hr-color;
+    }
+
+    td {
+        padding: 0.5rem 0.5rem;
+        border-bottom: 1px solid $hr-color;
+
+        &:nth-child(1) {
+            width: 50%;
+        }
+        &:nth-child(2) {
+            width: 25%;
+        }
+        &:nth-child(3) {
+            width: 25%;
+        }
+    }
 }
