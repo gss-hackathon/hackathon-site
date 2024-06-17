@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CompetitionMethodComponent } from './competition-method/competition-method.component';
+import { CompetitionMethodNewComponent } from './competition-method-new/competition-method-new.component';
 import { FooterComponent } from './footer/footer.component';
 import { GSSSignUpComponent } from './gss/signup/gss-signup.component';
 import { SchoolSignUpComponent } from './school/signup/school-signup.component';
@@ -22,6 +23,7 @@ import { School2024SignUpComponent } from './2024-school/signup/school-signup.co
     SchoolSignUpComponent,
     GSSSignUpComponent,
     CompetitionMethodComponent,
+    CompetitionMethodNewComponent,
     FooterComponent,
     SchoolSignupRecordComponent,
     GssSignupRecordComponent,

@@ -1,0 +1,21 @@
+@import '../../assets/scss/variables';
+
+.item-title {
+  color: $body-heading-color;
+  text-align: center;
+  margin-top: min(max(1rem, 4vw), 2rem);
+  margin-bottom: 0;
+  font-size: min(max(32px, 4vw), 40px);
+
+  img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    padding-right: 10px;
+  }
+}
+
+.item-title > * {
+  vertical-align: middle;
+}
