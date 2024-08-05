@@ -104,6 +104,12 @@
     }
 }
 
+.container .item-text.small {
+    font-size: min(max(10px, 4vw), 14px);
+    font-weight: bold;
+    color: #0a43a0;
+}
+
 .item-list {
     padding-left: 10%;
     padding-right: 10%;
