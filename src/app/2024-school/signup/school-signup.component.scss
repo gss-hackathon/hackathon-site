@@ -236,3 +236,23 @@ h3 {
 .item-list-icon.warning {
     width: 30px;
 }
+
+.question-remark {
+    width: 180px;
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    background-color: #ffffff; 
+    padding: 5px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    font-weight: bold;
+    font-size: min(max(10px, 4vw), 14px);
+    color: #0a43a0;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        position: static;
+    }
+}
