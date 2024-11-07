@@ -166,43 +166,6 @@
     }
 }
 
-.list-table {
-    font-size: min(max(18px, 4vw), 20px) !important;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 850px;
-    border-spacing: 0;
-    color: $gray;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 0.5rem;
-    font-size: min(max(0.8rem, 4vw), 1.25rem);
-
-    tbody {
-        tr td {
-            width: 25%;
-            &:hover {
-                color: white;
-                background-color: $hr-color;
-                transition: all 0.2s;
-            }
-
-            &:hover a {
-                color: white;
-                text-decoration: underline;
-            }
-        }
-
-        tr:last-child td {
-            border-bottom: 1px solid transparent;
-        }
-    }
-
-    td {
-        padding: 0.75rem;
-        border-bottom: 1px solid $hr-color;
-    }
-}
-
 h3 {
     color: $gray;
     font-weight: bold;

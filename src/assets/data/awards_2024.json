@@ -1,0 +1,44 @@
+[
+  {
+    "prizeId": 1,
+    "prizeName": "第一名",
+    "projectName": "基於智能檢索對話系統的活動推播助理",
+    "url": "https://www.youtube.com/watch?si=rkfbsHuChNl4E-MS&v=cYsosrucMoU&feature=youtu.be"
+  },
+  {
+    "prizeId": 2,
+    "prizeName": "第二名",
+    "projectName": "四季更褶",
+    "url": "https://www.youtube.com/watch?v=PMC3x22Pmvg"
+  },
+  {
+    "prizeId": 3,
+    "prizeName": "第三名",
+    "projectName": "騙假不留--智能防詐整合服務系統",
+    "url": "https://www.youtube.com/watch?v=nR0SpeNpbIk"
+  },
+  {
+    "prizeId": 4,
+    "prizeName": "創新應用獎",
+    "projectName": "GeneTree家庭樹",
+    "url": "https://www.youtube.com/watch?v=qLZ5JyrZ0Yw"
+  },
+  {
+    "prizeId": 5,
+    "prizeName": "技術卓越獎",
+    "projectName": "愛(AI)吃聊聊",
+    "url": "https://www.youtube.com/watch?v=bE36oLbqSvg&feature=youtu.be"
+  },
+  {
+    "prizeId": 6,
+    "prizeName": "產品貢獻獎",
+    "projectName": "永續ERP智能助理",
+    "url": "https://www.youtube.com/watch?v=H02uJ5MxV7U"
+  },  
+  {
+    "prizeId": 7,
+    "prizeName": "台風穩健獎",
+    "projectName": "天才小助教",
+    "url": "https://www.youtube.com/watch?v=Lfc3KCxSTsU"
+  }
+]
