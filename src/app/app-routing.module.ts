@@ -10,9 +10,10 @@ import { GssAwardComponent } from './gss/award/gss-award.component';
 import { School2023SignUpComponent } from './2023-school/signup/school-signup.component';
 import { School2023SignupRecordComponent } from './2023-school/signup-record/school-signup-record.component';
 import { School2024SignUpComponent } from './2024-school/signup/school-signup.component';
+import { School2025SignUpComponent } from './2025-school/signup/school-signup.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/2024/innoserve', pathMatch: 'full' },
+  { path: '', redirectTo: '/2025/innoserve', pathMatch: 'full' },
   {
       path: '2022',
       children: [
@@ -42,6 +43,14 @@ const routes: Routes = [
         { path: '', redirectTo: 'innoserve', pathMatch: 'full' },
         { path: 'innoserve', component: School2024SignUpComponent },
         { path: '**', redirectTo: '/2024/innoserve', pathMatch: 'full' },
+    ]
+  },
+  {
+    path: '2025',
+    children: [
+        { path: '', redirectTo: 'innoserve', pathMatch: 'full' },
+        { path: 'innoserve', component: School2025SignUpComponent },
+        { path: '**', redirectTo: '/2025/innoserve', pathMatch: 'full' },
     ]
   }
 ];

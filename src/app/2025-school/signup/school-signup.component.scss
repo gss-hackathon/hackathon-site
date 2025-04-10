@@ -1,0 +1,257 @@
+@import '../../../assets/scss/school-variables';
+
+.background {
+    background-color: #321796;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.container {
+    box-sizing: border-box;
+    margin-top: 0px;
+    padding: 0;
+    background: transparent;
+    color: $body-color;
+    padding-bottom: 2rem;
+}
+
+.container ul {
+    padding-inline-start: 0px;
+}
+
+.container ul ul {
+    padding-inline-start: 1.5rem;
+}
+
+.container ul ul ul {
+    padding-inline-start: 2rem;
+}
+
+.container li {
+    line-height: 1.5;
+    text-align: left;
+}
+
+.container a {
+    color: $blue;
+    text-decoration: none;
+    border-bottom: 1px solid $blue;
+    transition: all 0.2s;
+}
+
+.container a:hover {
+    border-bottom: 1px solid transparent;
+}
+
+.container .boxstyle {
+    background: white;
+    background: url("../../../assets/images/lp_innoserve_y24_bg.jpg");
+    background-size: contain;
+    border-radius: 1rem;
+    padding: 1rem min(max(0.5rem, 4vw), 1rem) min(max(1rem, 4vw), 4rem);
+}
+
+.container .item-product {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    padding: 1rem min(max(1rem, 4vw), 1.5rem);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.container .title,
+.container .item-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.container .title {
+    margin-top: min(max(1rem, 4vw), 2rem);
+    font-size: min(max(32px, 4vw), 40px);
+}
+
+.container .title > * {
+    vertical-align: middle;
+}
+
+.container .item-text {
+    margin-top: 1rem;
+    color: $gray;
+    font-size: min(max(20px, 4vw), 24px);
+
+    .highlight {
+        color: $body-color-highlight;
+        font-weight: bold;
+    }
+
+    .bigger {
+        font-size: 1.6rem;
+    }
+}
+
+.container .item-text.small {
+    font-size: min(max(10px, 4vw), 14px);
+    font-weight: bold;
+    color: #0a43a0;
+}
+
+.item-list {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+
+    li+li {
+        margin-top: 0.8rem;
+    }
+}
+
+.default-table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 850px;
+    border-spacing: 0;
+    color: $gray;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    font-size: min(max(0.8rem, 4vw), 1.25rem);
+
+    tbody {
+        tr {
+            &:hover {
+                color: white;
+                background-color: $hr-color;
+                transition: all 0.2s;
+            }
+
+            &:hover a {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+
+        tr:last-child td {
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+    th {
+        font-weight: bold;
+        padding: 0.5rem 0.5rem;
+        border-bottom: 2px solid $hr-color;
+    }
+
+    td {
+        padding: 0.75rem;
+        border-bottom: 1px solid $hr-color;
+    }
+
+    .highlight {
+        color: $body-color-highlight;
+        font-weight: bold;
+    }
+}
+
+h3 {
+    color: $gray;
+    font-weight: bold;
+}
+
+.item-product h3>* {
+    vertical-align: middle;
+}
+
+.item-list-icon {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.item-list-icon.two {
+    width: 15px;
+}
+
+.item-list-icon.three {
+    width: 10px;
+}
+
+.item-list-icon.four {
+    width: 8px;
+}
+
+.iota-table {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 850px;
+    border-spacing: 0;
+
+    th {
+        text-align: center;
+        font-weight: bold;
+        padding: 0.5rem 0.5rem;
+        border-bottom: 2px solid $hr-color;
+    }
+
+    td {
+        padding: 0.5rem 0.5rem;
+        border-bottom: 1px solid $hr-color;
+
+        &:nth-child(1) {
+            width: 50%;
+        }
+
+        &:nth-child(2) {
+            width: 25%;
+        }
+
+        &:nth-child(3) {
+            width: 25%;
+        }
+    }
+}
+
+.container .img-rwd {
+    width: 100%;
+}
+
+.container .title01 {
+    color: rgb(255, 111, 0);
+    font-weight: bold;
+}
+
+.item-list-icon.warning {
+    width: 30px;
+}
+
+.question-remark {
+    width: 180px;
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    background-color: #ffffff; 
+    padding: 5px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: min(max(10px, 4vw), 14px);
+    color: #0a43a0;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        position: static;
+    }
+}
