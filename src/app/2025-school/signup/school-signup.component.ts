@@ -38,4 +38,17 @@ export class School2025SignUpComponent {
     gotoYT(url: string): void {
         window.open(url);
     }
+
+    openGssWebChat() {
+        const width = 950;
+        const height = 650;
+        window.open('https://cai-innoserve.gss.com.tw/webchat/index.html?botid=baseinfo', 'HelloGSSWebChat', `width=${width},height=${height},resizable=yes,scrollbars=yes`);
+    }
+
+    getTodayMonthDay(): string {
+        const today = new Date();
+        const formattedMonth = (today.getMonth() + 1).toString().padStart(2, '0');
+        const formattedDay = today.getDate().toString().padStart(2, '0');
+        return `${formattedMonth}/${formattedDay}`;
+    }
 }
