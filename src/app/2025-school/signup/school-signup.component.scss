@@ -255,3 +255,10 @@ h3 {
         position: static;
     }
 }
+
+.info-box {
+    background: rgba(245, 230, 201, 0.7);
+    border-radius: 1rem;
+    padding: 1rem min(max(1rem, 4vw), 1.5rem);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
