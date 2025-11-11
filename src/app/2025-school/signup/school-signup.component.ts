@@ -12,7 +12,7 @@ export class School2025SignUpComponent {
 
     awards: AwardModel[] = [];
 
-    private _jsonURL = 'assets/data/awards_2024.json';
+    private _jsonURL = 'assets/data/awards_2025.json';
 
     constructor(private http: HttpClient) {
         this.getJSON().subscribe(data => {
@@ -30,6 +30,7 @@ export class School2025SignUpComponent {
             award.prizeId = data[index]['prizeId'];
             award.prizeName = data[index]['prizeName'];
             award.projectName = data[index]['projectName'];
+            award.schoolName = data[index]['schoolName'];
             award.url = data[index]['url'];
             this.awards.push(award);
         }
