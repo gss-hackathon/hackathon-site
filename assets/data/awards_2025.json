@@ -1,0 +1,51 @@
+[
+  {
+    "prizeId": 1,
+    "prizeName": "第一名",
+    "projectName": "議想同心",
+    "schoolName": "國立臺中科技大學",
+    "url": "https://www.youtube.com/watch?v=pw42hoiUZqo"
+  },
+  {
+    "prizeId": 2,
+    "prizeName": "第二名",
+    "projectName": "Visitour - 視覺化旅遊行程決策系統",
+    "schoolName": "國立中山大學",
+    "url": "https://www.youtube.com/watch?v=9IjUvADzrIs&feature=youtu.be"
+  },
+  {
+    "prizeId": 3,
+    "prizeName": "第三名",
+    "projectName": "傳統不掉線",
+    "schoolName": "國立臺中科技大學",
+    "url": "https://www.youtube.com/watch?v=Lt2X4p66McA&feature=youtu.be"
+  },
+  {
+    "prizeId": 4,
+    "prizeName": "創新應用獎",
+    "projectName": "慧流庫存財務資訊管理系統",
+    "schoolName": "國立臺灣大學",
+    "url": "https://www.youtube.com/watch?v=FPO2KYYK4jQ&feature=youtu.be"
+  },
+  {
+    "prizeId": 5,
+    "prizeName": "技術卓越獎",
+    "projectName": "揪遊趣_基於超個人化的旅遊推薦系統",
+    "schoolName": "國立中山大學",
+    "url": "https://www.youtube.com/watch?v=O5swESrhcBU"
+  },
+  {
+    "prizeId": 6,
+    "prizeName": "產品貢獻獎",
+    "projectName": "藥你健康",
+    "schoolName": "國立臺中科技大學",
+    "url": "https://www.youtube.com/watch?v=_mmnIRyAj34&feature=youtu.be"
+  },  
+  {
+    "prizeId": 7,
+    "prizeName": "台風穩健獎",
+    "projectName": "化癬為零",
+    "schoolName": "私立明道高中",
+    "url": "https://www.youtube.com/watch?v=LQfIAetYc5g&feature=youtu.be"
+  }
+]
