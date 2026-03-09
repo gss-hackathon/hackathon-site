@@ -17,6 +17,7 @@ import { School2023SignUpComponent } from './2023-school/signup/school-signup.co
 import { School2023SignupRecordComponent } from './2023-school/signup-record/school-signup-record.component';
 import { School2024SignUpComponent } from './2024-school/signup/school-signup.component';
 import { School2025SignUpComponent } from './2025-school/signup/school-signup.component';
+import { School2026SignUpComponent } from './2026-school/signup/school-signup.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { School2025SignUpComponent } from './2025-school/signup/school-signup.co
     School2023SignupRecordComponent,
     School2023AwardComponent,
     School2024SignUpComponent,
-    School2025SignUpComponent
+    School2025SignUpComponent,
+    School2026SignUpComponent
   ],
   imports: [
     BrowserModule,
