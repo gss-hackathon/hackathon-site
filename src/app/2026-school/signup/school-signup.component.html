@@ -3,27 +3,6 @@
         <img class="logo" alt="Hackathon 主視覺" src="assets/images/2026/lp_innoserve_y26_hero.jpg">
 
         <section class="boxstyle">
-            <c-method-n class="title" [icon]="'innoserve_29_celebration'" [methodSubject]="'得獎名單'">
-                <p class="item-text">！！！恭喜以下得獎團隊！！！</p>
-                <table style="margin-top: 24px;" class="default-table">
-                    <thead>
-                        <tr>
-                            <th>名次</th>
-                            <th>專題名稱</th>
-                            <th>學校名稱</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let award of awards; let i=index" (click)="gotoYT(award.url)" style="cursor: pointer;">
-                            <td style="width: 25%">{{award.prizeName}}</td>
-                            <td style="width: 40%">{{award.projectName}}</td>
-                            <td style="width: 35%">{{award.schoolName}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="item-text" style="margin-top: 0; text-align: right; font-size: 16px;">詳細請見<a href="https://innoserve.tca.org.tw/award.aspx" target="_blank">官網公告</a></p>
-            </c-method-n>
-
             <c-method-n class="title" [icon]="'innoserve_29_description'" [methodSubject]="'參賽說明'">
                 <p class="item-text">
                     結合<span class="highlight"> AI </span>新趨勢，以「<span class="highlight">智慧場域</span>」為發展概念<br>
@@ -33,9 +12,8 @@
             </c-method-n>
             <c-method-n class="title" [icon]="'innoserve_29_bonus'" [methodSubject]="'加分機制'">
                 <p class="item-text">
-                    若能透過 API 串接，整合多項「叡揚」的數位服務，
-                    每整合一項服務（如下所列），可酌予加分（至多 5% ），
-                    依此類推，若同時串接整合其他2項服務，至多可加 10%。
+                    若透過 API 串接整合「叡揚」多項數位服務，每整合一項可加分<br>
+                    （最高 5%），最多整合兩項可加至 10%。
                 </p>
             </c-method-n>
             <c-method-n class="title" [icon]="'innoserve_29_eligibility'" [methodSubject]="'報名資格'">
@@ -46,9 +24,8 @@
                     </ol>
                 </div>
                 <p class="item-text">
-                    <strong><a href="https://innoserve.tca.org.tw/RegistrationLogin.aspx" target="_blank" >參賽隊伍記得去官網報名喔</a><br/>
-                    競賽活動報名日期：8/1(五)09:00 至 09/30(二)17:00 截止</strong><br/>
-                    <span class="item-text small">想參賽，但是缺指導老師嗎? <a href="mailto:innoserve@gss.com.tw">來信告訴我們喔</a>。</span>
+                    <strong><a href="https://innoserve.tca.org.tw/RegistrationLogin.aspx" target="_blank" >參賽隊伍記得去官網報名喔</a></strong>&nbsp;&nbsp;&nbsp;                
+                    <span class="item-text ">想參賽但缺指導老師 <a href="mailto:innoserve@gss.com.tw"> 來信告訴我們喔</a>。</span>
                 </p>
             </c-method-n>
             <c-method-n class="title" [icon]="'innoserve_29_prize'" [methodSubject]="'獎勵方式'">
@@ -124,13 +101,13 @@
             </c-method-n>
             <c-method-n class="title" [icon]="'innoserve_29_resources'" [methodSubject]="'相關資源'">
                 <div class="item-text text-left">
-                    <p>※ <a href="https://bizform.vitalyun.com/#/survey/ZGVwb3RJZD01NzU1YTc3OWM4OGE0OWRlOTk5Nzc2MDdlYmJmNzllYiZpZD0zMQ" target="_blank">需要幫忙? 點這裡告訴我們！</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a (click)="openGssWebChat()" style="cursor: pointer;">有人幫你問過了<sub>{{ getTodayMonthDay() }}</sub></a></p>
-                    <p>※ <a href='https://teams.microsoft.com/l/meetup-join/19:meeting_Y2I5ZTM2MTItNzE1Zi00YjY4LWE1M2UtNjViZmRmMzA2NjUw@thread.v2/0?context={"Tid":"b59c91e9-a988-4ea1-911c-c3b75bcb33e1","Oid":"4e9a79a0-2b75-4025-be67-b16d05613c3f"}' target="_blank">統問統答會議室</a> (時間：2025/07/18~2025/09/26 每週五 16:00~16:30)</p>
-                    <p>※ <a href="https://docs.google.com/spreadsheets/d/1nkXQiF-8bLTUcLgCja5Gv4iJz-jjsL259tRL-mbFHgQ/edit?usp=sharing" target="_blank">統問統答紀錄與錄影</a></p>
+                    <p>※ <a href="https://bizform.vitalyun.com/#/survey/ZGVwb3RJZD01NzU1YTc3OWM4OGE0OWRlOTk5Nzc2MDdlYmJmNzllYiZpZD0zMQ" target="_blank">需要幫忙? 點這裡告訴我們(待更新2026年表單)！</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a (click)="openGssWebChat()" style="cursor: pointer;">有人幫你問過了<sub>{{ getTodayMonthDay() }}</sub></a></p>
+                    <p>※ <a href='https://teams.microsoft.com/l/meetup-join/19:meeting_Y2I5ZTM2MTItNzE1Zi00YjY4LWE1M2UtNjViZmRmMzA2NjUw@thread.v2/0?context={"Tid":"b59c91e9-a988-4ea1-911c-c3b75bcb33e1","Oid":"4e9a79a0-2b75-4025-be67-b16d05613c3f"}' target="_blank">統問統答會議室</a> (2026 時間另訂，後續公布)</p>
+                    <p>※ <a href="https://docs.google.com/spreadsheets/d/1nkXQiF-8bLTUcLgCja5Gv4iJz-jjsL259tRL-mbFHgQ/edit?usp=sharing" target="_blank">統問統答紀錄與錄影-2025參考，2026待啟動後更新</a></p>
                 </div>
 
                 <div class="item-text item-list item-product">
-                    <h3><img class="img-rwd" src="assets/images/logo_iota_c-ai-2.jpg" alt="iota C.ai logo" style="max-width: 200px"><span>（ Bot Builder ）</span></h3>
+                    <h3><img class="img-rwd" src="assets/images/logo_iota_c-ai-2.jpg" alt="iota C.ai logo" style="max-width: 200px"><span>（ Bot Builder 對話式服務平台 ）</span></h3>
                     <ul style="list-style: none;">
                         <li class="text-justify">
                             <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon" /><span class="title01">產品介紹</span>
@@ -147,7 +124,7 @@
                                 </li>
                                 <li><img alt="項目圖案" src="assets/images/blue-outline-circle.png"
                                         class="item-list-icon two" />
-                                    <a href="https://bizform.vitalyun.com/#/survey/ZGVwb3RJZD01NzU1YTc3OWM4OGE0OWRlOTk5Nzc2MDdlYmJmNzllYiZpZD0zMA" target="_blank">試用站台申請</a>
+                                    <a href="https://bizform.vitalyun.com/#/survey/ZGVwb3RJZD01NzU1YTc3OWM4OGE0OWRlOTk5Nzc2MDdlYmJmNzllYiZpZD0zMA" target="_blank">試用站台申請(2026表單待更新)</a>
                                 </li>
                             </ul>
                         </li>
@@ -234,7 +211,7 @@
                     </ul>
                 </div>
                 <div class="item-text item-list item-product">
-                    <h3><img class="img-rwd" src="assets/images/logo_vital-crm.png" alt="Vital CRM logo" style="max-width: 320px"></h3>
+                    <h3><img class="img-rwd" src="assets/images/logo_vital-crm.png" alt="Vital CRM logo" style="max-width: 250px">  客戶關係管理</h3>
                     <ul style="list-style: none;">
                         <li class="text-justify">
                             <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon" /><span class="title01">產品介紹</span>
@@ -287,35 +264,37 @@
                             &nbsp;<span class="item-text small">(申請展延請提供識別碼， <a (click)="openGssWebChat()" style="cursor: pointer;">[有人幫你問過了]</a> 有提供識別碼查找方式)</span>
                         </li>
                         <li class="text-justify">
-                            <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon" /><span class="title01">API 文件</span>
+                            <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon" /><span class="title01">立即索取功能大禮包</span>&nbsp;<span class="item-text small">(展期到 11/30、API與Insight模組授權、點數1000點)</span>
                             <ul style="list-style: none; margin-top: 12px;">
                                 <li><img alt="項目圖案" src="assets/images/blue-outline-circle.png"
                                         class="item-list-icon two" />
-                                    要先有試用站台，需要用 API 時要申請開通 API 模組
+                                    先領通行證（站台識別碼），再解鎖功能大禮包，能量全開 🚀
                                 </li>
                                 <li><img alt="項目圖案" src="assets/images/blue-outline-circle.png"
                                         class="item-list-icon two" />
-                                    API授權申請寄信到：<a href="mailto:innoserve@gss.com.tw">innoserve@gss.com.tw</a>
+                                    大禮包申請寄信到：<a href="mailto:innoserve@gss.com.tw">innoserve@gss.com.tw</a>
                                     <ul style="list-style: none; margin-top: 12px;">
                                         <li><img alt="項目圖案" src="assets/images/blue-outline-circle2.png"
-                                                class="item-list-icon three" />主旨：CRM API授權申請（資訊應用服務創新競賽）
+                                                class="item-list-icon three" />主旨：大禮包授權一次申請全到位（資訊應用服務創新競賽）
                                         </li>
                                         <li><img alt="項目圖案" src="assets/images/blue-outline-circle2.png"
-                                                class="item-list-icon three" />內文：團隊名稱以及站台識別碼
+                                                class="item-list-icon three" />內文：團隊名稱(所屬學校)以及CRM站台識別碼<br>
+                                                &nbsp;&nbsp;<span class="item-text small">(如有 BizForm 要一併展期(含API授權)，請另外附上 BizForm 站台的識別碼)</span>
+                                                
                                         </li>
-                                    </ul>
+                                    </ul>                                    
                                 </li>
                                 <li><img alt="項目圖案" src="assets/images/blue-outline-circle.png"
                                         class="item-list-icon two" />
-                                    取得授權後使用的步驟：
+                                    取得 API 授權後，登入申請的站台，操作步驟如下：
                                     <ul style="list-style: none; margin-top: 12px;">
                                         <li style="color: #0a43a0;"><img alt="項目圖案" src="assets/images/blue-outline-circle2.png"
-                                            class="item-list-icon three" />登入申請的站台 > 管理 > 其他 > API接口範例下載
+                                            class="item-list-icon three" />找到[管理] > 其他 > API接口範例下載
                                         </li>
                                         <li style="color: #0a43a0;"><img alt="項目圖案" src="assets/images/blue-outline-circle2.png"
-                                                class="item-list-icon three" />取得 API 授權後，登入申請的站台 > 管理 > 系統 > 服務資訊 > 往下拉 > 店點 ApiKey > 新增 > 自行填寫
+                                                class="item-list-icon three" />找到[管理] > 系統 > 服務資訊 > 往下拉 > 店點 ApiKey > 新增 > 自行填寫
                                         </li>
-                                    </ul>
+                                    </ul>                                    
                                 </li>
                                 <p class="item-text small">活動相關問題，請點 <a href="https://bizform.vitalyun.com/#/survey/ZGVwb3RJZD01NzU1YTc3OWM4OGE0OWRlOTk5Nzc2MDdlYmJmNzllYiZpZD0zMQ" target="_blank">[需要幫忙? 點這裡告訴我們！]</a></p>
                             </ul>
@@ -323,7 +302,7 @@
                     </ul>
                 </div>
                 <div class="item-text item-list item-product">
-                    <h3><img class="img-rwd" src="assets/images/logo_vital-bizform.png" alt="Vital BizForm logo" style="max-width: 400px"></h3>
+                    <h3><img class="img-rwd" src="assets/images/logo_vital-bizform.png" alt="Vital BizForm logo" style="max-width: 250px">  雲端智慧表單</h3>
                     <ul style="list-style: none;">
                         <li class="text-justify">
                             <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon" /><span class="title01">產品介紹</span>
@@ -354,7 +333,7 @@
                                     <ul style="list-style: none; margin-top: 12px;">
                                         <li><img alt="項目圖案" src="assets/images/blue-outline-circle2.png"
                                                 class="item-list-icon three" />組織內部簽核行政使用
-                                            <ul style="list-style: none; margin-top: 12px;">
+                                            <ul style="list-style: none; margin-top: 9px;">
                                                 <li><img alt="項目圖案" src="assets/images/blue-outline-circle3.png"
                                                         class="item-list-icon four" />
                                                     例如：請款、請假、出差申請、員工基本資料填寫、報價單、商品資料、利潤分析、設備檢查表等。
@@ -363,7 +342,7 @@
                                         </li>
                                         <li><img alt="項目圖案" src="assets/images/blue-outline-circle2.png"
                                                 class="item-list-icon three" />亦可作為無帳號填寫或問卷使用
-                                            <ul style="list-style: none; margin-top: 12px;">
+                                            <ul style="list-style: none; margin-top: 9px;">
                                                 <li><img alt="項目圖案" src="assets/images/blue-outline-circle3.png"
                                                         class="item-list-icon four" />
                                                     例如：初診基本資料填寫、預約資料、聯繫表單、活動報名表、同意授權書、新人報到資料填寫。
@@ -371,8 +350,8 @@
                                             </ul>
                                         </li>
                                         <li><img alt="項目圖案" src="assets/images/blue-outline-circle2.png"
-                                                class="item-list-icon three" />在無帳號填寫上，更可以結合匯入對象資料，達成指定對象問卷填寫
-                                            <ul style="list-style: none; margin-top: 12px;">
+                                                class="item-list-icon three" />在無帳號填寫上，可以結合匯入對象資料，達成指定對象問卷填寫
+                                            <ul style="list-style: none; margin-top: 9px;">
                                                 <li><img alt="項目圖案" src="assets/images/blue-outline-circle3.png"
                                                         class="item-list-icon four" />
                                                     例如：親師聯繫用通知、VIP 問卷、活動滿意度問卷、VIP 資料授權確認書等。
@@ -404,8 +383,7 @@
                                     與其它系統整合情境
                                     <ul style="list-style: none; margin-top: 12px;">
                                         <li><img alt="項目圖案" src="assets/images/blue-outline-circle2.png"
-                                                class="item-list-icon three" />原有系統需要啟動表單簽核，可以將資料帶入 Vital BizForm
-                                            ，並於簽核通過後更新回系統中。</li>
+                                                class="item-list-icon three" />原系統需發起表單簽核，資料同步至 Vital BizForm，簽核完成後更新回原系統。</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -414,6 +392,37 @@
                             <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon" />
                             <a href="https://www.gsscloud.com/tw/vital-bizform/pricing" target="_blank">試用站台申請</a>
                             &nbsp;<span class="item-text small">(申請展延請提供識別碼， <a (click)="openGssWebChat()" style="cursor: pointer;">[有人幫你問過了]</a> 有提供識別碼查找方式)</span>
+                        </li>
+                        <li class="text-justify">
+                            <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon" />
+                            <span class="title01">立即提升自由度</span>&nbsp;
+                            <span class="item-text small">(展期到 11/30、API授權)</span>
+                        
+                            <ul style="list-style: none; margin-top: 12px; padding-left: 20px;">
+                                <li>
+                                    <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon two" />
+                                    先領通行證（站台識別碼），再提升自由度 👍
+                                </li>
+                                <li>
+                                    <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon two" />
+                                    提升自由度申請寄信到：<a href="mailto:innoserve@gss.com.tw">innoserve@gss.com.tw</a>
+                                    
+                                    <ul style="list-style: none; margin-top: 12px; padding-left: 20px;">
+                                        <li>
+                                            <img alt="項目圖案" src="assets/images/blue-outline-circle2.png" class="item-list-icon three" />
+                                            主旨：BizForm 一次申請到位（資訊應用服務創新競賽）
+                                        </li>
+                                        <li>
+                                            <img alt="項目圖案" src="assets/images/blue-outline-circle2.png" class="item-list-icon three" />
+                                            內文：團隊名稱(所屬學校)以及 BizForm 站台識別碼
+                                        </li>
+                                        <li>
+                                            <img alt="項目圖案" src="assets/images/blue-outline-circle2.png" class="item-list-icon three" />
+                                            如同時有申請 BizForm、CRM 站台的競賽隊伍，請參照上方的大禮包申請方式
+                                        </li>
+                                    </ul> 
+                                </li>
+                            </ul>
                         </li>
                         <li class="text-justify">
                             <img alt="項目圖案" src="assets/images/blue-outline-circle.png" class="item-list-icon" />

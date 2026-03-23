@@ -12,7 +12,7 @@ export class School2026SignUpComponent {
 
     awards: AwardModel[] = [];
 
-    private _jsonURL = 'assets/data/awards_2026.json';
+    private _jsonURL = 'assets/data/awards_2025.json';
 
     constructor(private http: HttpClient) {
         this.getJSON().subscribe(data => {
@@ -43,7 +43,7 @@ export class School2026SignUpComponent {
     openGssWebChat() {
         const width = 950;
         const height = 650;
-        window.open('https://cai-innoserve.gss.com.tw/webchat/index.html?botid=baseinfo', 'HelloGSSWebChat', `width=${width},height=${height},resizable=yes,scrollbars=yes`);
+        window.open('https://cai.gss.com.tw/webchat/index.html?botid=baseinfo', 'HelloGSSWebChat', `width=${width},height=${height},resizable=yes,scrollbars=yes`);
     }
 
     getTodayMonthDay(): string {
