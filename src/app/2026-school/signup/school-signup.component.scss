@@ -1,5 +1,19 @@
 @import '../../../assets/scss/school-variables';
 
+// 移除 iframe 的預設間隔
+iframe {
+    vertical-align: bottom; 
+    display: block;
+}
+
+// 讓下方的加分機制區塊 (boxstyle) 往上提，覆蓋掉可能的間隙
+.boxstyle {
+    margin-top: 0 !important;
+    border-top: none !important; // 移除頂部線條或圓角，達成平整對齊
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
 .background {
     background-color: #321796;
     padding: 0;
