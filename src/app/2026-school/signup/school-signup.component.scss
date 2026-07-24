@@ -277,10 +277,23 @@ h3 {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-// 為注意事項、獎勵方式、Bot Builder 區塊設置 0.8 行距
-.item-list li,
-.item-product li,
+// 為注意事項、Bot Builder、Vital CRM、雲端智慧表單 區塊設置行距
+.item-list li {
+    line-height: 1.2;
+}
+
+.item-product li {
+    line-height: 1.2;
+}
+
+// 為獎勵方式 區塊設置行距
 .default-table td,
 .default-table th {
     line-height: 0.8;
+}
+
+// 增加相關資源區塊中 sub 標籤的上方空間
+.container .item-text sub {
+    display: block;
+    margin-top: 0.8rem;
 }
