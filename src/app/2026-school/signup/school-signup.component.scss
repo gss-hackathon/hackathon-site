@@ -297,3 +297,9 @@ h3 {
     display: block;
     margin-top: 0.8rem;
 }
+
+// sub-follow: 下標文字跟在前字後面，保持同一行
+.container .item-text sub.sub-follow {
+    display: inline;
+    margin-top: 0;
+}
