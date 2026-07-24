@@ -53,7 +53,7 @@ iframe {
 }
 
 .container li {
-    line-height: 0.8;
+    line-height: 1.0;
     text-align: left;
 }
 
@@ -91,7 +91,7 @@ iframe {
 .container .item-text {
     max-width: 800px;
     margin: 0 auto;
-    line-height: 0.5;
+    line-height: 1.0;
 }
 
 .container .title {
@@ -275,4 +275,12 @@ h3 {
     border-radius: 1rem;
     padding: 1rem min(max(1rem, 4vw), 1.5rem);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+// 為注意事項、獎勵方式、Bot Builder 區塊設置 0.8 行距
+.item-list li,
+.item-product li,
+.default-table td,
+.default-table th {
+    line-height: 0.8;
 }
