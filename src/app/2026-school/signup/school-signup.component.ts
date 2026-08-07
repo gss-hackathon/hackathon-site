@@ -53,3 +53,36 @@ export class School2026SignUpComponent {
         return `${formattedMonth}/${formattedDay}`;
     }
 }
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-school-signup',
+  templateUrl: './school-signup.component.html',
+  styleUrls: ['./school-signup.component.scss']
+})
+export class SchoolSignupComponent implements OnInit {
+
+  // 定義顯示次數的變數
+  hitCount: string = '載入中...';
+
+  ngOnInit(): void {
+    this.getHitCount();
+  }
+
+  getHitCount(): void {
+    // 使用免 key、高穩定度且支援跨域的 Counter API
+    const API_URL = 'https://api.counterapi.dev/v1/gss-hackathon-site/views/up';
+
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.count !== undefined) {
+          this.hitCount = data.count.toString();
+        }
+      })
+      .catch(err => {
+        console.error('計數器載入失敗:', err);
+        this.hitCount = '1';
+      });
+  }
+}

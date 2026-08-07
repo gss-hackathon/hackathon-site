@@ -482,29 +482,9 @@
 
         <!-- 網頁點擊計數器 (使用 SVG 徽章，完美相容 Angular) -->
         <div style="padding: 20px 0 30px; text-align: center;">
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=gss-hackathon%2Fhackathon-site&count_bg=%230A43A0&title_bg=%23555555&title=views" alt="Views Count" style="vertical-align: middle;" />
+            <p style="font-size: 14px; color: #ffffff; background: rgba(255, 255, 255, 0.2); padding: 8px 18px; border-radius: 20px; display: inline-block;">
+                👁️ 頁面瀏覽點擊次數：<span style="font-weight: bold; color: #ffd700;">{{ hitCount }}</span> 次
+            </p>
         </div>
     </div>
 </div>
-
-<!-- 網頁點擊計數器 JS 邏輯 -->
-<script>
-  (function() {
-    var SITE_ID = 'gss-hackathon/hackathon-site';
-    var API_URL = 'https://hits.seeyoufarm.com/api/count/incr/badge.json?url=' + encodeURIComponent(SITE_ID);
-
-    fetch(API_URL)
-      .then(function(res) { return res.json(); })
-      .then(function(data) {
-        var el = document.getElementById('hitCounter');
-        if (el && data && data.value) {
-          el.textContent = data.value;
-        }
-      })
-      .catch(function(err) {
-        console.error('計數器載入失敗:', err);
-        var el = document.getElementById('hitCounter');
-        if (el) el.textContent = '1';
-      });
-  })();
-</script>
