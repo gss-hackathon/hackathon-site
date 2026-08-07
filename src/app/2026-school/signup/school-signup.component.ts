@@ -16,8 +16,8 @@ export class School2026SignUpComponent implements OnInit {
 
   private _jsonURL = 'assets/data/awards_2025.json';
 
-  // 替換連字號為底線，符合 API 命名規範
-  private apiNamespace = 'gss_hackathon_site_2026';
+  // ⚠️ 請在此處貼上您部署 Google Apps Script 後取得的「網頁應用程式 URL」
+  private GAS_API_URL = 'https://script.google.com/macros/s/AKfycby481HaGG3Fe8rk2qxSKicjRFrJKwDC0DxZ3JqBNSLjxwJL_wNJwm77l24SL54ciZSTKw/exec';
 
   constructor(
     private http: HttpClient,
@@ -29,76 +29,35 @@ export class School2026SignUpComponent implements OnInit {
       this.convertToModels(data);
     });
 
-    this.getHitCount();
-    this.getRecordLinkCount();
+    // 頁面載入時觸發全頁瀏覽數 +1，並同時取得最新的點擊數據
+    this.fetchCounters('hit_page');
   }
 
-  // 1. 取得全頁瀏覽次數 (累加 +1)
-  getHitCount(): void {
-    const url = `https://api.counterapi.dev/v1/${this.apiNamespace}/page_views/up`;
+  // 統一處理數據讀取與累加
+  fetchCounters(action: 'get' | 'hit_page' | 'hit_link'): void {
+    if (!this.GAS_API_URL || this.GAS_API_URL === 'YOUR_GAS_API_URL_HERE') {
+      console.warn('請先設定正確的 GAS_API_URL');
+      return;
+    }
+
+    const url = `${this.GAS_API_URL}?action=${action}`;
     this.http.get<any>(url).subscribe({
       next: (data) => {
-        if (data && data.count !== undefined) {
-          this.hitCount = data.count.toString();
-          this.cdr.detectChanges(); // 強制更新 Angular 視圖
+        if (data) {
+          if (data.pageViews !== undefined) this.hitCount = data.pageViews.toString();
+          if (data.linkViews !== undefined) this.recordLinkCount = data.linkViews.toString();
+          this.cdr.detectChanges();
         }
       },
       error: (err) => {
-        console.error('頁面計數失敗:', err);
-        this.hitCount = '1';
-        this.cdr.detectChanges();
+        console.error('取得點擊計數失敗:', err);
       }
     });
   }
 
-  // 2. 初始化讀取「統問統答」連結點擊數 (僅讀取，不累加)
-  getRecordLinkCount(): void {
-    const url = `https://api.counterapi.dev/v1/${this.apiNamespace}/record_link`;
-    this.http.get<any>(url).subscribe({
-      next: (data) => {
-        if (data && data.count !== undefined) {
-          this.recordLinkCount = data.count.toString();
-          this.cdr.detectChanges();
-        }
-      },
-      error: () => {
-        // 若該 key 尚未建立，呼叫一次 /up 進行初始化
-        this.initRecordLinkCounter();
-      }
-    });
-  }
-
-  // 3. 首次建立連結計數器
-  private initRecordLinkCounter(): void {
-    const url = `https://api.counterapi.dev/v1/${this.apiNamespace}/record_link/up`;
-    this.http.get<any>(url).subscribe({
-      next: (data) => {
-        if (data && data.count !== undefined) {
-          this.recordLinkCount = data.count.toString();
-          this.cdr.detectChanges();
-        }
-      },
-      error: () => {
-        this.recordLinkCount = '0';
-        this.cdr.detectChanges();
-      }
-    });
-  }
-
-  // 4. 點擊「統問統答」連結時觸發累加
+  // 點擊「統問統答」連結時觸發累加
   onRecordLinkClick(): void {
-    const url = `https://api.counterapi.dev/v1/${this.apiNamespace}/record_link/up`;
-    this.http.get<any>(url).subscribe({
-      next: (data) => {
-        if (data && data.count !== undefined) {
-          this.recordLinkCount = data.count.toString();
-          this.cdr.detectChanges();
-        }
-      },
-      error: (err) => {
-        console.error('更新點擊數失敗:', err);
-      }
-    });
+    this.fetchCounters('hit_link');
   }
 
   getJSON(): Observable<any> {
