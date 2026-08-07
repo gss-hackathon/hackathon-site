@@ -1,9 +1,17 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs'; // 解決 Cannot find name 'Observable'
+import { AwardModel } from './award-model'; // 解決 Cannot find name 'AwardModel'
+
+@Component({
+  selector: 'school-signup',
+  templateUrl: './school-signup.component.html',
+  styleUrls: ['./school-signup.component.scss']
+})
 export class School2026SignUpComponent implements OnInit {
 
   awards: AwardModel[] = [];
   hitCount: string = '載入中...';
-
-  // 1. 宣告紀錄該連結點擊數的變數
   recordLinkCount: string = '0';
 
   private _jsonURL = 'assets/data/awards_2025.json';
@@ -16,12 +24,10 @@ export class School2026SignUpComponent implements OnInit {
     });
 
     this.getHitCount();
-
-    // 2. 初始化時讀取連結點擊數
     this.getRecordLinkCount();
   }
 
-  // 取得整頁瀏覽次數 (原有)
+  // 取得整頁瀏覽次數
   getHitCount(): void {
     const API_URL = 'https://api.counterapi.dev/v1/gss-hackathon-site/views/up';
     fetch(API_URL)
@@ -37,7 +43,7 @@ export class School2026SignUpComponent implements OnInit {
       });
   }
 
-  // 3. 初始化讀取連結點擊數 (僅讀取，不加一)
+  // 初始化讀取「統問統答」連結點擊數
   getRecordLinkCount(): void {
     const API_URL = 'https://api.counterapi.dev/v1/gss-hackathon-site/record-link';
     fetch(API_URL)
@@ -52,7 +58,7 @@ export class School2026SignUpComponent implements OnInit {
       });
   }
 
-  // 4. 當使用者點擊該連結時觸發 (累加 1 並更新畫面)
+  // 點擊「統問統答」連結時觸發計數加一
   onRecordLinkClick(): void {
     const API_URL = 'https://api.counterapi.dev/v1/gss-hackathon-site/record-link/up';
     fetch(API_URL)
