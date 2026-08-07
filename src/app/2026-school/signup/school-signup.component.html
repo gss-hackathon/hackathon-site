@@ -1,4 +1,4 @@
-<div class="background" style="padding-top: 0; background: url('assets/images/lp_innoserve_y24_bg.jpg') white; background-size: contain; text-align: center;">
+html_content = '''<div class="background" style="padding-top: 0; background: url('assets/images/lp_innoserve_y24_bg.jpg') white; background-size: contain; text-align: center;">
     <div class="container" style="max-width: 100%; padding: 0;">
       <!-- 改叫用 eDM_2026 的原因是 eDM_2026_GSS-innoserve.html 的學習資源是叫用本頁，而下方就有學習資源了，所以重複了 -->
         <iframe
@@ -83,6 +83,7 @@
                 </table>
             </c-method-n>
             <c-method-n class="title" [icon]="'innoserve_29_note'" [methodSubject]="'注意事項'">
+              <p style="font-size: 20px;font-weight: bold;">報名日期： 8/3(一)9:00am至10/5(一)4:00pm截止</p>
                 <div class="item-text item-list">
                     <ol>
                         <li class="text-justify">每一獎項限頒發一組團隊，且不重複得獎。</li>
@@ -105,6 +106,10 @@
                     <p>⭐ <a href="https://teams.microsoft.com/meet/49335452477811?p=1GmTQjvN3ld3OPStG5" target="_blank" rel="noopener">統問統答會議室</a>(2026/07/17~2026/09/18，2026/09/24) PM4:00-4:30</p>
                     <p>⭐ <a href="https://docs.google.com/spreadsheets/d/1VHjMGSNNYqnjcWXXRndSgOFeHMmHWGOxR67dJPGlzMw/edit?gid=0#gid=0" target="_blank" rel="noopener">統問統答紀錄與錄影-每週五下班前更新</a>
                     <br><sub>統問統答時間配比依「參賽者提問 ＞ 主題說明 ＞ 宣說事項」優先順序安排，詳細內容請參閱「統問統答紀錄」</sub></p>
+                    <!-- 網頁點擊計數器 (Hits API) -->
+                    <p style="margin-top: 15px; font-size: 14px; color: #555; background: #f8f9fa; padding: 8px 12px; border-radius: 6px; display: inline-block;">
+                        👁️ 頁面瀏覽點擊次數：<span id="hitCounter" style="font-weight: bold; color: #0a43a0;">載入中...</span> 次
+                    </p>
                 </div>
 
                 <div class="item-text item-list item-product">
@@ -264,7 +269,7 @@
                             <a href="https://www.gsscloud.com/tw/vital-crm/pricing" target="_blank">CRM 試用站台申請</a>
                         </li>
                         <li class="text-justify">
-                            <img alt="項目圖案" src="../../../assets/images/blue-outline-circle.png" class="item-list-icon" /><span class="title01">立即索取功能大禮包</span>&nbsp;<span class="item-text small">(展期到 11/30、API與Insight模組授權、點數1000點)</span>
+                            <img alt="項目圖案" src="../../../assets/images/blue-outline-circle.png" class="item-list-icon" /><span class="title01">領域大禮包</span>&nbsp;<span class="item-text small">(展期到 11/30、API與Insight模組授權、點數1000點)</span>
                             <ul style="list-style: none; margin-top: 12px;">
                                 <li><img alt="項目圖案" src="../../../assets/images/blue-outline-circle.png"
                                         class="item-list-icon two" />
@@ -421,7 +426,7 @@
                         </li>
                         <li class="text-justify">
                             <img alt="項目圖案" src="../../../assets/images/blue-outline-circle.png" class="item-list-icon" />
-                            <span class="title01">立即提升自由度</span>&nbsp;
+                            <span class="title01">轉換自由度</span>&nbsp;
                             <span class="item-text small">(展期到 11/30、API授權)</span>
 
                             <ul style="list-style: none; margin-top: 12px; padding-left: 20px;">
@@ -480,3 +485,33 @@
         </section>
     </div>
 </div>
+
+<!-- 網頁點擊計數器 JS 邏輯 -->
+<script>
+  (function() {
+    // Hits API 路徑 (使用專案識別名稱)
+    var SITE_ID = 'gss-hackathon/hackathon-site';
+    var API_URL = 'https://hits.seeyoufarm.com/api/count/incr/badge.json?url=' + encodeURIComponent(SITE_ID);
+
+    // 每次進入/載入頁面時自動觸發計數加一並更新顯示
+    fetch(API_URL)
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        var el = document.getElementById('hitCounter');
+        if (el && data && data.value) {
+          el.textContent = data.value;
+        }
+      })
+      .catch(function(err) {
+        console.error('計數器載入失敗:', err);
+        var el = document.getElementById('hitCounter');
+        if (el) el.textContent = '1';
+      });
+  })();
+</script>
+'''
+
+with open("hackathon_site_updated.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("File created successfully: hackathon_site_updated.html")
