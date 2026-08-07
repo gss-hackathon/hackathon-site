@@ -104,10 +104,12 @@
                           <a (click)="openGssWebChat()" style="cursor: pointer;">[有人幫你問過了(精選)]</a>
                         <sub class="sub-follow">Bot 中有更新日</sub></p>
                     <p>⭐ <a href="https://teams.microsoft.com/meet/49335452477811?p=1GmTQjvN3ld3OPStG5" target="_blank" rel="noopener">統問統答會議室</a>(2026/07/17~2026/09/18，2026/09/24) PM4:00-4:30</p>
-                    <p>⭐ <a href="https://docs.google.com/spreadsheets/d/1VHjMGSNNYqnjcWXXRndSgOFeHMmHWGOxR67dJPGlzMw/edit?gid=0#gid=0" target="_blank" rel="noopener"
-                          (click)="onRecordLinkClick()">統問統答紀錄與錄影-每週五下班前更新 ({{ recordLinkCount }})</a>
-                          <br><sub>統問統答時間配比依「參賽者提問 ＞ 主題說明 ＞ 宣說事項」優先順序安排，詳細內容請參閱「統問統答紀錄」</sub>
-                    </p>
+                    <!-- 統問統答連結區塊 -->
+                    <p>⭐ <a href="https://docs.google.com/spreadsheets/d/1VHjMGSNNYqnjcWXXRndSgOFeHMmHWGOxR67dJPGlzMw/edit?gid=0#gid=0"
+                            target="_blank"
+                            rel="noopener"
+                            (click)="onRecordLinkClick()">統問統答紀錄與錄影-每週五下班前更新 ({{ recordLinkCount }})</a>
+                    <br><sub>統問統答時間配比依「參賽者提問 ＞ 主題說明 ＞ 宣說事項」優先順序安排，詳細內容請參閱「統問統答紀錄」</sub></p>
                 </div>
 
                 <div class="item-text item-list item-product">
@@ -482,7 +484,7 @@
             </c-method-n>
         </section>
 
-        <!-- 網頁點擊計數器 (使用 SVG 徽章，完美相容 Angular) -->
+        <!-- 頁面最底部的全頁點擊數 -->
         <div style="padding: 20px 0 30px; text-align: center;">
             <p style="font-size: 14px; color: #ffffff; background: rgba(255, 255, 255, 0.2); padding: 8px 18px; border-radius: 20px; display: inline-block;">
                 👁️ 頁面瀏覽點擊次數：<span style="font-weight: bold; color: #ffd700;">{{ hitCount }}</span> 次

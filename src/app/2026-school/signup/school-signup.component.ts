@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs'; // 解決 Cannot find name 'Observable'
-import { AwardModel } from './award-model'; // 解決 Cannot find name 'AwardModel'
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AwardModel } from './award-model';
 
 @Component({
   selector: 'school-signup',
@@ -16,7 +16,13 @@ export class School2026SignUpComponent implements OnInit {
 
   private _jsonURL = 'assets/data/awards_2025.json';
 
-  constructor(private http: HttpClient) {}
+  // 替換連字號為底線，符合 API 命名規範
+  private apiNamespace = 'gss_hackathon_site_2026';
+
+  constructor(
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     this.getJSON().subscribe(data => {
@@ -27,50 +33,72 @@ export class School2026SignUpComponent implements OnInit {
     this.getRecordLinkCount();
   }
 
-  // 取得整頁瀏覽次數
+  // 1. 取得全頁瀏覽次數 (累加 +1)
   getHitCount(): void {
-    const API_URL = 'https://api.counterapi.dev/v1/gss-hackathon-site/views/up';
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(data => {
+    const url = `https://api.counterapi.dev/v1/${this.apiNamespace}/page_views/up`;
+    this.http.get<any>(url).subscribe({
+      next: (data) => {
         if (data && data.count !== undefined) {
           this.hitCount = data.count.toString();
+          this.cdr.detectChanges(); // 強制更新 Angular 視圖
         }
-      })
-      .catch(err => {
-        console.error('計數器載入失敗:', err);
+      },
+      error: (err) => {
+        console.error('頁面計數失敗:', err);
         this.hitCount = '1';
-      });
+        this.cdr.detectChanges();
+      }
+    });
   }
 
-  // 初始化讀取「統問統答」連結點擊數
+  // 2. 初始化讀取「統問統答」連結點擊數 (僅讀取，不累加)
   getRecordLinkCount(): void {
-    const API_URL = 'https://api.counterapi.dev/v1/gss-hackathon-site/record-link';
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(data => {
+    const url = `https://api.counterapi.dev/v1/${this.apiNamespace}/record_link`;
+    this.http.get<any>(url).subscribe({
+      next: (data) => {
         if (data && data.count !== undefined) {
           this.recordLinkCount = data.count.toString();
+          this.cdr.detectChanges();
         }
-      })
-      .catch(() => {
-        this.recordLinkCount = '0';
-      });
+      },
+      error: () => {
+        // 若該 key 尚未建立，呼叫一次 /up 進行初始化
+        this.initRecordLinkCounter();
+      }
+    });
   }
 
-  // 點擊「統問統答」連結時觸發計數加一
-  onRecordLinkClick(): void {
-    const API_URL = 'https://api.counterapi.dev/v1/gss-hackathon-site/record-link/up';
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(data => {
+  // 3. 首次建立連結計數器
+  private initRecordLinkCounter(): void {
+    const url = `https://api.counterapi.dev/v1/${this.apiNamespace}/record_link/up`;
+    this.http.get<any>(url).subscribe({
+      next: (data) => {
         if (data && data.count !== undefined) {
           this.recordLinkCount = data.count.toString();
+          this.cdr.detectChanges();
         }
-      })
-      .catch(err => {
-        console.error('更新連結點擊數失敗:', err);
-      });
+      },
+      error: () => {
+        this.recordLinkCount = '0';
+        this.cdr.detectChanges();
+      }
+    });
+  }
+
+  // 4. 點擊「統問統答」連結時觸發累加
+  onRecordLinkClick(): void {
+    const url = `https://api.counterapi.dev/v1/${this.apiNamespace}/record_link/up`;
+    this.http.get<any>(url).subscribe({
+      next: (data) => {
+        if (data && data.count !== undefined) {
+          this.recordLinkCount = data.count.toString();
+          this.cdr.detectChanges();
+        }
+      },
+      error: (err) => {
+        console.error('更新點擊數失敗:', err);
+      }
+    });
   }
 
   getJSON(): Observable<any> {
