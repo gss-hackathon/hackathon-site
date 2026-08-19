@@ -96,4 +96,5 @@ export class School2026SignUpComponent implements OnInit {
     const formattedDay = today.getDate().toString().padStart(2, '0');
     return `${formattedMonth}/${formattedDay}`;
   }
+
 }
