@@ -242,6 +242,17 @@ h3 {
     width: 100%;
 }
 
+.image-slot {
+    margin: 28px auto 36px;
+    max-width: 1200px;
+}
+
+.image-slot img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .container .title01 {
     color: rgb(255, 111, 0);
     font-weight: bold;
