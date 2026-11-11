@@ -3,7 +3,8 @@
       <!-- 改叫用 eDM_2026 的原因是 eDM_2026_GSS-innoserve.html 的學習資源是叫用本頁，而下方就有學習資源了，所以重複了 -->
         <iframe
             src="../../../assets/2026_GSS_EDM/eDM_2026.html "
-            style="width: 100%; max-width: 752px; height: 1530px; border: none; display: inline-block; vertical-align: bottom; background: transparent;"
+            class="edm-iframe"
+            style="width: 100%; max-width: 752px; border: none; display: inline-block; vertical-align: bottom; background: transparent;"
             allowtransparency="true"
             scrolling="no">
         </iframe>
@@ -15,6 +16,45 @@
         <!-- <img class="logo" alt="Hackathon 主視覺" src="../../../assets/images/2026/lp_innoserve_y26_hero.jpg"> -->
 
         <section class="boxstyle">
+            <c-method-n class="title" [icon]="'innoserve_29_celebration'" [methodSubject]="'得獎名單'">
+                <p class="item-text" style="font-weight: bold; color: #1e3a8a; margin-bottom: 20px;">
+                    🎉 恭喜以下得獎團隊！點擊成果影片封面可觀看專題 Demo 展示
+                </p>
+
+                <div class="award-video-grid">
+                    <div class="award-video-card" *ngFor="let award of awards">
+                        <a [href]="award.url" target="_blank" rel="noopener" class="thumb-wrapper">
+                            <img [src]="'https://img.youtube.com/vi/' + award.ytId + '/hqdefault.jpg'" [alt]="award.projectName">
+                            <div class="play-btn-overlay">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="video-card-body">
+                            <div class="video-card-meta">
+                                <span class="badge-rank" [ngClass]="getBadgeClass(award.prizeId)">
+                                    <i class="fa" [ngClass]="award.prizeId <= 3 ? 'fa-trophy' : 'fa-star'" aria-hidden="true"></i>
+                                    {{ award.prizeName }}
+                                </span>
+                                <a [href]="award.url" target="_blank" rel="noopener" class="yt-text-link">
+                                    <i class="fa fa-youtube-play" style="color: #ef4444;" aria-hidden="true"></i> 影片連結
+                                </a>
+                            </div>
+                            <a [href]="award.url" target="_blank" rel="noopener" class="video-card-title">
+                                {{ award.projectName }}
+                            </a>
+                            <div class="video-card-school">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                <span>{{ award.schoolName }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="item-text text-right" style="margin-top: 16px; font-size: 15px;">
+                    詳細得獎資訊請參閱 <a href="https://innoserveawards.tca.org.tw/award.aspx" target="_blank" rel="noopener">大會官方得獎名單</a>
+                </p>
+            </c-method-n>
+
             <c-method-n class="title" [icon]="'innoserve_29_bonus'" [methodSubject]="'評分標準與加分機制'">
                 <p class="item-text">
                     若透過 API 串接整合「叡揚」多項數位服務，每整合一項可加分<br>

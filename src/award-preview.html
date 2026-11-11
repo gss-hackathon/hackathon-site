@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025/2026 InnoServe 叡揚資訊 得獎名單設計提案預覽</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --gold: #d97706;
+      --gold-bg: #fef3c7;
+      --silver: #4b5563;
+      --silver-bg: #f3f4f6;
+      --bronze: #b45309;
+      --bronze-bg: #ffedd5;
+      --special: #0284c7;
+      --special-bg: #e0f2fe;
+      --text-main: #1f2937;
+      --text-muted: #6b7280;
+      --bg-page: #f8fafc;
+      --card-bg: #ffffff;
+      --yt-red: #ff0000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+    }
+
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      padding: 24px 16px 80px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .header-section h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .header-section p {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    /* Style Switcher Tabs */
+    .style-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+      border-radius: 9999px;
+      border: 1px solid #cbd5e1;
+      background: white;
+      font-size: 15px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn:hover {
+      border-color: var(--primary-light);
+      color: var(--primary-light);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .design-desc {
+      background: #eff6ff;
+      border-left: 4px solid var(--primary-light);
+      padding: 12px 18px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: #1e40af;
+    }
+
+    /* ----------------------------------------------------
+       STYLE 1: 現代互動卡片網格 (Modern Card Grid)
+    ---------------------------------------------------- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .award-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .award-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      border-color: #cbd5e1;
+    }
+
+    .award-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #94a3b8;
+    }
+
+    .award-card.rank-1::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+    .award-card.rank-2::before { background: linear-gradient(90deg, #9ca3af, #cbd5e1); }
+    .award-card.rank-3::before { background: linear-gradient(90deg, #d97706, #f97316); }
+    .award-card.rank-special::before { background: linear-gradient(90deg, #0284c7, #38bdf8); }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .badge-rank {
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-rank.gold { background: var(--gold-bg); color: var(--gold); }
+    .badge-rank.silver { background: var(--silver-bg); color: var(--silver); }
+    .badge-rank.bronze { background: var(--bronze-bg); color: var(--bronze); }
+    .badge-rank.special { background: var(--special-bg); color: var(--special); }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.15s ease;
+    }
+
+    .card-title:hover {
+      color: var(--primary-light);
+    }
+
+    .school-info {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed #f1f5f9;
+    }
+
+    .school-info i {
+      color: #94a3b8;
+      margin-top: 3px;
+    }
+
+    .yt-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #dc2626;
+      background: #fef2f2;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .yt-btn:hover {
+      background: #fee2e2;
+    }
+
+    /* ----------------------------------------------------
+       STYLE 2: 質感排行榜/榮譽榜 (Leaderboard List)
+    ---------------------------------------------------- */
+    .list-wrapper {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    .list-item {
+      display: grid;
+      grid-template-columns: 140px 1fr 200px 110px;
+      align-items: center;
+      padding: 18px 24px;
+      border-bottom: 1px solid #f1f5f9;
+      transition: background 0.15s ease;
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    .list-item:hover {
+      background: #f8fafc;
+    }
+
+    .list-item.highlight-top {
+      background: #fffdf5;
+    }
+
+    .list-item.highlight-top:hover {
+      background: #fef9e7;
+    }
+
+    .list-rank {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .rank-icon-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .rank-icon-num.gold { background: #fbbf24; color: #78350f; }
+    .rank-icon-num.silver { background: #e2e8f0; color: #334155; }
+    .rank-icon-num.bronze { background: #fdba74; color: #7c2d12; }
+    .rank-icon-num.badge { background: #e0f2fe; color: #0369a1; font-size: 12px; border-radius: 6px; width: auto; padding: 4px 8px; }
+
+    .list-title-wrap {
+      padding-right: 20px;
+    }
+
+    .list-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: #1e293b;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .list-title:hover {
+      color: var(--primary-light);
+    }
+
+    .list-school {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .list-action {
+      text-align: right;
+    }
+
+    /* ----------------------------------------------------
+       STYLE 3: 影音優先 (Video Embedded / Preview Mode)
+    ---------------------------------------------------- */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .thumb-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      background: #0f172a;
+      overflow: hidden;
+    }
+
+    .thumb-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .video-card:hover .thumb-wrapper img {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+
+    .play-btn-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      background: rgba(220, 38, 38, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .video-card:hover .play-btn-overlay {
+      transform: translate(-50%, -50%) scale(1.12);
+      background: var(--yt-red);
+    }
+
+    .video-card-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .video-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .video-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+    .video-card-title:hover {
+      color: var(--primary-light);
+    }
+
+    .video-card-school {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .list-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 16px;
+      }
+      .list-action {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-section">
+    <div style="display:inline-block; margin-bottom:8px; font-weight:700; color:#1e3a8a; letter-spacing:1px; font-size:13px; text-transform:uppercase;">
+      InnoServe Awards • GSS 叡揚智慧場域創新應用組
+    </div>
+    <h1>2025/2026 年度得獎名單版型提案</h1>
+    <p>提供 3 種針對現代感、影音連結與閱讀體驗優化的版型，點擊切換預覽：</p>
+  </div>
+
+  <!-- Switcher Tabs -->
+  <div class="style-switcher">
+    <button class="tab-btn active" onclick="switchTab('style1')">
+      <i class="fa-solid fa-table-cells-large"></i> 樣式 A：卡片式徽章網格（推薦・清爽活潑）
+    </button>
+    <button class="tab-btn" onclick="switchTab('style2')">
+      <i class="fa-solid fa-list-ol"></i> 樣式 B：質感榮譽榜排行（清晰對齊・好比對）
+    </button>
+    <button class="tab-btn" onclick="switchTab('style3')">
+      <i class="fa-solid fa-play-circle"></i> 樣式 C：影音封面展示（吸引點擊・作品集感）
+    </button>
+  </div>
+
+  <!-- STYLE 1: Card Grid -->
+  <div id="style1" class="tab-content active">
+    <div class="design-desc">
+      💡 <strong>樣式 A 特色：</strong>將表格轉化為現代卡片，依獎項給予金/銀/銅與專屬代表色邊條。專題名稱與 Youtube 播放鍵緊密整合，手機與電腦版皆能極佳自適應展示。
+    </div>
+    <div class="card-grid" id="cardGridContainer"></div>
+  </div>
+
+  <!-- STYLE 2: List / Leaderboard -->
+  <div id="style2" class="tab-content">
+    <div class="design-desc">
+      💡 <strong>樣式 B 特色：</strong>保留表格條理分明的優勢，但去除了生硬的死板邊框。將前三名高光突顯，視覺重心分明，名次、作品名、學校一目了然。
+    </div>
+    <div class="list-wrapper" id="listWrapperContainer"></div>
+  </div>
+
+  <!-- STYLE 3: Video Preview Grid -->
+  <div id="style3" class="tab-content">
+    <div class="design-desc">
+      💡 <strong>樣式 C 特色：</strong>自動抓取 YouTube 官方縮圖與播放按鈕遮罩，讓觀賽者一眼看到得獎專題的 Demo 畫面，極大化影片點閱率與成果發表感。
+    </div>
+    <div class="video-grid" id="videoGridContainer"></div>
+  </div>
+</div>
+
+<script>
+  // 7 筆 GSS 得獎資料
+  const awardsData = [
+    {
+      prizeId: 1,
+      prizeName: "第一名",
+      projectName: "AI拍才會贏：由輪椅身障者操作的行動 AI 拍貼工作系統",
+      schoolName: "桃園市高級中學非學校型態實驗教育",
+      url: "https://youtu.be/q-MmZgoyX2Y",
+      ytId: "q-MmZgoyX2Y",
+      type: "gold"
+    },
+    {
+      prizeId: 2,
+      prizeName: "第二名",
+      projectName: "寵此安心",
+      schoolName: "國立臺中科技大學",
+      url: "https://youtu.be/sW3azoP5T_Y?si=XwUB5qkSkmx20v00",
+      ytId: "sW3azoP5T_Y",
+      type: "silver"
+    },
+    {
+      prizeId: 3,
+      prizeName: "第三名",
+      projectName: "冥之顧問-日常智慧身心調養系統",
+      schoolName: "國立中山大學",
+      url: "https://youtu.be/MM71QUYLD2M?si=G2K8ea1PQLNPFcf8",
+      ytId: "MM71QUYLD2M",
+      type: "bronze"
+    },
+    {
+      prizeId: 4,
+      prizeName: "創新應用獎",
+      projectName: "雲端彼岸",
+      schoolName: "國立臺中科技大學",
+      url: "https://youtu.be/QCZdLYElJAo",
+      ytId: "QCZdLYElJAo",
+      type: "special"
+    },
+    {
+      prizeId: 5,
+      prizeName: "技術卓越獎",
+      projectName: "裝修厝理好",
+      schoolName: "國立臺中科技大學",
+      url: "https://youtu.be/ujm0C7G-Uu4?si=rDaJ08HHfH6H26Kf",
+      ytId: "ujm0C7G-Uu4",
+      type: "special"
+    },
+    {
+      prizeId: 6,
+      prizeName: "產品貢獻獎",
+      projectName: "修到好處",
+      schoolName: "淡江大學",
+      url: "https://youtu.be/iAbzs7Bgm10?si=xhMKaBtZPjrF7kHV",
+      ytId: "iAbzs7Bgm10",
+      type: "special"
+    },
+    {
+      prizeId: 7,
+      prizeName: "台風穩健獎",
+      projectName: "「僑」見校園智慧系統",
+      schoolName: "國立華僑高級中等學校, 國立臺北商業大學, 市立板橋高中",
+      url: "https://www.youtube.com/watch?v=EtZmuyjwL5w",
+      ytId: "EtZmuyjwL5w",
+      type: "special"
+    }
+  ];
+
+  function getBadgeIcon(type) {
+    if (type === 'gold') return '<i class="fa-solid fa-trophy"></i>';
+    if (type === 'silver') return '<i class="fa-solid fa-medal"></i>';
+    if (type === 'bronze') return '<i class="fa-solid fa-award"></i>';
+    return '<i class="fa-solid fa-star"></i>';
+  }
+
+  // Render Style 1
+  const cardGrid = document.getElementById('cardGridContainer');
+  cardGrid.innerHTML = awardsData.map(item => `
+    <div class="award-card rank-${item.type === 'special' ? 'special' : (item.prizeId)}">
+      <div>
+        <div class="card-header">
+          <span class="badge-rank ${item.type}">
+            ${getBadgeIcon(item.type)} ${item.prizeName}
+          </span>
+          <a href="${item.url}" target="_blank" rel="noopener" class="yt-btn" title="觀看成果展示影片">
+            <i class="fa-brands fa-youtube"></i> 成果影片
+          </a>
+        </div>
+        <a href="${item.url}" target="_blank" rel="noopener" class="card-title">
+          ${item.projectName}
+        </a>
+      </div>
+      <div class="school-info">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>${item.schoolName}</span>
+      </div>
+    </div>
+  `).join('');
+
+  // Render Style 2
+  const listWrapper = document.getElementById('listWrapperContainer');
+  listWrapper.innerHTML = awardsData.map(item => `
+    <div class="list-item ${item.prizeId <= 3 ? 'highlight-top' : ''}">
+      <div class="list-rank">
+        <span class="rank-icon-num ${item.type}">
+          ${item.prizeId <= 3 ? item.prizeId : getBadgeIcon(item.type)}
+        </span>
+        <span style="font-weight:700;">${item.prizeName}</span>
+      </div>
+      <div class="list-title-wrap">
+        <a href="${item.url}" target="_blank" rel="noopener" class="list-title">
+          ${item.projectName}
+        </a>
+      </div>
+      <div class="list-school">
+        <i class="fa-solid fa-graduation-cap" style="color:#94a3b8; margin-right:4px;"></i>
+        ${item.schoolName}
+      </div>
+      <div class="list-action">
+        <a href="${item.url}" target="_blank" rel="noopener" class="yt-btn">
+          <i class="fa-brands fa-youtube"></i> 觀看影片
+        </a>
+      </div>
+    </div>
+  `).join('');
+
+  // Render Style 3
+  const videoGrid = document.getElementById('videoGridContainer');
+  videoGrid.innerHTML = awardsData.map(item => `
+    <div class="video-card">
+      <a href="${item.url}" target="_blank" rel="noopener" class="thumb-wrapper">
+        <img src="https://img.youtube.com/vi/${item.ytId}/hqdefault.jpg" alt="${item.projectName}">
+        <div class="play-btn-overlay">
+          <i class="fa-solid fa-play"></i>
+        </div>
+      </a>
+      <div class="video-card-body">
+        <div class="video-card-meta">
+          <span class="badge-rank ${item.type}">
+            ${getBadgeIcon(item.type)} ${item.prizeName}
+          </span>
+          <span style="font-size:12px; color:#94a3b8;"><i class="fa-brands fa-youtube" style="color:#ef4444;"></i> YouTube</span>
+        </div>
+        <a href="${item.url}" target="_blank" rel="noopener" class="video-card-title">
+          ${item.projectName}
+        </a>
+        <div class="video-card-school">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>${item.schoolName}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+    
+    event.currentTarget.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>

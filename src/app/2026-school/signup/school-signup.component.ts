@@ -14,7 +14,7 @@ export class School2026SignUpComponent implements OnInit {
   hitCount: string = '載入中...';
   recordLinkCount: string = '0';
 
-  private _jsonURL = 'assets/data/awards_2025.json';
+  private _jsonURL = 'assets/data/awards_2026.json';
 
   // ⚠️ 請在此處貼上您部署 Google Apps Script 後取得的「網頁應用程式 URL」
   private GAS_API_URL = 'https://script.google.com/macros/s/AKfycby481HaGG3Fe8rk2qxSKicjRFrJKwDC0DxZ3JqBNSLjxwJL_wNJwm77l24SL54ciZSTKw/exec';
@@ -72,8 +72,23 @@ export class School2026SignUpComponent implements OnInit {
       award.projectName = data[index]['projectName'];
       award.schoolName = data[index]['schoolName'];
       award.url = data[index]['url'];
+      award.ytId = this.extractYtId(award.url);
       this.awards.push(award);
     }
+  }
+
+  extractYtId(url: string): string {
+    if (!url) return '';
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : '';
+  }
+
+  getBadgeClass(prizeId: number): string {
+    if (prizeId === 1) return 'gold';
+    if (prizeId === 2) return 'silver';
+    if (prizeId === 3) return 'bronze';
+    return 'special';
   }
 
   gotoYT(url: string): void {

@@ -4,4 +4,5 @@ export class AwardModel {
     projectName: string = '';
     schoolName: string = '';
     url: string = '';
+    ytId?: string = '';
 }
