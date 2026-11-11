@@ -1,0 +1,51 @@
+[
+  {
+    "prizeId": 1,
+    "prizeName": "第一名",
+    "projectName": "AI拍才會贏：由輪椅身障者操作的行動 AI 拍貼工作系統",
+    "schoolName": "桃園市高級中學非學校型態實驗教育",
+    "url": "https://youtu.be/q-MmZgoyX2Y"
+  },
+  {
+    "prizeId": 2,
+    "prizeName": "第二名",
+    "projectName": "寵此安心",
+    "schoolName": "國立臺中科技大學",
+    "url": "https://youtu.be/sW3azoP5T_Y?si=XwUB5qkSkmx20v00"
+  },
+  {
+    "prizeId": 3,
+    "prizeName": "第三名",
+    "projectName": "冥之顧問-日常智慧身心調養系統",
+    "schoolName": "國立中山大學",
+    "url": "https://youtu.be/MM71QUYLD2M?si=G2K8ea1PQLNPFcf8"
+  },
+  {
+    "prizeId": 4,
+    "prizeName": "創新應用獎",
+    "projectName": "雲端彼岸",
+    "schoolName": "國立臺中科技大學",
+    "url": "https://youtu.be/QCZdLYElJAo"
+  },
+  {
+    "prizeId": 5,
+    "prizeName": "技術卓越獎",
+    "projectName": "裝修厝理好",
+    "schoolName": "國立臺中科技大學",
+    "url": "https://youtu.be/ujm0C7G-Uu4?si=rDaJ08HHfH6H26Kf"
+  },
+  {
+    "prizeId": 6,
+    "prizeName": "產品貢獻獎",
+    "projectName": "修到好處",
+    "schoolName": "淡江大學",
+    "url": "https://youtu.be/iAbzs7Bgm10?si=xhMKaBtZPjrF7kHV"
+  },
+  {
+    "prizeId": 7,
+    "prizeName": "台風穩健獎",
+    "projectName": "「僑」見校園智慧系統",
+    "schoolName": "國立華僑高級中等學校,國立臺北商業大學,市立板橋高中",
+    "url": "https://www.youtube.com/watch?v=EtZmuyjwL5w"
+  }
+]
